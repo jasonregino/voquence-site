@@ -120,6 +120,22 @@ export default function Home() {
             input="coloring book about a fish in an aquarium bold and easy with text at the top saying the fish name"
             output="You are a children's coloring book illustrator. Create a single coloring book page featuring an aquarium scene with bold, thick black outlines suitable for coloring..."
           />
+          <ModeExample
+            mode="Clean Text"
+            input="uh so like basically the meeting is at three pm tomorrow and um we need to bring the slides and the demo and you know the budget thing too"
+            output="The meeting is at 3pm tomorrow. Bring the slides, the demo, and the budget."
+          />
+          <ModeExample
+            mode="Eloquence"
+            input="lifting heavy weights is a good way to get stronger and feel better about yourself"
+            output="Lift heavy. Get stronger. Feel better. Repeat."
+          />
+          <ModeExample
+            mode="Tech Support"
+            input="customer's printer keeps jamming on every page after the second one they already tried restarting it"
+            output="Hi — sorry the printer is acting up. Since a restart didn't fix it, let's check the paper path. Open the back panel and look for any small shreds in the rollers..."
+            isNew
+          />
         </div>
 
         {/* Footer note about additional modes */}
@@ -132,7 +148,7 @@ export default function Home() {
             marginTop: "8px",
           }}
         >
-          PLUS CLEAN TEXT · ELOQUENCE · TECH SUPPORT · AND MORE
+          PLUS RAW TRANSCRIPT · MORE MODES COMING SOON
         </p>
         <p
           className="text-center max-w-xl mx-auto mt-4"
@@ -177,7 +193,17 @@ export default function Home() {
   );
 }
 
-function ModeExample({ mode, input, output }: { mode: string; input: string; output: string }) {
+function ModeExample({
+  mode,
+  input,
+  output,
+  isNew = false,
+}: {
+  mode: string;
+  input: string;
+  output: string;
+  isNew?: boolean;
+}) {
   return (
     <div
       className="rounded-xl overflow-hidden"
@@ -187,7 +213,7 @@ function ModeExample({ mode, input, output }: { mode: string; input: string; out
       }}
     >
       <div
-        className="font-mono px-5 py-3"
+        className="font-mono px-5 py-3 flex items-center justify-between"
         style={{
           color: "var(--brand-cyan)",
           fontSize: "11px",
@@ -196,7 +222,21 @@ function ModeExample({ mode, input, output }: { mode: string; input: string; out
           borderBottom: "1px solid var(--brand-border)",
         }}
       >
-        {mode.toUpperCase()}
+        <span>{mode.toUpperCase()}</span>
+        {isNew && (
+          <span
+            style={{
+              color: "#22c55e",
+              border: "1px solid #22c55e",
+              borderRadius: "4px",
+              padding: "1px 6px",
+              fontSize: "9px",
+              letterSpacing: "0.15em",
+            }}
+          >
+            NEW
+          </span>
+        )}
       </div>
       <div className="p-5 space-y-4">
         <div>
