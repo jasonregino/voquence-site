@@ -3,9 +3,8 @@ interface VLogoProps {
 }
 
 /**
- * Voquence brand mark — the actual desktop app icon PNG.
- * mix-blend-mode: lighten blends the icon's dark background with the page
- * so the rounded-square edge disappears on dark pages.
+ * Voquence brand mark — desktop app icon with the dark square background
+ * removed so it floats cleanly on any page background.
  */
 export function VLogo({ size = 96 }: VLogoProps) {
   return (
@@ -14,10 +13,7 @@ export function VLogo({ size = 96 }: VLogoProps) {
       alt="Voquence"
       width={size}
       height={size}
-      style={{
-        display: "block",
-        mixBlendMode: "lighten",
-      }}
+      style={{ display: "block" }}
     />
   );
 }
