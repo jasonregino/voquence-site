@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Voquence Landing Page
 
-## Getting Started
+Pre-launch site for [voquence.com](https://voquence.com).
 
-First, run the development server:
+## Stack
+- Next.js 16 App Router
+- TypeScript
+- Tailwind CSS 4
+- Resend (email audience)
+- Deployed on Vercel
 
+## Local Dev
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Open [http://localhost:3000](http://localhost:3000).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment Variables
+Copy `.env.example` to `.env.local` and fill in:
+- `RESEND_API_KEY` — your Resend API key
+- `RESEND_AUDIENCE_ID` — the audience the wishlist signups land in
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Without these, signups are logged to the server console but no email is captured.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy
+Push to `main` on GitHub. Vercel auto-deploys.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Structure
+- `src/app/page.tsx` — landing page
+- `src/app/api/subscribe/route.ts` — email signup endpoint
+- `src/components/VLogo.tsx` — brand mark SVG (same as the desktop app)
+- `src/components/EmailSignup.tsx` — wishlist form
