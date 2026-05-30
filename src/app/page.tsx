@@ -39,13 +39,7 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 py-16 sm:py-24">
-        {/* V mark with a soft radial glow behind it, no rectangle wrapper */}
-        <div
-          className="mb-8"
-          style={{
-            filter: "drop-shadow(0 0 24px rgba(0, 212, 255, 0.35))",
-          }}
-        >
+        <div className="mb-8">
           <VLogo size={120} />
         </div>
 
