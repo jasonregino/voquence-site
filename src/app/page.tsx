@@ -101,7 +101,7 @@ export default function Home() {
           className="text-center mb-16 max-w-xl mx-auto"
           style={{ color: "var(--brand-muted)", fontSize: "15px" }}
         >
-          Hit a hotkey. Speak naturally. The polished output pastes wherever your cursor is.
+          Hit a hotkey. Speak naturally. The polished output pastes right at your cursor.
         </p>
 
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-8">
