@@ -63,7 +63,7 @@ export default function Home() {
             letterSpacing: "0.15em",
           }}
         >
-          VOICE INTO READY-TO-PASTE CONTENT
+          SPEAK ROUGH IDEAS. GET POLISHED OUTPUT.
         </p>
 
         <p
@@ -133,6 +133,21 @@ export default function Home() {
           }}
         >
           PLUS CLEAN TEXT · ELOQUENCE · TECH SUPPORT · AND MORE
+        </p>
+        <p
+          className="text-center max-w-xl mx-auto mt-4"
+          style={{ color: "var(--brand-muted)", fontSize: "14px" }}
+        >
+          Or use Clean Text mode for fast, polished dictation when that&apos;s all you need.
+        </p>
+
+        {/* Audience strip */}
+        <p
+          className="text-center max-w-2xl mx-auto mt-16"
+          style={{ color: "#aaaaaa", fontSize: "15px", lineHeight: 1.6 }}
+        >
+          Made for indie creators, authors, founders, devs, and professionals who&apos;d
+          rather speak once than rewrite three times.
         </p>
       </section>
 
