@@ -104,7 +104,7 @@ export default function Home() {
           Hit a hotkey. Speak naturally. The polished output pastes wherever your cursor is.
         </p>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-8">
           <ModeExample
             mode="Book Description"
             input="book about lifting for guys over 40 who feel tired and weak. thirty day plan. food sleep stress."
@@ -112,8 +112,8 @@ export default function Home() {
           />
           <ModeExample
             mode="Tweet Thread"
-            input="the 49ers are winning the super bowl this year"
-            output="1/ The 49ers are winning the Super Bowl this year. 2/ Their defense is suffocating. They're forcing turnovers at a rate that makes offenses uncomfortable before the game even starts..."
+            input="sean loves to eat corn dogs"
+            output="1/ Sean's got a thing for corn dogs. Not just any snack. This is a lifestyle choice. 2/ Most people eat corn dogs at the fair. Sean eats them on a Tuesday at 2pm like it's a spiritual practice..."
           />
           <ModeExample
             mode="Prompt Builder"
@@ -121,6 +121,19 @@ export default function Home() {
             output="You are a children's coloring book illustrator. Create a single coloring book page featuring an aquarium scene with bold, thick black outlines suitable for coloring..."
           />
         </div>
+
+        {/* Footer note about additional modes */}
+        <p
+          className="text-center font-mono"
+          style={{
+            color: "var(--brand-muted)",
+            fontSize: "12px",
+            letterSpacing: "0.1em",
+            marginTop: "8px",
+          }}
+        >
+          PLUS CLEAN TEXT · ELOQUENCE · TECH SUPPORT · AND MORE
+        </p>
       </section>
 
       {/* Footer */}
