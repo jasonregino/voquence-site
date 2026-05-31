@@ -12,6 +12,14 @@ export const metadata: Metadata = {
     url: "https://voquence.com",
     siteName: "Voquence",
     type: "website",
+    images: [
+      {
+        url: "https://voquence.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Voquence — Speak Rough Ideas. Get Polished Output.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -19,6 +27,7 @@ export const metadata: Metadata = {
     description:
       "Voice into finished business content. Book descriptions, tweet threads, AI prompts, tech support replies. Ready in seconds.",
     creator: "@voquenceapp",
+    images: ["https://voquence.com/og-image.png"],
   },
 };
 
