@@ -1,15 +1,15 @@
 {
-  "version": "0.1.0",
-  "notes": "Initial release. Voice-to-polished-content for Mac.",
-  "pub_date": "2026-06-02T19:50:38Z",
+  "version": "0.1.1",
+  "notes": "Auto-update verification test \u2014 confirms permissions persist across updates.",
+  "pub_date": "2026-06-02T20:57:38Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaGlVSWEvQndrZ1lqbWNzL1ZLVWNKY2tqYkpseHFjSWhheWhsbCtydHA1bTJFdHhvd0x4c3oxVStQOStORGpLVUhQYmtvM2hEaWt5V1hlNHpXTXBaREE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNDI5NzkyCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negptZnB4RDhWdXVPUXRHUlcwNWhvVmVXcFBpOE14SFJ1K3lVSENhYmpwcEc4M2RQOEM4TFJ5LzNuNkI1amxVVWw0S0VYZE56eFZ2clFqMVFrcmE4M3pBdz09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.1.0_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaHRUWWJabTZZVDh3Uk93VlZjMzVXTEhWV2I2cjF5R2xHLzZDSGRCWDFrUXB2YlFiNDB5K0RqT0hHOHF4WllOblFwZllEQnlJakNDcENOL1RLaHZ3QXdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNDMzODIxCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpVVWt6VndaMjQ3Zis3TkI5VmVUOW5nSFk2U0tnbVE1YkFscWU4VUFIajBhS3VaOUs0MVRpOVdFZUN5VWdGd0tMUmdqTFQvLzBHcFMwSHlvTGgvc2JDQT09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.1.1_aarch64.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaGlVSWEvQndrZ1lqbWNzL1ZLVWNKY2tqYkpseHFjSWhheWhsbCtydHA1bTJFdHhvd0x4c3oxVStQOStORGpLVUhQYmtvM2hEaWt5V1hlNHpXTXBaREE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNDI5NzkyCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negptZnB4RDhWdXVPUXRHUlcwNWhvVmVXcFBpOE14SFJ1K3lVSENhYmpwcEc4M2RQOEM4TFJ5LzNuNkI1amxVVWw0S0VYZE56eFZ2clFqMVFrcmE4M3pBdz09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.1.0_x86_64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaHRUWWJabTZZVDh3Uk93VlZjMzVXTEhWV2I2cjF5R2xHLzZDSGRCWDFrUXB2YlFiNDB5K0RqT0hHOHF4WllOblFwZllEQnlJakNDcENOL1RLaHZ3QXdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNDMzODIxCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpVVWt6VndaMjQ3Zis3TkI5VmVUOW5nSFk2U0tnbVE1YkFscWU4VUFIajBhS3VaOUs0MVRpOVdFZUN5VWdGd0tMUmdqTFQvLzBHcFMwSHlvTGgvc2JDQT09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.1.1_x86_64.app.tar.gz"
     }
   }
 }
