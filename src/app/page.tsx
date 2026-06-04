@@ -279,7 +279,14 @@ export default function Home() {
           className="text-center max-w-xl mx-auto mt-6"
           style={{ color: "var(--brand-muted)", fontSize: "13px" }}
         >
-          Spokenly and Glaido give you cleaner dictation. Voquence gives you finished content.
+          Spokenly and Glaido give you cleaner dictation. Voquence gives you finished content.{" "}
+          <Link
+            href="/compare"
+            className="underline"
+            style={{ color: "var(--brand-cyan)" }}
+          >
+            See the full comparison →
+          </Link>
         </p>
       </section>
 
