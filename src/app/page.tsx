@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { VLogo } from "@/components/VLogo";
 import { EmailSignup } from "@/components/EmailSignup";
 
@@ -75,14 +76,47 @@ export default function Home() {
           tech support replies, pasted at your cursor in seconds.
         </p>
 
-        <EmailSignup />
+        <Link
+          href="/download"
+          className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-7 py-4 transition mb-6"
+          style={{
+            background: "var(--brand-cyan)",
+            color: "#0a0a0a",
+            fontSize: "14px",
+            letterSpacing: "0.15em",
+            boxShadow: "0 0 32px rgba(0, 212, 255, 0.25)",
+          }}
+        >
+          ↓ DOWNLOAD FOR MAC
+        </Link>
 
         <p
-          className="font-mono mt-6"
-          style={{ color: "var(--brand-muted)", fontSize: "11px", letterSpacing: "0.1em" }}
+          className="font-mono mb-8"
+          style={{
+            color: "var(--brand-muted)",
+            fontSize: "10px",
+            letterSpacing: "0.1em",
+          }}
         >
-          Mac launching first. Windows shortly after.
+          APPLE SILICON · NOTARIZED · v0.1.3
         </p>
+
+        <div
+          className="w-full max-w-md mx-auto pt-6"
+          style={{ borderTop: "1px solid var(--brand-border)" }}
+        >
+          <p
+            className="font-mono mb-3"
+            style={{
+              color: "var(--brand-muted)",
+              fontSize: "11px",
+              letterSpacing: "0.15em",
+            }}
+          >
+            OR GET NOTIFIED WHEN LOCAL MODE SHIPS
+          </p>
+          <EmailSignup />
+        </div>
       </section>
 
       {/* What it does */}
@@ -167,6 +201,88 @@ export default function Home() {
         </p>
       </section>
 
+      {/* Pricing */}
+      <section className="relative z-10 px-6 sm:px-12 py-16 sm:py-24" id="pricing">
+        <h2
+          className="font-mono font-black text-center mb-3"
+          style={{
+            color: "var(--brand-cyan)",
+            fontSize: "clamp(20px, 3vw, 28px)",
+            letterSpacing: "0.18em",
+          }}
+        >
+          PRICING
+        </h2>
+        <p
+          className="text-center mb-16 max-w-xl mx-auto"
+          style={{ color: "var(--brand-muted)", fontSize: "15px" }}
+        >
+          Free local dictation, no setup. Pay only when you want finished content.
+        </p>
+
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+          <PricingCard
+            tier="Free Local"
+            price="$0"
+            priceSuffix="forever"
+            tagline="The fast way to try Voquence."
+            features={[
+              "Local Whisper transcription",
+              "Works offline",
+              "Raw text at your cursor",
+              "No account, no keys, no setup",
+              "Unlimited usage",
+            ]}
+            comingSoon
+          />
+          <PricingCard
+            tier="Free BYOK"
+            price="$0"
+            priceSuffix="to Voquence"
+            tagline="For power users with their own API keys."
+            features={[
+              "Cloud transcription (Whisper)",
+              "Clean Text, Eloquence, Raw modes",
+              "Bring your own OpenAI + Anthropic keys",
+              "Pay only what your APIs charge (~$1-3/mo)",
+              "Unlimited usage",
+            ]}
+          />
+          <PricingCard
+            tier="Creator"
+            price="$19"
+            priceSuffix="per month"
+            tagline="The ready-to-paste content tier."
+            features={[
+              "Everything in Free, plus:",
+              "Book Description, Tweet Thread, Prompt Builder",
+              "Tech Support, Email Draft, more",
+              "Managed cloud — zero setup",
+              "Custom modes + history (v1.1)",
+            ]}
+            highlighted
+          />
+        </div>
+
+        <p
+          className="text-center font-mono mt-12"
+          style={{
+            color: "var(--brand-muted)",
+            fontSize: "12px",
+            letterSpacing: "0.1em",
+          }}
+        >
+          NO CREDIT CARD REQUIRED · CANCEL ANYTIME
+        </p>
+
+        <p
+          className="text-center max-w-xl mx-auto mt-6"
+          style={{ color: "var(--brand-muted)", fontSize: "13px" }}
+        >
+          Spokenly and Glaido give you cleaner dictation. Voquence gives you finished content.
+        </p>
+      </section>
+
       {/* Footer */}
       <footer className="relative z-10 border-t mt-auto" style={{ borderColor: "var(--brand-border)" }}>
         <div className="max-w-6xl mx-auto px-6 sm:px-12 py-8 flex flex-col sm:flex-row justify-between items-center gap-4">
@@ -190,6 +306,115 @@ export default function Home() {
         </div>
       </footer>
     </main>
+  );
+}
+
+function PricingCard({
+  tier,
+  price,
+  priceSuffix,
+  tagline,
+  features,
+  highlighted = false,
+  comingSoon = false,
+}: {
+  tier: string;
+  price: string;
+  priceSuffix: string;
+  tagline: string;
+  features: string[];
+  highlighted?: boolean;
+  comingSoon?: boolean;
+}) {
+  return (
+    <div
+      className="rounded-xl overflow-hidden flex flex-col"
+      style={{
+        background: "var(--brand-surface)",
+        border: highlighted
+          ? "1px solid var(--brand-cyan)"
+          : "1px solid var(--brand-border)",
+        boxShadow: highlighted ? "0 0 32px rgba(0, 212, 255, 0.18)" : "none",
+      }}
+    >
+      <div
+        className="font-mono px-6 py-3 flex items-center justify-between"
+        style={{
+          color: highlighted ? "var(--brand-cyan)" : "var(--brand-muted)",
+          fontSize: "11px",
+          letterSpacing: "0.2em",
+          fontWeight: 800,
+          borderBottom: "1px solid var(--brand-border)",
+        }}
+      >
+        <span>{tier.toUpperCase()}</span>
+        {highlighted && (
+          <span style={{ fontSize: "9px", letterSpacing: "0.15em" }}>
+            MOST POPULAR
+          </span>
+        )}
+        {comingSoon && (
+          <span
+            style={{
+              color: "#a3a3a3",
+              border: "1px solid #2a2a2a",
+              borderRadius: "4px",
+              padding: "1px 8px",
+              fontSize: "9px",
+              letterSpacing: "0.15em",
+            }}
+          >
+            COMING SOON
+          </span>
+        )}
+      </div>
+      <div className="p-6 flex flex-col flex-1">
+        <div className="mb-4">
+          <div className="flex items-baseline gap-2">
+            <span
+              style={{
+                color: "#ffffff",
+                fontSize: "36px",
+                fontWeight: 700,
+                letterSpacing: "-0.02em",
+              }}
+            >
+              {price}
+            </span>
+            <span
+              className="font-mono"
+              style={{
+                color: "var(--brand-muted)",
+                fontSize: "11px",
+                letterSpacing: "0.1em",
+              }}
+            >
+              {priceSuffix}
+            </span>
+          </div>
+          <p
+            className="mt-2"
+            style={{ color: "#bbbbbb", fontSize: "13px", lineHeight: 1.5 }}
+          >
+            {tagline}
+          </p>
+        </div>
+        <ul className="space-y-2 flex-1">
+          {features.map((f, i) => (
+            <li
+              key={i}
+              className="flex items-start gap-2"
+              style={{ color: "#cccccc", fontSize: "13px", lineHeight: 1.5 }}
+            >
+              <span style={{ color: "var(--brand-cyan)", fontSize: "12px", marginTop: "2px" }}>
+                ✓
+              </span>
+              <span>{f}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 }
 
