@@ -116,7 +116,7 @@ export default function DownloadPage() {
             <Step
               n={3}
               title="Move to Applications"
-              body="Drag Voquence.app into your Applications folder. This step matters — launching from anywhere else can cause permission issues."
+              body="Drag Voquence.app from Downloads into your Applications folder. macOS doesn't show a progress bar — the drag itself IS the install. This step matters: launching from Downloads instead can cause permission issues."
             />
             <Step
               n={4}
@@ -191,41 +191,71 @@ export default function DownloadPage() {
           </p>
         </div>
 
-        {/* Troubleshooting */}
-        <div className="mt-14 rounded-xl p-6" style={{ background: "var(--brand-surface)", border: "1px solid var(--brand-border)" }}>
-          <h3
-            className="font-mono font-black mb-3"
+        {/* FAQ / Troubleshooting */}
+        <div className="mt-14">
+          <h2
+            className="font-mono font-black mb-6"
             style={{
-              color: "#aaaaaa",
-              fontSize: "12px",
+              color: "var(--brand-cyan)",
+              fontSize: "16px",
               letterSpacing: "0.18em",
             }}
           >
-            RUNNING INTO TROUBLE?
-          </h3>
-          <p style={{ color: "#cccccc", fontSize: "13px", lineHeight: 1.6 }}>
-            If macOS warns about Voquence being from an unidentified developer,
-            right-click Voquence.app in Applications and choose Open. Voquence is
-            signed and notarized by Apple, but Gatekeeper sometimes gets cautious on
-            first launch. After the first open, it&apos;ll launch normally from then
-            on.
-          </p>
-          <p
-            className="mt-3"
-            style={{ color: "#cccccc", fontSize: "13px", lineHeight: 1.6 }}
+            COMMON QUESTIONS
+          </h2>
+
+          <div className="space-y-5">
+            <Faq
+              q="I dragged Voquence to Applications but I didn't see anything happen. Did it install?"
+              a="Yes. macOS doesn't show a progress bar or wizard when you drag an app to Applications — the drag itself IS the install. Open your Applications folder and Voquence.app will be there. (A proper installer is coming in v0.2.0.)"
+            />
+            <Faq
+              q="Where is Voquence after I double-clicked the downloaded file?"
+              a="macOS automatically extracts Voquence.app into the same folder as the .tar.gz file — usually your Downloads folder. Look for the V icon. Drag that into Applications."
+            />
+            <Faq
+              q="Can I just launch it from my Downloads folder?"
+              a="Technically yes, but I don't recommend it. macOS keeps a 'quarantined' marker on files in Downloads that can make Accessibility permissions flaky. Drag to Applications first, then launch from there."
+            />
+            <Faq
+              q={"macOS says “Voquence can't be opened because Apple cannot check it for malicious software.”"}
+              a="This is Gatekeeper being cautious on first launch. Voquence is signed and notarized by Apple, but you still need to approve it once. Right-click Voquence.app in Applications → choose Open → confirm. After that, it launches normally every time."
+            />
+            <Faq
+              q="The Welcome screen didn't appear when I launched."
+              a="Quit Voquence completely (Cmd+Q, or right-click the Dock icon → Quit). Then launch again from Applications. The Welcome screen should appear on first run."
+            />
+            <Faq
+              q="Will there be a proper installer (.dmg / .pkg)?"
+              a="Yes. A real .dmg installer is shipping with v0.2.0 in about a week, along with Free Local Mode (no API keys needed). For now, the .tar.gz extraction is the install method — works the same, just less polished."
+            />
+            <Faq
+              q="How do I uninstall?"
+              a="Drag Voquence.app from Applications to the Trash. If you want a full clean uninstall, also remove ~/Library/Application Support/Voquence (holds your API keys and settings)."
+            />
+          </div>
+
+          <div
+            className="mt-10 rounded-xl p-5"
+            style={{
+              background: "var(--brand-surface)",
+              border: "1px solid var(--brand-border)",
+            }}
           >
-            Still stuck? Reply to me on{" "}
-            <a
-              href="https://x.com/voquenceapp"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline"
-              style={{ color: "var(--brand-cyan)" }}
-            >
-              @voquenceapp
-            </a>{" "}
-            and I&apos;ll help directly.
-          </p>
+            <p style={{ color: "#cccccc", fontSize: "13px", lineHeight: 1.6 }}>
+              Still stuck? Reply to me on{" "}
+              <a
+                href="https://x.com/voquenceapp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+                style={{ color: "var(--brand-cyan)" }}
+              >
+                @voquenceapp
+              </a>{" "}
+              and I&apos;ll help directly. Real human, not a bot.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -272,6 +302,26 @@ export default function DownloadPage() {
         </div>
       </footer>
     </main>
+  );
+}
+
+function Faq({ q, a }: { q: string; a: string }) {
+  return (
+    <div
+      className="rounded-xl p-5"
+      style={{
+        background: "var(--brand-surface)",
+        border: "1px solid var(--brand-border)",
+      }}
+    >
+      <h3
+        className="font-bold mb-2"
+        style={{ color: "#ffffff", fontSize: "14px", lineHeight: 1.5 }}
+      >
+        {q}
+      </h3>
+      <p style={{ color: "#bbbbbb", fontSize: "13px", lineHeight: 1.6 }}>{a}</p>
+    </div>
   );
 }
 
