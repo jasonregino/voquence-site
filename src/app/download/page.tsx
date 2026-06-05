@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { VLogo } from "@/components/VLogo";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 
 const DOWNLOAD_URL =
   "https://voquence.com/releases/Voquence_0.1.3_aarch64.app.tar.gz";
@@ -15,35 +16,7 @@ export default function DownloadPage() {
     <main className="min-h-screen flex flex-col">
       <div className="fixed inset-0 bg-grid pointer-events-none opacity-60" />
 
-      {/* Nav */}
-      <nav className="relative z-10 flex justify-between items-center px-6 sm:px-12 py-6">
-        <Link href="/" className="flex items-center gap-3">
-          <VLogo size={36} />
-          <span
-            className="font-mono font-black"
-            style={{
-              color: "var(--brand-cyan)",
-              fontSize: "18px",
-              letterSpacing: "0.2em",
-            }}
-          >
-            VOQUENCE
-          </span>
-        </Link>
-        <a
-          href="https://x.com/voquenceapp"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-mono"
-          style={{
-            color: "var(--brand-muted)",
-            fontSize: "12px",
-            letterSpacing: "0.15em",
-          }}
-        >
-          @VOQUENCEAPP
-        </a>
-      </nav>
+      <SiteHeader />
 
       {/* Hero */}
       <section className="relative z-10 px-6 sm:px-12 py-12 sm:py-20 max-w-3xl mx-auto w-full">
@@ -116,7 +89,7 @@ export default function DownloadPage() {
             <Step
               n={3}
               title="Move to Applications"
-              body="Drag Voquence.app from Downloads into your Applications folder. macOS doesn't show a progress bar — the drag itself IS the install. This step matters: launching from Downloads instead can cause permission issues."
+              body="Drag Voquence.app from Downloads into your Applications folder. macOS doesn't show a progress bar. The drag itself IS the install. This step matters: launching from Downloads instead can cause permission issues."
             />
             <Step
               n={4}
@@ -143,7 +116,7 @@ export default function DownloadPage() {
             style={{ color: "#cccccc", fontSize: "14px", lineHeight: 1.6 }}
           >
             Voquence runs on cloud AI today. Bring your own keys from OpenAI and
-            Anthropic — both are free to sign up for, and a typical month of
+            Anthropic. Both are free to sign up for, and a typical month of
             dictation costs about a dollar in API charges.
           </p>
           <ul
@@ -179,7 +152,7 @@ export default function DownloadPage() {
           </ul>
           <p style={{ color: "#aaaaaa", fontSize: "13px", lineHeight: 1.6 }}>
             Paste both into Voquence → Settings → API Keys. That&apos;s it. Local
-            Whisper mode (no keys required) is coming soon — sign up at{" "}
+            Whisper mode (no keys required) is coming soon. Sign up at{" "}
             <Link
               href="/"
               className="underline"
@@ -207,11 +180,11 @@ export default function DownloadPage() {
           <div className="space-y-5">
             <Faq
               q="I dragged Voquence to Applications but I didn't see anything happen. Did it install?"
-              a="Yes. macOS doesn't show a progress bar or wizard when you drag an app to Applications — the drag itself IS the install. Open your Applications folder and Voquence.app will be there. (A proper installer is coming in v0.2.0.)"
+              a="Yes. macOS doesn't show a progress bar or wizard when you drag an app to Applications. The drag itself IS the install. Open your Applications folder and Voquence.app will be there. (A proper installer is coming in v0.2.0.)"
             />
             <Faq
               q="Where is Voquence after I double-clicked the downloaded file?"
-              a="macOS automatically extracts Voquence.app into the same folder as the .tar.gz file — usually your Downloads folder. Look for the V icon. Drag that into Applications."
+              a="macOS automatically extracts Voquence.app into the same folder as the .tar.gz file, usually your Downloads folder. Look for the V icon. Drag that into Applications."
             />
             <Faq
               q="Can I just launch it from my Downloads folder?"
@@ -227,7 +200,7 @@ export default function DownloadPage() {
             />
             <Faq
               q="Will there be a proper installer (.dmg / .pkg)?"
-              a="Yes. A real .dmg installer is shipping with v0.2.0 in about a week, along with Free Local Mode (no API keys needed). For now, the .tar.gz extraction is the install method — works the same, just less polished."
+              a="Yes. A real .dmg installer is shipping with v0.2.0 in about a week, along with Free Local Mode (no API keys needed). For now, the .tar.gz extraction is the install method. Works the same, just less polished."
             />
             <Faq
               q="How do I uninstall?"
@@ -259,48 +232,7 @@ export default function DownloadPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer
-        className="relative z-10 border-t mt-auto"
-        style={{ borderColor: "var(--brand-border)" }}
-      >
-        <div className="max-w-6xl mx-auto px-6 sm:px-12 py-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <Link href="/" className="flex items-center gap-2">
-            <VLogo size={24} />
-            <span
-              className="font-mono"
-              style={{
-                color: "var(--brand-muted)",
-                fontSize: "11px",
-                letterSpacing: "0.12em",
-              }}
-            >
-              VOQUENCE · v0.1.3
-            </span>
-          </Link>
-          <div
-            className="flex gap-6 font-mono text-xs"
-            style={{ color: "var(--brand-muted)" }}
-          >
-            <a
-              href="https://x.com/voquenceapp"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ letterSpacing: "0.1em" }}
-            >
-              X / TWITTER
-            </a>
-            <a
-              href="https://instagram.com/voquenceapp"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ letterSpacing: "0.1em" }}
-            >
-              INSTAGRAM
-            </a>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

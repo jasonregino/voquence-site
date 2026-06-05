@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { VLogo } from "@/components/VLogo";
 import { EmailSignup } from "@/components/EmailSignup";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export default function Home() {
   return (
@@ -8,35 +10,7 @@ export default function Home() {
       {/* Background grid */}
       <div className="fixed inset-0 bg-grid pointer-events-none opacity-60" />
 
-      {/* Top nav */}
-      <nav className="relative z-10 flex justify-between items-center px-6 sm:px-12 py-6">
-        <div className="flex items-center gap-3">
-          <VLogo size={36} />
-          <span
-            className="font-mono font-black"
-            style={{
-              color: "var(--brand-cyan)",
-              fontSize: "18px",
-              letterSpacing: "0.2em",
-            }}
-          >
-            VOQUENCE
-          </span>
-        </div>
-        <a
-          href="https://x.com/voquenceapp"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-mono"
-          style={{
-            color: "var(--brand-muted)",
-            fontSize: "12px",
-            letterSpacing: "0.15em",
-          }}
-        >
-          @VOQUENCEAPP
-        </a>
-      </nav>
+      <SiteHeader />
 
       {/* Hero */}
       <section className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 py-16 sm:py-24">
@@ -167,7 +141,7 @@ export default function Home() {
           <ModeExample
             mode="Tech Support"
             input="customer's printer keeps jamming on every page after the second one they already tried restarting it"
-            output="Hi — sorry the printer is acting up. Since a restart didn't fix it, let's check the paper path. Open the back panel and look for any small shreds in the rollers..."
+            output="Hi, sorry the printer is acting up. Since a restart didn't fix it, let's check the paper path. Open the back panel and look for any small shreds in the rollers..."
             isNew
           />
         </div>
@@ -234,9 +208,10 @@ export default function Home() {
               "Unlimited usage",
             ]}
             comingSoon
+            comingSoonLabel="SHIPS ~1 WEEK"
           />
           <PricingCard
-            tier="Free BYOK"
+            tier="Free (Your Keys)"
             price="$0"
             priceSuffix="to Voquence"
             tagline="For power users with their own API keys."
@@ -244,7 +219,7 @@ export default function Home() {
               "Cloud transcription (Whisper)",
               "Clean Text, Eloquence, Raw modes",
               "Bring your own OpenAI + Anthropic keys",
-              "Pay only what your APIs charge (~$1-3/mo)",
+              "Pay only what your APIs charge (about $1-3 a month)",
               "Unlimited usage",
             ]}
           />
@@ -257,7 +232,7 @@ export default function Home() {
               "Everything in Free, plus:",
               "Book Description, Tweet Thread, Prompt Builder",
               "Tech Support, Email Draft, more",
-              "Managed cloud — zero setup",
+              "Managed cloud, zero setup",
               "Custom modes + history (v1.1)",
             ]}
             highlighted
@@ -279,7 +254,7 @@ export default function Home() {
           className="text-center max-w-xl mx-auto mt-6"
           style={{ color: "var(--brand-muted)", fontSize: "13px" }}
         >
-          Spokenly and Glaido give you cleaner dictation. Voquence gives you finished content.{" "}
+          Other dictation apps give you a transcript. Voquence gives you finished content.{" "}
           <Link
             href="/compare"
             className="underline"
@@ -290,28 +265,7 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Footer */}
-      <footer className="relative z-10 border-t mt-auto" style={{ borderColor: "var(--brand-border)" }}>
-        <div className="max-w-6xl mx-auto px-6 sm:px-12 py-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-2">
-            <VLogo size={24} />
-            <span
-              className="font-mono"
-              style={{ color: "var(--brand-muted)", fontSize: "11px", letterSpacing: "0.12em" }}
-            >
-              VOQUENCE · v1.0 LAUNCHING SOON
-            </span>
-          </div>
-          <div className="flex gap-6 font-mono text-xs" style={{ color: "var(--brand-muted)" }}>
-            <a href="https://x.com/voquenceapp" target="_blank" rel="noopener noreferrer" style={{ letterSpacing: "0.1em" }}>
-              X / TWITTER
-            </a>
-            <a href="https://instagram.com/voquenceapp" target="_blank" rel="noopener noreferrer" style={{ letterSpacing: "0.1em" }}>
-              INSTAGRAM
-            </a>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
@@ -324,6 +278,7 @@ function PricingCard({
   features,
   highlighted = false,
   comingSoon = false,
+  comingSoonLabel = "COMING SOON",
 }: {
   tier: string;
   price: string;
@@ -332,6 +287,7 @@ function PricingCard({
   features: string[];
   highlighted?: boolean;
   comingSoon?: boolean;
+  comingSoonLabel?: string;
 }) {
   return (
     <div
@@ -371,7 +327,7 @@ function PricingCard({
               letterSpacing: "0.15em",
             }}
           >
-            COMING SOON
+            {comingSoonLabel}
           </span>
         )}
       </div>
