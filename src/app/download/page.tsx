@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
 const DOWNLOAD_URL =
-  "https://voquence.com/releases/Voquence_0.1.3_aarch64.app.tar.gz";
+  "https://voquence.com/releases/Voquence_0.1.4_aarch64.app.tar.gz";
 
 export const metadata = {
   title: "Download Voquence",
@@ -59,7 +59,7 @@ export default function DownloadPage() {
             letterSpacing: "0.1em",
           }}
         >
-          VERSION 0.1.3 · APPLE SILICON (M1, M2, M3, M4) · NOTARIZED BY APPLE
+          VERSION 0.1.4 · APPLE SILICON (M1, M2, M3, M4) · NOTARIZED BY APPLE
         </p>
 
         {/* Install steps */}
