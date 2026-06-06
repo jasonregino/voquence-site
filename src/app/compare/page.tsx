@@ -169,7 +169,7 @@ export default function ComparePage() {
             <strong style={{ color: "#ffffff" }}>
               Built for the &ldquo;type for a living&rdquo; crowd.
             </strong>{" "}
-            KDP authors, founders, content creators, prompt engineers. The modes
+            Authors, founders, content creators, prompt engineers. The modes
             are tuned for the actual outputs those people need to ship every day.
           </Win>
         </ul>
@@ -319,21 +319,21 @@ const PAID_TIER_ROWS: CompareRow[] = [
   {
     label: "Custom modes / prompts",
     voquence: { text: "v1.1 ship", pending: true },
-    competitors: [{ text: "No" }, { text: "Yes" }, { text: "Limited" }],
+    competitors: [{ text: "Limited" }, { text: "Yes" }, { text: "Limited" }],
   },
   {
     label: "Platforms",
     voquence: { text: "Mac (Windows soon)" },
     competitors: [
       { text: "Mac, iOS, Windows" },
-      { text: "Mac, Web" },
-      { text: "Mac, Windows, Web" },
+      { text: "Mac only" },
+      { text: "Mac, Windows, iPhone, Android" },
     ],
   },
   {
     label: "Custom dictionary",
     voquence: { text: "v1.1 ship", pending: true },
-    competitors: [{ text: "No" }, { text: "No" }, { text: "No" }],
+    competitors: [{ text: "Not advertised" }, { text: "Yes" }, { text: "Yes" }],
   },
 ];
 
