@@ -1,15 +1,15 @@
 {
-  "version": "0.1.4",
-  "notes": "v0.1.4 ships a hotkey you can actually customize.\n\n• New default: Right Option (alone). Tap to start dictating, tap to stop.\n• Pick your own in Settings > Hotkey: single modifier keys (Right Option, Left Option, Fn, Caps Lock) or 2-key combos (Cmd+Opt+V, etc).\n• Existing Cmd+Opt+V users: automatically migrated to Right Option. You can switch back in Settings if you preferred the old combo.\n\nWhy: Spokenly users have years of single-key muscle memory. Three-key combos break that. Voquence now matches.",
-  "pub_date": "2026-06-06T03:07:28Z",
+  "version": "0.1.5",
+  "notes": "v0.1.5 makes Voquence easier to live in.\n\n• HUD pill now shows the active mode. \"CLEAN TEXT\", \"FOUNDER MODE\", \"POETRY / BARS\" instead of generic \"RECORDING\". No more \"wait, what mode am I in?\" moments.\n• New mode: Poetry / Bars. Turn any voice note into 4-8 rap bars with internal rhyme, or a short free verse for reflective moments.\n• Mode picker reorganized into three groups: Productivity, Professional, Creative.\n\nAuto-update should pull this within a few hours. If your existing hotkey was changed in Settings, it's preserved.",
+  "pub_date": "2026-06-06T22:07:20Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaHB5aHZoc1dyQzFmMHhsT2JtczRRNVl2YVU2RzV5UTVRbnozM255YVpVeEY1UkNldzFyeS9RYy9xcmlNcHVGN0s0WVlUcUNlTjQxcURSWlkwMzNjTHc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNzE1MTM0CWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negorT0o3Y3ByRW4ybm5Sc2hlM1ZJNGVqS3Y1TEpsN0Rhci9JR1NrcmRkMkQzcXNpSG51TUY3Z1lzY0I2dlY5cGlmRndOTGlIZUpUQ2wyWUlPTzdzQm9Ddz09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.1.4_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaHZvd1lTdDhTWmZrOGlwZko0d2czUUpBb0MvOTBhajM3NEEwUzVTdmd4SCtrdDRwek10TzY5NnQ0eVJTNW9FMU50dFhnU1JqSzZQL3cvQlZFTE5KVWdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNzgzMjk5CWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negoyTjlscnB5S3AzdENmRTVmbnNGL3ZrcGFnbENWdTBRamV3eGQwVGwvNzB5M2h5SUFha0VKcVppMmZac3NMaUpBQ0pWRlAzaE1KK09aQk9vZUpYK1pCUT09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.1.5_aarch64.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaHB5aHZoc1dyQzFmMHhsT2JtczRRNVl2YVU2RzV5UTVRbnozM255YVpVeEY1UkNldzFyeS9RYy9xcmlNcHVGN0s0WVlUcUNlTjQxcURSWlkwMzNjTHc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNzE1MTM0CWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negorT0o3Y3ByRW4ybm5Sc2hlM1ZJNGVqS3Y1TEpsN0Rhci9JR1NrcmRkMkQzcXNpSG51TUY3Z1lzY0I2dlY5cGlmRndOTGlIZUpUQ2wyWUlPTzdzQm9Ddz09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.1.4_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaHZvd1lTdDhTWmZrOGlwZko0d2czUUpBb0MvOTBhajM3NEEwUzVTdmd4SCtrdDRwek10TzY5NnQ0eVJTNW9FMU50dFhnU1JqSzZQL3cvQlZFTE5KVWdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNzgzMjk5CWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negoyTjlscnB5S3AzdENmRTVmbnNGL3ZrcGFnbENWdTBRamV3eGQwVGwvNzB5M2h5SUFha0VKcVppMmZac3NMaUpBQ0pWRlAzaE1KK09aQk9vZUpYK1pCUT09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.1.5_aarch64.app.tar.gz"
     }
   }
 }

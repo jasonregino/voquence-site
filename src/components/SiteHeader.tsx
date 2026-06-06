@@ -26,7 +26,8 @@ export function SiteHeader() {
 
       <div className="flex items-center gap-5 sm:gap-7">
         <NavLink href="/download">DOWNLOAD</NavLink>
-        <NavLink href="/compare">COMPARE</NavLink>
+        {/* COMPARE link parked until /compare page is audited against
+            competitor docs — we can't risk falsifying capabilities. */}
         <a
           href="https://x.com/voquenceapp"
           target="_blank"
