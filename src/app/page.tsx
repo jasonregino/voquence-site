@@ -54,9 +54,8 @@ export default function Home() {
           className="max-w-xl text-base mb-12 leading-relaxed"
           style={{ color: "#aaaaaa" }}
         >
-          Want it fully private and faster? Turn on Local Whisper and
-          transcription runs entirely on your Mac. Faster than the cloud API,
-          offline, no API key, no per-minute cost.
+          Want it private and faster? Turn on Local Whisper — runs entirely on
+          your Mac. Offline, no API key, no per-minute cost.
         </p>
 
         <Link
