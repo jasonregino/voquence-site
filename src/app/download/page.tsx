@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
 const DOWNLOAD_URL =
-  "https://voquence.com/releases/Voquence_0.2.1_aarch64.app.tar.gz";
+  "https://voquence.com/releases/Voquence_0.2.1_aarch64.dmg";
 
 export const metadata = {
   title: "Download Voquence",
@@ -34,7 +34,7 @@ export default function DownloadPage() {
           className="mb-10"
           style={{ color: "#cccccc", fontSize: "16px", lineHeight: 1.6 }}
         >
-          Voice into ready-to-paste content. Mac, Apple Silicon. ~3 MB download.
+          Voice into ready-to-paste content. Mac, Apple Silicon. ~4 MB DMG.
         </p>
 
         <a
@@ -72,27 +72,22 @@ export default function DownloadPage() {
               letterSpacing: "0.18em",
             }}
           >
-            INSTALL IN 4 STEPS
+            INSTALL IN 3 STEPS
           </h2>
 
           <ol className="space-y-5">
             <Step
               n={1}
-              title="Download"
-              body="Click the button above. The file is a 3 MB .tar.gz archive."
+              title="Download + open the DMG"
+              body="Click the button above to download the 4 MB .dmg file, then double-click it. A small window opens showing the Voquence app icon next to a shortcut to your Applications folder."
             />
             <Step
               n={2}
-              title="Extract"
-              body="Double-click the downloaded file. macOS will automatically extract Voquence.app into your Downloads folder."
+              title="Drag Voquence into Applications"
+              body="Inside the DMG window, drag the Voquence icon onto the Applications folder shortcut. That copies the app into /Applications/ in one move. After it copies, you can eject the DMG (right-click → Eject) and trash the .dmg file."
             />
             <Step
               n={3}
-              title="Move to Applications"
-              body="Drag Voquence.app from Downloads into your Applications folder. macOS doesn't show a progress bar. The drag itself IS the install. Launching from Downloads can cause permission issues, so if you skip this step Voquence now shows a banner on startup with a one-click fix."
-            />
-            <Step
-              n={4}
               title="Launch"
               body="Open Applications, double-click Voquence. A Welcome screen will walk you through granting Microphone, Accessibility, and Apple Events permissions. All three are required for the paste-at-cursor magic."
             />
@@ -176,16 +171,12 @@ export default function DownloadPage() {
 
           <div className="space-y-5">
             <Faq
-              q="I dragged Voquence to Applications but I didn't see anything happen. Did it install?"
-              a="Yes. macOS doesn't show a progress bar or wizard when you drag an app to Applications. The drag itself IS the install. Open your Applications folder and Voquence.app will be there. (A .dmg installer is rolling out shortly to make this a single step.)"
+              q="I dragged Voquence onto the Applications shortcut. Did it install?"
+              a="Yes. macOS doesn't show a progress bar or wizard when you drop an app onto Applications inside a DMG. The drop itself IS the copy. Open your Applications folder and Voquence.app will be there."
             />
             <Faq
-              q="Where is Voquence after I double-clicked the downloaded file?"
-              a="macOS automatically extracts Voquence.app into the same folder as the .tar.gz file, usually your Downloads folder. Look for the V icon. Drag that into Applications."
-            />
-            <Faq
-              q="Can I just launch it from my Downloads folder?"
-              a="Technically yes, but I don't recommend it. macOS keeps a 'quarantined' marker on files in Downloads that can make Accessibility permissions flaky. Drag to Applications first, then launch from there."
+              q="Can I just launch Voquence from inside the DMG window?"
+              a="Technically yes, but don't. Apps run from a mounted DMG can't be updated and macOS often blocks Accessibility permissions on them. Drag Voquence onto the Applications shortcut first, eject the DMG, then launch from Applications."
             />
             <Faq
               q={"macOS says “Voquence can't be opened because Apple cannot check it for malicious software.”"}
@@ -194,10 +185,6 @@ export default function DownloadPage() {
             <Faq
               q="The Welcome screen didn't appear when I launched."
               a="Quit Voquence completely (Cmd+Q, or right-click the Dock icon → Quit). Then launch again from Applications. The Welcome screen should appear on first run."
-            />
-            <Faq
-              q="Will there be a proper installer (.dmg / .pkg)?"
-              a="A .dmg installer is built and rolling out shortly; for now the download is a .tar.gz archive that extracts the same app, just with one extra drag step. Free Local Mode already shipped in v0.2.0, so offline dictation with no API keys is available today — turn it on in Settings → Local Whisper."
             />
             <Faq
               q="How do I uninstall?"
