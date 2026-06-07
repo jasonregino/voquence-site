@@ -72,7 +72,7 @@ export default function Home() {
             letterSpacing: "0.1em",
           }}
         >
-          APPLE SILICON · NOTARIZED · v0.1.5
+          APPLE SILICON · NOTARIZED · v0.2.0
         </p>
 
         <div
@@ -351,7 +351,7 @@ export default function Home() {
           />
           <FaqItem
             q="When does Local Whisper Mode ship?"
-            a="v0.2.0, weeks not months. Local Whisper runs transcription on your Mac instead of OpenAI's servers. No API key needed for transcription, fully offline, zero per-minute cost. It's the next major release after v0.1.5 (which is what you'd download today)."
+            a="Already shipped in v0.2.0 — that's what you download today. Local Whisper runs transcription on your Mac instead of OpenAI's servers. No API key needed for transcription, fully offline, zero per-minute cost. Download the model from Voquence Settings once it's installed."
           />
           <FaqItem
             q="What about Windows?"

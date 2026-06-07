@@ -1,15 +1,15 @@
 {
-  "version": "0.1.5",
-  "notes": "v0.1.5 makes Voquence easier to live in.\n\n• HUD pill now shows the active mode. \"CLEAN TEXT\", \"FOUNDER MODE\", \"POETRY / BARS\" instead of generic \"RECORDING\". No more \"wait, what mode am I in?\" moments.\n• New mode: Poetry / Bars. Turn any voice note into 4-8 rap bars with internal rhyme, or a short free verse for reflective moments.\n• Mode picker reorganized into three groups: Productivity, Professional, Creative.\n\nAuto-update should pull this within a few hours. If your existing hotkey was changed in Settings, it's preserved.",
-  "pub_date": "2026-06-06T22:07:20Z",
+  "version": "0.2.0",
+  "notes": "v0.2.0 — Local Whisper Mode. The big one.\n\nVoquence can now transcribe your voice entirely on your Mac. No OpenAI Whisper API. No internet. No per-minute cost. Audio never leaves your device.\n\n• New: Local Whisper transcription via whisper.cpp on Apple Silicon. ~141 MB model downloads once from inside Settings, then runs in roughly real-time on your CPU.\n• Settings → Local Whisper: one-click model download with progress bar, on/off toggle, delete button. Toggle is greyed out until the model is installed.\n• When toggled on, dictation skips OpenAI Whisper entirely. You still need your Anthropic key for the AI content modes. Raw Transcript mode now runs fully offline with zero API keys.\n• Fully usable on a plane, on hotspot, or anywhere your Mac has power and a mic.\n\nSmaller fixes: dictation hint at the bottom of the main window now reflects YOUR actual hotkey, and the Welcome screen no longer references the old Cmd+Opt+V default.\n\nPrivacy story is now bulletproof.",
+  "pub_date": "2026-06-07T03:04:39Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaHZvd1lTdDhTWmZrOGlwZko0d2czUUpBb0MvOTBhajM3NEEwUzVTdmd4SCtrdDRwek10TzY5NnQ0eVJTNW9FMU50dFhnU1JqSzZQL3cvQlZFTE5KVWdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNzgzMjk5CWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negoyTjlscnB5S3AzdENmRTVmbnNGL3ZrcGFnbENWdTBRamV3eGQwVGwvNzB5M2h5SUFha0VKcVppMmZac3NMaUpBQ0pWRlAzaE1KK09aQk9vZUpYK1pCUT09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.1.5_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaHZGWHlDMXVRZnR6R1UrR24wUEtUV0VaNUxTUWNEdGgyQWhocE1sSHNpWmRUUWtMeit6ZXRZQTlGNmpOU29wUStrbGMwVmhnUTVnZ0pkK2FHSER4RWcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwODAxMzQ1CWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negprV3B3enRaMUd5c0NFcERpNldFWUtGZ3NWVkJuSG5pMERDZndlV1MrZytVTFFWR0NlY1d2WmxEcTY3T044TDlNTWJUVmY3ak9JajJJNjJncE5YWnhCUT09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.2.0_aarch64.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaHZvd1lTdDhTWmZrOGlwZko0d2czUUpBb0MvOTBhajM3NEEwUzVTdmd4SCtrdDRwek10TzY5NnQ0eVJTNW9FMU50dFhnU1JqSzZQL3cvQlZFTE5KVWdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNzgzMjk5CWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negoyTjlscnB5S3AzdENmRTVmbnNGL3ZrcGFnbENWdTBRamV3eGQwVGwvNzB5M2h5SUFha0VKcVppMmZac3NMaUpBQ0pWRlAzaE1KK09aQk9vZUpYK1pCUT09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.1.5_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaHZGWHlDMXVRZnR6R1UrR24wUEtUV0VaNUxTUWNEdGgyQWhocE1sSHNpWmRUUWtMeit6ZXRZQTlGNmpOU29wUStrbGMwVmhnUTVnZ0pkK2FHSER4RWcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwODAxMzQ1CWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negprV3B3enRaMUd5c0NFcERpNldFWUtGZ3NWVkJuSG5pMERDZndlV1MrZytVTFFWR0NlY1d2WmxEcTY3T044TDlNTWJUVmY3ak9JajJJNjJncE5YWnhCUT09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.2.0_aarch64.app.tar.gz"
     }
   }
 }
