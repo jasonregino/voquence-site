@@ -89,7 +89,7 @@ export default function DownloadPage() {
             <Step
               n={3}
               title="Move to Applications"
-              body="Drag Voquence.app from Downloads into your Applications folder. macOS doesn't show a progress bar. The drag itself IS the install. This step matters: launching from Downloads instead can cause permission issues."
+              body="Drag Voquence.app from Downloads into your Applications folder. macOS doesn't show a progress bar. The drag itself IS the install. Launching from Downloads can cause permission issues, so if you skip this step Voquence now shows a banner on startup with a one-click fix."
             />
             <Step
               n={4}
@@ -115,9 +115,12 @@ export default function DownloadPage() {
             className="mb-4"
             style={{ color: "#cccccc", fontSize: "14px", lineHeight: 1.6 }}
           >
-            Voquence runs on cloud AI today. Bring your own keys from OpenAI and
+            Voquence runs two ways. For fully offline dictation, turn on Local
+            Whisper in Settings: transcription runs entirely on your Mac, no API
+            key needed. For the cloud content modes (Book Description, Tweet
+            Thread, and the rest), bring your own keys from OpenAI and
             Anthropic. Both are free to sign up for, and a typical month of
-            dictation costs about a dollar in API charges.
+            cloud dictation costs about a dollar in API charges.
           </p>
           <ul
             className="space-y-2 mb-4"
@@ -134,7 +137,7 @@ export default function DownloadPage() {
               >
                 OpenAI API key
               </a>{" "}
-              (used for Whisper transcription)
+              (cloud Whisper transcription, optional if you turn on Local Whisper)
             </li>
             <li>
               <span style={{ color: "var(--brand-cyan)" }}>·</span>{" "}
@@ -147,20 +150,14 @@ export default function DownloadPage() {
               >
                 Anthropic API key
               </a>{" "}
-              (used for the AI content modes)
+              (the AI content modes)
             </li>
           </ul>
           <p style={{ color: "#aaaaaa", fontSize: "13px", lineHeight: 1.6 }}>
-            Paste both into Voquence → Settings → API Keys. That&apos;s it. Local
-            Whisper mode (no keys required) is coming soon. Sign up at{" "}
-            <Link
-              href="/"
-              className="underline"
-              style={{ color: "var(--brand-cyan)" }}
-            >
-              voquence.com
-            </Link>{" "}
-            to be notified when it ships.
+            Paste both into Voquence → Settings → API Keys. Prefer to stay
+            offline? Open Settings → Local Whisper, download the model once
+            (about 141 MB), and flip it on. Combined with Raw Transcript mode
+            that&apos;s fully offline dictation: no keys, nothing leaving your Mac.
           </p>
         </div>
 
@@ -180,7 +177,7 @@ export default function DownloadPage() {
           <div className="space-y-5">
             <Faq
               q="I dragged Voquence to Applications but I didn't see anything happen. Did it install?"
-              a="Yes. macOS doesn't show a progress bar or wizard when you drag an app to Applications. The drag itself IS the install. Open your Applications folder and Voquence.app will be there. (A proper installer is coming in v0.2.0.)"
+              a="Yes. macOS doesn't show a progress bar or wizard when you drag an app to Applications. The drag itself IS the install. Open your Applications folder and Voquence.app will be there. (A .dmg installer is rolling out shortly to make this a single step.)"
             />
             <Faq
               q="Where is Voquence after I double-clicked the downloaded file?"
@@ -200,7 +197,7 @@ export default function DownloadPage() {
             />
             <Faq
               q="Will there be a proper installer (.dmg / .pkg)?"
-              a="Yes. A real .dmg installer is shipping with v0.2.0 in about a week, along with Free Local Mode (no API keys needed). For now, the .tar.gz extraction is the install method. Works the same, just less polished."
+              a="A .dmg installer is built and rolling out shortly; for now the download is a .tar.gz archive that extracts the same app, just with one extra drag step. Free Local Mode already shipped in v0.2.0, so offline dictation with no API keys is available today — turn it on in Settings → Local Whisper."
             />
             <Faq
               q="How do I uninstall?"

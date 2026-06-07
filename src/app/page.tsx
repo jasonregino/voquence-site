@@ -42,12 +42,20 @@ export default function Home() {
         </p>
 
         <p
-          className="max-w-xl text-lg mb-12 leading-relaxed"
+          className="max-w-xl text-lg mb-6 leading-relaxed"
           style={{ color: "#cccccc" }}
         >
           Most dictation apps give you a transcript. Voquence turns your voice into
           finished business content. Book descriptions, tweet threads, AI prompts,
           tech support replies, pasted at your cursor in seconds.
+        </p>
+
+        <p
+          className="max-w-xl text-base mb-12 leading-relaxed"
+          style={{ color: "#aaaaaa" }}
+        >
+          Want it fully private? Turn on Local Whisper and transcription runs
+          entirely on your Mac. Offline, no API key, no per-minute cost.
         </p>
 
         <Link
@@ -87,7 +95,7 @@ export default function Home() {
               letterSpacing: "0.15em",
             }}
           >
-            OR GET NOTIFIED WHEN LOCAL MODE SHIPS
+            LOCAL WHISPER IS LIVE · GET NOTIFIED ON WINDOWS + NEW MODES
           </p>
           <EmailSignup />
         </div>
@@ -138,7 +146,7 @@ export default function Home() {
         {/* CREATOR TIER — ready-to-paste content modes (8) */}
         <TierLabel
           tier="CREATOR — $19/MO"
-          subhead="Everything in Free, plus eight ready-to-paste content modes. Voice in, finished content out."
+          subhead="Everything in Free, plus nine ready-to-paste content modes. Voice in, finished content out."
         />
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-16">
           <ModeExample
@@ -248,7 +256,7 @@ export default function Home() {
               "Unlimited usage",
             ]}
             comingSoon
-            comingSoonLabel="SHIPS ~1 WEEK"
+            comingSoonLabel="NEW · v0.2.0"
           />
           <PricingCard
             tier="Free (Your Keys)"
@@ -327,7 +335,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto space-y-3">
           <FaqItem
             q="Is my voice data private?"
-            a="Yes. On the Free tier (Bring Your Own Keys), your audio goes directly from your Mac to OpenAI's Whisper API, and your transcript goes directly to Anthropic's Claude. Voquence the company never sees or stores either. When Local Whisper Mode ships in v0.2.0 (weeks not months), transcription runs entirely on your Mac — nothing leaves your device."
+            a="Yes. Two layers. Turn on Local Whisper (shipped in v0.2.0) and transcription runs entirely on your Mac, nothing leaves your device. Prefer the cloud content modes? On the Free tier your audio goes directly from your Mac to OpenAI's Whisper API and your transcript goes directly to Anthropic's Claude. Voquence the company never sees or stores either."
           />
           <FaqItem
             q="Do I need an account?"
@@ -339,7 +347,7 @@ export default function Home() {
           />
           <FaqItem
             q="How is Voquence different from Spokenly and Wispr Flow?"
-            a="Spokenly and Wispr Flow are both solid dictation apps. They turn voice into a clean transcript fast. Voquence goes a step further: the same voice note becomes a polished tweet thread, book description, support reply, email draft, or one of twelve other ready-to-paste content modes. If you want fast transcription, Spokenly and Wispr are great choices. If you want voice in and finished content out — saving the rewriting step entirely — that's where Voquence fits."
+            a="Spokenly and Wispr Flow are both solid dictation apps. They turn voice into a clean transcript fast. Voquence goes a step further: the same voice note becomes a polished tweet thread, book description, support reply, email draft, or one of nine ready-to-paste content modes total. If you want fast transcription, Spokenly and Wispr are great choices. If you want voice in and finished content out — saving the rewriting step entirely — that's where Voquence fits."
           />
           <FaqItem
             q="Will Voquence work in any Mac app?"
@@ -355,7 +363,7 @@ export default function Home() {
           />
           <FaqItem
             q="What about Windows?"
-            a="In active development. We're targeting a Windows release a few weeks after v0.2.0 ships on Mac. Drop your email at the top of this page and you'll be the first to know the moment it's ready."
+            a="In active development. The Mac version is shipping and stable (v0.2.0 added Local Whisper, v0.2.1 added the install-location safety banner). A Windows release is targeted for a few weeks out. Drop your email at the top of this page and you'll be the first to know the moment it's ready."
           />
         </div>
       </section>

@@ -124,11 +124,12 @@ export default function ComparePage() {
           </Loss>
           <Loss>
             <strong style={{ color: "#ffffff" }}>
-              Local Mode isn&apos;t live yet.
+              Local Whisper needs a one-time model download.
             </strong>{" "}
-            Voquence ships Local Mode within about a week. Until then, the
-            &ldquo;truly free no-setup&rdquo; tier belongs to Spokenly. If
-            that&apos;s the only box you need ticked today, install Spokenly.
+            Local Whisper is live and free, but you download a one-time ~141 MB
+            model from Settings before your first fully offline session.
+            Spokenly&apos;s local models work the same way. It&apos;s a one-time
+            step, not a subscription.
           </Loss>
         </ul>
       </section>
@@ -155,7 +156,7 @@ export default function ComparePage() {
             </strong>{" "}
             Speak a rough idea. Get back a book description, a tweet thread, a
             structured AI prompt, a polished email. Spokenly, Glaido, and Wispr
-            Flow don&apos;t ship these modes. Voquence has 10+.
+            Flow don&apos;t ship these modes. Voquence has 12.
           </Win>
           <Win>
             <strong style={{ color: "#ffffff" }}>
@@ -257,12 +258,12 @@ const FREE_TIER_ROWS: CompareRow[] = [
   },
   {
     label: "Works offline",
-    voquence: { text: "Local Mode ships ~1 week", pending: true },
+    voquence: { text: "Yes (Local Whisper, v0.2.0)" },
     competitors: [{ text: "Yes" }, { text: "No" }, { text: "No" }],
   },
   {
     label: "No API keys needed",
-    voquence: { text: "With Local Mode (ships ~1 week)", pending: true },
+    voquence: { text: "Yes, with Local Whisper" },
     competitors: [{ text: "Yes (Local Mode)" }, { text: "Yes" }, { text: "Yes" }],
   },
   {
