@@ -1,15 +1,15 @@
 {
-  "version": "0.2.1",
-  "notes": "v0.2.1 — small but important.\n\nA user-trap fix that prevents you from getting stuck on an old version.\n\n• New: install-location detection. If Voquence is running from your Downloads folder, Desktop, or anywhere other than Applications, a yellow banner appears in the main window telling you to drag the app over. macOS keeps a quarantine flag on apps in Downloads that makes auto-updates silently fail. Now Voquence catches that and tells you exactly what to fix.\n• The banner has a \"Show in Finder\" button that opens the folder where Voquence is right now, so you can drag it from there into Applications in two seconds.\n• Also: small clarification on the OpenAI API key field — it's now labeled optional if you're using Local Whisper.",
-  "pub_date": "2026-06-07T04:25:51Z",
+  "version": "0.2.2",
+  "notes": "v0.2.2 — install + update polish.\n\nSmall release focused on smoothing two friction points existing users have hit.\n\n• New: DMG installer. The /download flow is now the standard Mac drag-onto-Applications experience instead of a .tar.gz that extracts first. Cleaner for new installs. (Auto-updates from v0.2.1 keep using the .tar.gz path — nothing changes for you here.)\n• Update errors now speak English. If the auto-updater hits the classic \"Read-only file system\" trap (running from Downloads instead of Applications), the message in Settings → Check for Updates now reads \"Move Voquence to /Applications/ to enable updates\" instead of \"Couldn't check: Error: ... (os error 30)\". Network errors get a similarly clear line.\n• Local Whisper continues running on CPU (~0.58s per dictation). Metal GPU is queued for v0.2.3 — current Apple Metal SDK rejects some of whisper.cpp's shader code, and the fix isn't a single-line bump. CPU is already faster than the OpenAI API round trip, so it's an optimization, not a blocker.",
+  "pub_date": "2026-06-07T19:36:30Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaGpsVWpVT0QydWxKTUVXcVRqK1AyVHJMVW95ZnkrbWtyL1lBNWltNWhVNVdUQjNqdWplV2U1SFkxZTU2OWhoZkNzY0tKaTF3eG9pV2F4Y0tjVS95OHdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwODA2MjUyCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpZMkdkdlRCMmF1SE96MU1TdmNPRG4vRGdiRWNpT0daSFNYT0poZUg2dEZmamQ3a01veXpyTXJ2K2ZvNzl4UzVPWU40b1d2VFQ2bVM3RkkyN2FzdmNBQT09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.2.1_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaHZsWnVxMk8yVVRQZVFmdDFINW5FUzJXQko1NUlvTG51Uk1pZFdScExNcVZmMFNUTlJFSHZLUHd4VUJtK3ZmcVBNbEJLYTlvYzBJc1pRbG0wUzg1RmcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwODYwOTkwCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpJb2VJSUUxeHk0Q3dJQWgrMnFPa3NhVGpndUcrUktPOFluVDYyVTZHalFjVnBGUkJTQW9qQ1JwSm1ZNnhWWk5KWEtYZG9tb1RTZ1ZWelVaVDlpWGtCQT09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.2.2_aarch64.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaGpsVWpVT0QydWxKTUVXcVRqK1AyVHJMVW95ZnkrbWtyL1lBNWltNWhVNVdUQjNqdWplV2U1SFkxZTU2OWhoZkNzY0tKaTF3eG9pV2F4Y0tjVS95OHdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwODA2MjUyCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpZMkdkdlRCMmF1SE96MU1TdmNPRG4vRGdiRWNpT0daSFNYT0poZUg2dEZmamQ3a01veXpyTXJ2K2ZvNzl4UzVPWU40b1d2VFQ2bVM3RkkyN2FzdmNBQT09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.2.1_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaHZsWnVxMk8yVVRQZVFmdDFINW5FUzJXQko1NUlvTG51Uk1pZFdScExNcVZmMFNUTlJFSHZLUHd4VUJtK3ZmcVBNbEJLYTlvYzBJc1pRbG0wUzg1RmcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwODYwOTkwCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpJb2VJSUUxeHk0Q3dJQWgrMnFPa3NhVGpndUcrUktPOFluVDYyVTZHalFjVnBGUkJTQW9qQ1JwSm1ZNnhWWk5KWEtYZG9tb1RTZ1ZWelVaVDlpWGtCQT09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.2.2_aarch64.app.tar.gz"
     }
   }
 }
