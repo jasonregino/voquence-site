@@ -6,7 +6,7 @@ import { VLogo } from "@/components/VLogo";
  * version drift between the homepage ("v1.0 LAUNCHING SOON") and the other
  * pages ("v0.1.3"). Centralized here so version updates happen in one place.
  */
-const CURRENT_VERSION = "v0.2.2";
+const CURRENT_VERSION = "v0.3.0";
 
 export function SiteFooter() {
   return (

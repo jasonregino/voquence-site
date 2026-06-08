@@ -1,15 +1,15 @@
 {
-  "version": "0.2.2",
-  "notes": "v0.2.2 — install + update polish.\n\nSmall release focused on smoothing two friction points existing users have hit.\n\n• New: DMG installer. The /download flow is now the standard Mac drag-onto-Applications experience instead of a .tar.gz that extracts first. Cleaner for new installs. (Auto-updates from v0.2.1 keep using the .tar.gz path — nothing changes for you here.)\n• Update errors now speak English. If the auto-updater hits the classic \"Read-only file system\" trap (running from Downloads instead of Applications), the message in Settings → Check for Updates now reads \"Move Voquence to /Applications/ to enable updates\" instead of \"Couldn't check: Error: ... (os error 30)\". Network errors get a similarly clear line.\n• Local Whisper continues running on CPU (~0.58s per dictation). Metal GPU is queued for v0.2.3 — current Apple Metal SDK rejects some of whisper.cpp's shader code, and the fix isn't a single-line bump. CPU is already faster than the OpenAI API round trip, so it's an optimization, not a blocker.",
-  "pub_date": "2026-06-07T19:36:30Z",
+  "version": "0.3.0",
+  "notes": "v0.3.0 — Local Whisper now auto-installs during Welcome.\n\nThe headline change for anyone who installs Voquence for the first time: you no longer need an API key to get started. The Welcome flow now downloads the Local Whisper model (~141 MB, ~30 seconds) and flips the toggle on for you. First dictation works offline, no signup, no keys, $0.\n\nFor existing users (you), this means nothing changes day-to-day. Your settings persist. But the next person you tell about Voquence will have a much smoother first 60 seconds.\n\nAlso in this release:\n• The final Welcome screen now shows your actual hotkey instead of the old hardcoded ⌘+⌥+V. (If you're on the v0.1.4+ default of Right Option alone, the Welcome screen now matches.)\n• Bug fixes around model download progress + auto-enable-on-completion.\n\nNothing about cloud mode, BYOK, or the existing modes has changed. Update at your leisure.",
+  "pub_date": "2026-06-08T12:25:00Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaHZsWnVxMk8yVVRQZVFmdDFINW5FUzJXQko1NUlvTG51Uk1pZFdScExNcVZmMFNUTlJFSHZLUHd4VUJtK3ZmcVBNbEJLYTlvYzBJc1pRbG0wUzg1RmcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwODYwOTkwCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpJb2VJSUUxeHk0Q3dJQWgrMnFPa3NhVGpndUcrUktPOFluVDYyVTZHalFjVnBGUkJTQW9qQ1JwSm1ZNnhWWk5KWEtYZG9tb1RTZ1ZWelVaVDlpWGtCQT09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.2.2_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaGxYZFZIQSt0a3oyOUs5c251eVlOWng2ZXAxdmFubVF1SHVJdmVRMHphYVR6TU5pVGZ4VlI0by9jeWY1R3JzbXhaWlVJYkRQU0VCYkdnSXRPUTA4VVE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwOTIxMzkyCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpMb3dJRmRUaURqd3pRNm1KTHpLcE5RSktocXVSVUkwNFlTYy9YbUNtRWtzVXhXb2NUZHY1ZXNhdjJoS29JL3JxN1FmQ1oyOGxTbFZrUTlyR0U4Sk9EUT09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.3.0_aarch64.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaHZsWnVxMk8yVVRQZVFmdDFINW5FUzJXQko1NUlvTG51Uk1pZFdScExNcVZmMFNUTlJFSHZLUHd4VUJtK3ZmcVBNbEJLYTlvYzBJc1pRbG0wUzg1RmcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwODYwOTkwCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpJb2VJSUUxeHk0Q3dJQWgrMnFPa3NhVGpndUcrUktPOFluVDYyVTZHalFjVnBGUkJTQW9qQ1JwSm1ZNnhWWk5KWEtYZG9tb1RTZ1ZWelVaVDlpWGtCQT09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.2.2_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaGxYZFZIQSt0a3oyOUs5c251eVlOWng2ZXAxdmFubVF1SHVJdmVRMHphYVR6TU5pVGZ4VlI0by9jeWY1R3JzbXhaWlVJYkRQU0VCYkdnSXRPUTA4VVE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwOTIxMzkyCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpMb3dJRmRUaURqd3pRNm1KTHpLcE5RSktocXVSVUkwNFlTYy9YbUNtRWtzVXhXb2NUZHY1ZXNhdjJoS29JL3JxN1FmQ1oyOGxTbFZrUTlyR0U4Sk9EUT09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.3.0_aarch64.app.tar.gz"
     }
   }
 }
