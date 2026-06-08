@@ -1,15 +1,15 @@
 {
-  "version": "0.3.0",
-  "notes": "v0.3.0 — Local Whisper now auto-installs during Welcome.\n\nThe headline change for anyone who installs Voquence for the first time: you no longer need an API key to get started. The Welcome flow now downloads the Local Whisper model (~141 MB, ~30 seconds) and flips the toggle on for you. First dictation works offline, no signup, no keys, $0.\n\nFor existing users (you), this means nothing changes day-to-day. Your settings persist. But the next person you tell about Voquence will have a much smoother first 60 seconds.\n\nAlso in this release:\n• The final Welcome screen now shows your actual hotkey instead of the old hardcoded ⌘+⌥+V. (If you're on the v0.1.4+ default of Right Option alone, the Welcome screen now matches.)\n• Bug fixes around model download progress + auto-enable-on-completion.\n\nNothing about cloud mode, BYOK, or the existing modes has changed. Update at your leisure.",
-  "pub_date": "2026-06-08T12:25:00Z",
+  "version": "0.3.1",
+  "notes": "v0.3.1 — in-app guard rail for Claude-backed modes without an Anthropic key.\n\nWhat this fixes: pre-v0.3.1, if you tried Clean Text, Eloquence, or any of the content modes without an Anthropic API key set, the AI step failed silently and your raw transcript landed at your cursor with no explanation. People (rightly) thought Voquence was broken.\n\nNow when you trigger a Claude-backed mode without a key, Voquence pops up a friendly screen explaining what's needed and gives you three clear paths: (1) Get a free Anthropic key — opens the right page in your browser, (2) Open Settings if you already have one to paste, or (3) Just use Raw Transcript instead. Your voice work isn't lost either way — the raw transcript still pastes at your cursor.\n\nThe screen also surfaces the Anthropic $5 new-account credit. That's about 17,000 polishings before you'd ever pay anything, which most users will never hit.\n\nAlso in this release:\n• Polish to the mode-prompt copy in case the new prompt fires in a state we didn't expect.\n\nNo breaking changes. Existing users keep their keys, settings, and current mode.",
+  "pub_date": "2026-06-08T17:40:00Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaGxYZFZIQSt0a3oyOUs5c251eVlOWng2ZXAxdmFubVF1SHVJdmVRMHphYVR6TU5pVGZ4VlI0by9jeWY1R3JzbXhaWlVJYkRQU0VCYkdnSXRPUTA4VVE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwOTIxMzkyCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpMb3dJRmRUaURqd3pRNm1KTHpLcE5RSktocXVSVUkwNFlTYy9YbUNtRWtzVXhXb2NUZHY1ZXNhdjJoS29JL3JxN1FmQ1oyOGxTbFZrUTlyR0U4Sk9EUT09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.3.0_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaG9TZnhZNDE1c2VrSFFzT0IrRVdObUJYYmttdVl4MXhneU51WGZhYnFyNGdLUmdyYzJIWmY2QzMzQ1JvMWF4MG5LUUF4dndrS3hSYjBRZXlVbDc3VEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwOTQwNDgxCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpDanBaUGI3WVBOS2Q2MGF6bTM1YkcxVVJJY0o4Z2JnNVNvL0oyTk8vZGQ5SFFvTlV2cGhFZFFqK0poU0RDZFdXenNKaS9SMi9mamdyNE1GTzNlTDREUT09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.3.1_aarch64.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaGxYZFZIQSt0a3oyOUs5c251eVlOWng2ZXAxdmFubVF1SHVJdmVRMHphYVR6TU5pVGZ4VlI0by9jeWY1R3JzbXhaWlVJYkRQU0VCYkdnSXRPUTA4VVE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwOTIxMzkyCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpMb3dJRmRUaURqd3pRNm1KTHpLcE5RSktocXVSVUkwNFlTYy9YbUNtRWtzVXhXb2NUZHY1ZXNhdjJoS29JL3JxN1FmQ1oyOGxTbFZrUTlyR0U4Sk9EUT09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.3.0_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaG9TZnhZNDE1c2VrSFFzT0IrRVdObUJYYmttdVl4MXhneU51WGZhYnFyNGdLUmdyYzJIWmY2QzMzQ1JvMWF4MG5LUUF4dndrS3hSYjBRZXlVbDc3VEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwOTQwNDgxCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpDanBaUGI3WVBOS2Q2MGF6bTM1YkcxVVJJY0o4Z2JnNVNvL0oyTk8vZGQ5SFFvTlV2cGhFZFFqK0poU0RDZFdXenNKaS9SMi9mamdyNE1GTzNlTDREUT09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.3.1_aarch64.app.tar.gz"
     }
   }
 }

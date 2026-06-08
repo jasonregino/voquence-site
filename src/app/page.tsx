@@ -80,7 +80,7 @@ export default function Home() {
             letterSpacing: "0.1em",
           }}
         >
-          APPLE SILICON · NOTARIZED · v0.3.0
+          APPLE SILICON · NOTARIZED · v0.3.1
         </p>
 
         <div
@@ -373,7 +373,7 @@ export default function Home() {
           />
           <FaqItem
             q="What about Windows?"
-            a="In active development. The Mac version is shipping and stable (v0.2.0 added Local Whisper, v0.2.1 added the install-location safety banner, v0.2.2 ships the DMG installer + clearer update errors, v0.3.0 auto-installs Local Whisper during the Welcome flow so no API keys are needed to get started). A Windows release is targeted for a few weeks out. Drop your email at the top of this page and you'll be the first to know the moment it's ready."
+            a="In active development. The Mac version is shipping and stable (v0.2.0 added Local Whisper, v0.2.1 added the install-location safety banner, v0.2.2 ships the DMG installer + clearer update errors, v0.3.0 auto-installs Local Whisper during the Welcome flow so no API keys are needed to get started, v0.3.1 adds a friendly in-app guard rail when you try a Claude-backed mode without a key). A Windows release is targeted for a few weeks out. Drop your email at the top of this page and you'll be the first to know the moment it's ready."
           />
           <FaqItem
             q="Why isn't Voquence on the Mac App Store?"
