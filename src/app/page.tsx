@@ -122,8 +122,8 @@ export default function Home() {
 
         {/* FREE TIER — dictation modes (3) */}
         <TierLabel
-          tier="FREE — BRING YOUR OWN KEYS"
-          subhead="Three dictation modes. No subscription. About $1/month in API charges from OpenAI + Anthropic."
+          tier="FREE — LOCAL WHISPER OR YOUR OWN KEYS"
+          subhead="Three dictation modes. Free with Local Whisper (offline, no setup, no keys). Or bring your own OpenAI + Anthropic keys for cloud mode (about $1/month in API charges)."
         />
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-16">
           <ModeExample
