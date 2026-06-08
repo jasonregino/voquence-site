@@ -136,7 +136,7 @@ export default function Home() {
         {/* FOUNDING LICENSE — all polish + content modes, one-time */}
         <TierLabel
           tier="FOUNDING LICENSE — $19 ONE-TIME (FIRST 100)"
-          subhead="11 polish + content modes for one price. Bring your own Anthropic key for the AI step (about 8 cents/month, and new accounts get $5 free credit). After 100 founding buyers the price moves to $29 — license owners keep theirs forever."
+          subhead="11 polish + content modes. One purchase, own it forever."
         />
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-16">
           <ModeExample
@@ -195,6 +195,7 @@ export default function Home() {
             output={`Six months deep, nobody knows\nBuilding in the dark, that's how it goes\nThe work don't lie when silence stays\nThis is the grind, the long game days\nNo applause for the early hours\nJust me and the doubt and the late-night powers\nTrust the slow build, trust the climb\nThe receipts come due in their own time`}
             isNew
           />
+          <FoundingLicenseCard />
         </div>
 
         {/* COMING SOON — v1.1 roadmap teasers */}
@@ -493,6 +494,125 @@ function PricingCard({
             </li>
           ))}
         </ul>
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Closing card for the Founding License grid — sits in the 12th slot
+ * (bottom-right) so the 11 mode-example cards plus this one form a clean
+ * 4x3 grid instead of leaving an empty cell. Styled to match ModeExample
+ * exactly (same outer chrome, same cyan border + halo, same header bar)
+ * so it reads as part of the row, but the inner content is the value
+ * recap + pricing math rather than a sample input/output.
+ *
+ * Intentionally NOT a button right now. The Founding License checkout
+ * isn't wired (license-key system is item F2 on the launch punchlist).
+ * A "Buy Now" link today would be a lie. When the checkout ships, this
+ * component upgrades to a real CTA in the same layout — no card-shape
+ * surgery required.
+ */
+function FoundingLicenseCard() {
+  return (
+    <div
+      className="rounded-xl overflow-hidden"
+      style={{
+        background: "var(--brand-surface)",
+        border: "1px solid var(--brand-cyan)",
+        boxShadow: "0 0 16px rgba(0, 212, 255, 0.18)",
+      }}
+    >
+      <div
+        className="font-mono px-5 py-3 flex items-center justify-between"
+        style={{
+          color: "var(--brand-cyan)",
+          fontSize: "11px",
+          letterSpacing: "0.2em",
+          fontWeight: 800,
+          borderBottom: "1px solid var(--brand-border)",
+        }}
+      >
+        <span>FOUNDING LICENSE</span>
+        <span
+          style={{
+            color: "#22c55e",
+            border: "1px solid #22c55e",
+            borderRadius: "4px",
+            padding: "1px 6px",
+            fontSize: "9px",
+            letterSpacing: "0.15em",
+          }}
+        >
+          FIRST 100
+        </span>
+      </div>
+      <div className="p-5 space-y-3">
+        <div>
+          <div className="flex items-baseline gap-2">
+            <span
+              style={{
+                color: "#ffffff",
+                fontSize: "30px",
+                fontWeight: 700,
+                letterSpacing: "-0.02em",
+              }}
+            >
+              $19
+            </span>
+            <span
+              className="font-mono"
+              style={{
+                color: "var(--brand-muted)",
+                fontSize: "11px",
+                letterSpacing: "0.1em",
+              }}
+            >
+              ONE-TIME
+            </span>
+          </div>
+          <p
+            style={{
+              color: "#aaaaaa",
+              fontSize: "12px",
+              lineHeight: 1.5,
+              marginTop: "4px",
+            }}
+          >
+            After the first 100 buyers, the price moves to $29 — license
+            owners keep theirs forever.
+          </p>
+        </div>
+
+        <div
+          style={{
+            borderTop: "1px solid var(--brand-border)",
+            paddingTop: "12px",
+          }}
+        >
+          <p
+            className="font-mono mb-2"
+            style={{
+              color: "var(--brand-cyan)",
+              fontSize: "10px",
+              letterSpacing: "0.18em",
+            }}
+          >
+            WHAT YOU GET
+          </p>
+          <ul
+            className="space-y-1.5"
+            style={{ color: "#cccccc", fontSize: "13px", lineHeight: 1.45 }}
+          >
+            <li>All 11 polish + content modes above</li>
+            <li>Free updates on the v0.3 series</li>
+            <li>
+              <span style={{ color: "#888" }}>
+                Bring your Anthropic key (~8¢/mo, $5 free credit)
+              </span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
