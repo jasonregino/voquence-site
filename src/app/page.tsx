@@ -284,6 +284,8 @@ export default function Home() {
               "Custom modes + history (v1.1)",
             ]}
             highlighted
+            comingSoon
+            comingSoonLabel="COMING SOON"
           />
         </div>
 
@@ -418,7 +420,7 @@ function PricingCard({
         }}
       >
         <span>{tier.toUpperCase()}</span>
-        {highlighted && (
+        {highlighted && !comingSoon && (
           <span style={{ fontSize: "9px", letterSpacing: "0.15em" }}>
             MOST POPULAR
           </span>
