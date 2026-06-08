@@ -29,9 +29,15 @@ export function SiteFooter() {
           </span>
         </Link>
         <div
-          className="flex gap-6 font-mono text-xs"
+          className="flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs justify-center sm:justify-end"
           style={{ color: "var(--brand-muted)" }}
         >
+          <Link href="/privacy" style={{ letterSpacing: "0.1em" }}>
+            PRIVACY
+          </Link>
+          <Link href="/terms" style={{ letterSpacing: "0.1em" }}>
+            TERMS
+          </Link>
           <a
             href="https://x.com/voquenceapp"
             target="_blank"

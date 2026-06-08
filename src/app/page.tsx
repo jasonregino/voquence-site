@@ -365,6 +365,10 @@ export default function Home() {
             q="What about Windows?"
             a="In active development. The Mac version is shipping and stable (v0.2.0 added Local Whisper, v0.2.1 added the install-location safety banner, v0.2.2 ships the DMG installer + clearer update errors). A Windows release is targeted for a few weeks out. Drop your email at the top of this page and you'll be the first to know the moment it's ready."
           />
+          <FaqItem
+            q="Why isn't Voquence on the Mac App Store?"
+            a="Voquence pastes its output at your cursor in any app — TextEdit, Pages, Google Docs in the browser, Slack, Notion, your code editor. That requires the macOS Accessibility API. In late 2025 Apple started rejecting Mac App Store updates for dictation apps that use the Accessibility API to inject text (WhisperPad and others have been hit). Going App Store would either mean shipping a worse product that can't paste at your cursor, or building Voquence and waiting to find out if a future update gets rejected. Direct download is the honest path: you get the real product today, signed by Apple, notarized by Apple, distributed by Voquence directly. If you'd prefer App Store, fair — Spokenly is a solid choice with a more limited cursor-paste story."
+          />
         </div>
       </section>
 
