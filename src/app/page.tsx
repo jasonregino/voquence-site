@@ -151,8 +151,8 @@ export default function Home() {
           />
           <ModeExample
             mode="Book Description"
-            input="kids book about three friends who find a magical treehouse after lightning hits the tree and through the window they see other worlds and learn the real magic is kindness"
-            output="What if a simple treehouse held a magical secret? When lightning strikes their backyard oak, Milo, Sophie, and Jay discover their hand-built treehouse is no ordinary place. Through its glowing window, they see sparkling beaches, snowy streets, and sunlit deserts. But the real magic is the kindness they bring back home..."
+            input="kids book about three friends in a magical treehouse whose window shows other worlds and they learn kindness is the real magic"
+            output="When lightning hits their treehouse, Milo, Sophie, and Jay find its window shows worlds beyond their own. But the real magic is the kindness they bring back home..."
           />
           <ModeExample
             mode="Tweet Thread"
