@@ -151,8 +151,8 @@ export default function Home() {
           />
           <ModeExample
             mode="Book Description"
-            input="book about lifting for guys over 40 who feel tired and weak. thirty day plan. food sleep stress."
-            output="You're not getting old, your testosterone is crashing. Inside, you'll learn how to reverse the signs of aging in 30 days through nutrition, training, and recovery..."
+            input="kids book about three friends who find a magical treehouse after lightning hits the tree and through the window they see other worlds and learn the real magic is kindness"
+            output="What if a simple treehouse held a magical secret? When lightning strikes their backyard oak, Milo, Sophie, and Jay discover their hand-built treehouse is no ordinary place. Through its glowing window, they see sparkling beaches, snowy streets, and sunlit deserts. But the real magic is the kindness they bring back home..."
           />
           <ModeExample
             mode="Tweet Thread"
@@ -266,7 +266,7 @@ export default function Home() {
               "Everything in Free, plus:",
               "Clean Text, Eloquence (polish)",
               "Book Description, Tweet Thread, Tech Support, Email Draft, Founder Mode, Marketing Copy, Social Post, Prompt Builder, Poetry / Bars",
-              "Bring your own Anthropic key (~8¢/mo, $5 free credit)",
+              "Bring your own Anthropic key — free $5 credit covers ~17,000 polishings",
               "Free updates forever on the v0.3 series",
             ]}
             highlighted
@@ -338,7 +338,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto space-y-3">
           <FaqItem
             q="Is my voice data private?"
-            a="Yes. Two layers. Turn on Local Whisper (shipped in v0.2.0) and transcription runs entirely on your Mac, nothing leaves your device. Prefer the cloud content modes? On the Free tier your audio goes directly from your Mac to OpenAI's Whisper API and your transcript goes directly to Anthropic's Claude. Voquence the company never sees or stores either."
+            a="Yes. Local Whisper is auto-installed when you finish Welcome (v0.3.0+) — transcription runs entirely on your Mac, nothing leaves your device. If you choose cloud transcription instead in Settings, your audio goes directly from your Mac to OpenAI's Whisper API using your own key. The polish + content modes send the transcript directly to Anthropic's Claude with your Anthropic key. Either way, Voquence the company never sees or stores any of it."
           />
           <FaqItem
             q="Do I need an account?"
@@ -371,6 +371,10 @@ export default function Home() {
           <FaqItem
             q="When does Local Whisper Mode ship?"
             a="Already shipped in v0.2.0 — that's what you download today. Local Whisper runs transcription on your Mac instead of OpenAI's servers. No API key needed for transcription, fully offline, zero per-minute cost. Download the model from Voquence Settings once it's installed."
+          />
+          <FaqItem
+            q="What Mac do I need to run Voquence?"
+            a="Apple Silicon (M1, M2, M3, M4, or newer) and macOS 11 (Big Sur) or later. That covers any Mac sold since November 2020. The Voquence app itself is about 4 MB; Local Whisper adds a one-time 141 MB model download during onboarding. Voquence does not run on Intel-based Macs."
           />
           <FaqItem
             q="What about Windows?"

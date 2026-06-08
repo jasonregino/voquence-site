@@ -156,7 +156,7 @@ export default function ComparePage() {
             </strong>{" "}
             Speak a rough idea. Get back a book description, a tweet thread, a
             structured AI prompt, a polished email. Spokenly, Glaido, and Wispr
-            Flow don&apos;t ship these modes. Voquence has 12.
+            Flow don&apos;t ship these modes. Voquence has 11.
           </Win>
           <Win>
             <strong style={{ color: "#ffffff" }}>
@@ -199,7 +199,7 @@ export default function ComparePage() {
             className="mb-6"
             style={{ color: "#cccccc", fontSize: "16px", lineHeight: 1.6 }}
           >
-            Voquence is free to try with your own API keys. Takes 5 minutes.
+            Voquence is free to try — no keys, no signup. Local Whisper installs during Welcome and Raw Transcript works immediately.
           </p>
           <Link
             href="/download"
@@ -273,7 +273,7 @@ const FREE_TIER_ROWS: CompareRow[] = [
   },
   {
     label: "AI content modes (Book Description, Tweet, Prompt, etc.)",
-    voquence: { text: "3 modes (your keys)" },
+    voquence: { text: "1 mode free (Raw Transcript)" },
     competitors: [
       { text: "None" },
       { text: "Auto-formatting only" },

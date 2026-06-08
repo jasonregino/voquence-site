@@ -7,7 +7,7 @@ export const metadata = {
     "The rules of using Voquence: what we promise, what we don't, and how disputes are handled. Plain English.",
 };
 
-const LAST_UPDATED = "2026-06-07";
+const LAST_UPDATED = "2026-06-08";
 
 export default function TermsPage() {
   return (

@@ -8,7 +8,7 @@ export const metadata = {
     "What data Voquence collects, what stays on your Mac, what flows to OpenAI and Anthropic, and how to reach us.",
 };
 
-const LAST_UPDATED = "2026-06-07";
+const LAST_UPDATED = "2026-06-08";
 
 export default function PrivacyPage() {
   return (
@@ -134,7 +134,7 @@ export default function PrivacyPage() {
         <H2>Where your API keys live</H2>
         <Block>
           <p>
-            As of v0.2.2 (current), your OpenAI and Anthropic API keys are
+            As of v0.3.1 (current), your OpenAI and Anthropic API keys are
             stored on your Mac in a local JSON file at{" "}
             <code style={{ color: "#ddd", fontSize: "12px" }}>
               ~/Library/Application Support/voquence/config.json

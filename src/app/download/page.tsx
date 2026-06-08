@@ -89,7 +89,7 @@ export default function DownloadPage() {
             <Step
               n={3}
               title="Launch"
-              body="Open Applications, double-click Voquence. A Welcome screen will walk you through granting Microphone, Accessibility, and Apple Events permissions. All three are required for the paste-at-cursor magic."
+              body="Open Applications, double-click Voquence. A Welcome screen will walk you through three macOS permissions: Microphone (so Voquence can hear you), Accessibility (so it can paste at your cursor), and Apple Events (it just lets the app press Cmd+V for you when a transcription completes). All three are required for the paste-at-cursor magic."
             />
           </ol>
         </div>
@@ -145,7 +145,8 @@ export default function DownloadPage() {
               >
                 Anthropic API key
               </a>{" "}
-              (the AI content modes)
+              (the AI content modes — new accounts get $5 free credit, about
+              17,000 polishings before you pay anything)
             </li>
           </ul>
           <p style={{ color: "#aaaaaa", fontSize: "13px", lineHeight: 1.6 }}>
