@@ -91,7 +91,7 @@ export default function ComparePage() {
       <ComparisonSection
         title="PAID TIER"
         competitors={["Spokenly Pro", "Glaido Pro", "Wispr Flow Pro"]}
-        voquenceLabel="Voquence Creator"
+        voquenceLabel="Voquence Founding"
         rows={PAID_TIER_ROWS}
       />
 
@@ -295,11 +295,20 @@ const FREE_TIER_ROWS: CompareRow[] = [
 const PAID_TIER_ROWS: CompareRow[] = [
   {
     label: "Price",
-    voquence: { text: "$19/mo" },
+    voquence: { text: "$19 one-time (first 100), then $29" },
     competitors: [
       { text: "$9.99/mo" },
       { text: "$20/mo" },
       { text: "~$12/mo" },
+    ],
+  },
+  {
+    label: "One-time vs subscription",
+    voquence: { text: "One-time. Own it." },
+    competitors: [
+      { text: "Subscription" },
+      { text: "Subscription" },
+      { text: "Subscription" },
     ],
   },
   {
@@ -309,12 +318,12 @@ const PAID_TIER_ROWS: CompareRow[] = [
   },
   {
     label: "AI content modes",
-    voquence: { text: "10+ (Book Description, Tweet, Prompt, Email, more)" },
+    voquence: { text: "11 (Book Description, Tweet, Email, Tech Support, more)" },
     competitors: [{ text: "None" }, { text: "None" }, { text: "None" }],
   },
   {
     label: "Managed cloud (no API keys)",
-    voquence: { text: "Yes" },
+    voquence: { text: "Managed Cloud tier ships later (~$9.99/mo)", pending: true },
     competitors: [{ text: "Yes" }, { text: "Yes" }, { text: "Yes" }],
   },
   {

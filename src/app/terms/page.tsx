@@ -99,30 +99,67 @@ export default function TermsPage() {
           </p>
         </Block>
 
-        <H2>3. The Free tiers</H2>
+        <H2>3. The Free tier</H2>
         <Block>
           <p>
-            Voquence&apos;s Free Local tier (Local Whisper + Raw Transcript and
-            Clean Text dictation modes) is free to download and use forever, with
-            no signup. The Free BYOK tier extends the same with cloud
-            transcription if you supply your own OpenAI and Anthropic keys.
+            Voquence&apos;s Free tier (Raw Transcript mode + Local Whisper
+            transcription) is free to download and use forever, with no signup,
+            no API key, and no payment. It runs fully offline on your Mac.
           </p>
           <p>
-            &ldquo;Free forever&rdquo; means we don&apos;t plan to retroactively
-            paywall what we&apos;ve already given away. If we ever have to
-            change that (we don&apos;t intend to), you get prior notice via the
-            in-app update and an email to anyone on the wishlist.
+            &ldquo;Free forever&rdquo; means we don&apos;t plan to
+            retroactively paywall what we&apos;ve already given away. If we
+            ever have to change that (we don&apos;t intend to), you get prior
+            notice via the in-app update and an email to anyone on the
+            wishlist.
           </p>
         </Block>
 
-        <H2>4. The Creator tier (when it ships)</H2>
+        <H2>4. The Founding License (when it ships)</H2>
         <Block>
           <p>
-            The Creator tier ($19/month) is currently advertised as coming soon
-            on voquence.com. It is not yet purchasable. When it ships, these
-            terms will be updated with the specifics, and we&apos;ll publish a
-            clear refund policy at that time. Until then, nothing on this site
-            constitutes an offer to sell Creator, and no charge can be made.
+            The Founding License is a one-time purchase that unlocks all 11
+            polish + content modes (Clean Text, Eloquence, Book Description,
+            Tweet Thread, Tech Support, Email Draft, Founder Mode, Marketing
+            Copy, Social Post, Prompt Builder, and Poetry / Bars). The first
+            100 purchases are $19; subsequent purchases are $29. The license
+            is one-time, not a subscription. It includes free updates on the
+            v0.3 series; a future major paid upgrade (v1.0+ or similar) may
+            be offered separately at our discretion, similar to how
+            superwhisper and MacWhisper handle their license generations.
+          </p>
+          <p>
+            The polish + content modes call Anthropic&apos;s Claude API. You
+            bring your own Anthropic API key for that step. Voquence does not
+            mark up or proxy those calls; what Anthropic charges your key is
+            between you and them (typically pennies — new accounts get $5 of
+            free credit, which covers around 17,000 polishings).
+          </p>
+          <p>
+            The Founding License is not yet purchasable as of {LAST_UPDATED}.
+            When it ships, these terms will be updated with the refund window
+            and purchase mechanics. Until then, nothing on this site
+            constitutes an offer to sell the Founding License, and no charge
+            can be made.
+          </p>
+        </Block>
+
+        <H2>4a. Managed Cloud (when it ships)</H2>
+        <Block>
+          <p>
+            Managed Cloud is a future subscription tier (~$9.99/month) that
+            includes all the Founding License modes but routes Claude calls
+            through Voquence&apos;s managed Anthropic account instead of
+            requiring you to bring your own key. It exists for users who
+            don&apos;t want to deal with key management.
+          </p>
+          <p>
+            Managed Cloud is on the roadmap and not yet purchasable. It ships
+            when the proxy backend is built. When it ships, these terms will
+            be updated with the subscription specifics, including the refund
+            window, fair-use cap (if any), and cancellation terms. Until
+            then, nothing on this site constitutes an offer to sell Managed
+            Cloud, and no charge can be made.
           </p>
         </Block>
 
@@ -143,8 +180,8 @@ export default function TermsPage() {
               though we may open-source components in the future.
             </li>
             <li>
-              Don&apos;t attempt to circumvent license enforcement if and when
-              we add it for the Creator tier.
+              Don&apos;t attempt to circumvent license enforcement for the
+              Founding License or Managed Cloud tiers when they ship.
             </li>
             <li>
               Respect OpenAI&apos;s and Anthropic&apos;s usage policies when

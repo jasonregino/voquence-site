@@ -120,17 +120,25 @@ export default function Home() {
           Hit a hotkey. Speak naturally. The polished output pastes right at your cursor.
         </p>
 
-        {/* FREE TIER — dictation modes (3) */}
+        {/* FREE TIER — one mode, fully offline, no keys */}
         <TierLabel
-          tier="FREE — LOCAL WHISPER OR YOUR OWN KEYS"
-          subhead="Three dictation modes. Free with Local Whisper (offline, no setup, no keys). Or bring your own OpenAI + Anthropic keys for cloud mode (about $1/month in API charges)."
+          tier="FREE — TRY VOQUENCE INSTANTLY"
+          subhead="Raw Transcript runs fully offline with Local Whisper. No keys, no setup, no signup. Download and dictate in 60 seconds."
         />
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-16">
+        <div className="max-w-md mx-auto mb-16">
           <ModeExample
             mode="Raw Transcript"
             input="okay note to self the deal closes friday and we still need legal sign off on the indemnity clause"
             output="Okay, note to self: the deal closes Friday and we still need legal sign-off on the indemnity clause."
           />
+        </div>
+
+        {/* FOUNDING LICENSE — all polish + content modes, one-time */}
+        <TierLabel
+          tier="FOUNDING LICENSE — $19 ONE-TIME (FIRST 100)"
+          subhead="11 polish + content modes for one price. Bring your own Anthropic key for the AI step (about 8 cents/month, and new accounts get $5 free credit). After 100 founding buyers the price moves to $29 — license owners keep theirs forever."
+        />
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-16">
           <ModeExample
             mode="Clean Text"
             input="uh so like basically the meeting is at three pm tomorrow and um we need to bring the slides and the demo and you know the budget thing too"
@@ -141,14 +149,6 @@ export default function Home() {
             input="lifting heavy weights is a good way to get stronger and feel better about yourself"
             output="Lift heavy. Get stronger. Feel better. Repeat."
           />
-        </div>
-
-        {/* CREATOR TIER — ready-to-paste content modes (8) */}
-        <TierLabel
-          tier="CREATOR — $19/MO"
-          subhead="Everything in Free, plus nine ready-to-paste content modes. Voice in, finished content out."
-        />
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-16">
           <ModeExample
             mode="Book Description"
             input="book about lifting for guys over 40 who feel tired and weak. thirty day plan. food sleep stress."
@@ -239,51 +239,51 @@ export default function Home() {
           className="text-center mb-16 max-w-xl mx-auto"
           style={{ color: "var(--brand-muted)", fontSize: "15px" }}
         >
-          Free local dictation, no setup. Pay only when you want finished content.
+          Free dictation, no setup. One price unlocks all the polish + content modes. No subscription.
         </p>
 
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
           <PricingCard
-            tier="Free Local"
+            tier="Free"
             price="$0"
             priceSuffix="forever"
             tagline="The fast way to try Voquence."
             features={[
+              "Raw Transcript mode",
               "Local Whisper transcription",
-              "Works offline",
-              "Raw text at your cursor",
+              "Works fully offline",
               "No account, no keys, no setup",
               "Unlimited usage",
             ]}
-            comingSoon
-            comingSoonLabel="NEW · v0.2.0"
           />
           <PricingCard
-            tier="Free (Your Keys)"
-            price="$0"
-            priceSuffix="to Voquence"
-            tagline="For power users with their own API keys."
-            features={[
-              "Cloud transcription (Whisper)",
-              "Clean Text, Eloquence, Raw modes",
-              "Bring your own OpenAI + Anthropic keys",
-              "Pay only what your APIs charge (about $1-3 a month)",
-              "Unlimited usage",
-            ]}
-          />
-          <PricingCard
-            tier="Creator"
+            tier="Founding License"
             price="$19"
-            priceSuffix="per month"
-            tagline="The ready-to-paste content tier."
+            priceSuffix="one-time"
+            tagline="11 polish + content modes. Own it once."
             features={[
               "Everything in Free, plus:",
-              "Book Description, Tweet Thread, Prompt Builder",
-              "Tech Support, Email Draft, more",
-              "Managed cloud, zero setup",
-              "Custom modes + history (v1.1)",
+              "Clean Text, Eloquence (polish)",
+              "Book Description, Tweet Thread, Tech Support, Email Draft, Founder Mode, Marketing Copy, Social Post, Prompt Builder, Poetry / Bars",
+              "Bring your own Anthropic key (~8¢/mo, $5 free credit)",
+              "Free updates forever on the v0.3 series",
             ]}
             highlighted
+            comingSoon
+            comingSoonLabel="FIRST 100 · THEN $29"
+          />
+          <PricingCard
+            tier="Managed Cloud"
+            price="$9.99"
+            priceSuffix="per month"
+            tagline="Same modes. No key needed. We handle the cloud."
+            features={[
+              "Everything in Founding License, plus:",
+              "Managed Anthropic — no signup elsewhere",
+              "No per-call thinking",
+              "Cancel anytime",
+              "Ships when the backend is built",
+            ]}
             comingSoon
             comingSoonLabel="COMING SOON"
           />
@@ -297,7 +297,7 @@ export default function Home() {
             letterSpacing: "0.1em",
           }}
         >
-          NO CREDIT CARD REQUIRED · CANCEL ANYTIME
+          NO RECURRING CHARGE · OWN IT ONCE
         </p>
 
         <p
@@ -341,11 +341,11 @@ export default function Home() {
           />
           <FaqItem
             q="Do I need an account?"
-            a="Not on Free. The Free tier works the moment you install Voquence and paste in your OpenAI and Anthropic API keys. No signup. No email required. Creator ($19/mo) requires an account so we can manage your subscription and let you skip the API key setup entirely."
+            a="Not for the Free tier. Download Voquence, walk through Welcome, and Raw Transcript works immediately with no account. The Founding License unlock will require an email when it ships (so you can recover your license if you reinstall). Managed Cloud will require an account so we can run the subscription."
           />
           <FaqItem
             q="What's BYOK and what will the API cost me?"
-            a="BYOK means Bring Your Own Keys. You sign up for free accounts at OpenAI and Anthropic (both free to register), paste your API keys into Voquence Settings, and Voquence calls those services directly with your keys. A typical month of personal dictation costs about a dollar in API charges. Usually less than a coffee."
+            a="BYOK means Bring Your Own Keys. For the polish + content modes you create a free Anthropic account, paste your API key into Voquence Settings, and Voquence calls Claude directly with your key. New Anthropic accounts get $5 of free credit — that's roughly 17,000 polishings before you pay anything. After that, typical usage is about 8 cents a month. Less than a coffee. You can also keep using Raw Transcript for free without any keys at all."
           />
           <FaqItem
             q="How is Voquence different from Spokenly and Wispr Flow?"
@@ -356,8 +356,16 @@ export default function Home() {
             a="Yes. Voquence pastes at your cursor wherever you are: Word, Pages, Notion, Slack, Google Docs in the browser, your code editor, your email client. Anywhere you can normally paste with Cmd+V, Voquence works."
           />
           <FaqItem
-            q="What's the difference between Free and Creator?"
-            a="Free gives you three dictation modes — Raw Transcript, Clean Text, and Eloquence — with BYOK (you bring your own API keys, you pay OpenAI and Anthropic directly). Creator at $19/month unlocks all nine ready-to-paste content modes (Book Description, Tweet Thread, Prompt Builder, Tech Support, Email Draft, Social Post, Marketing Copy, Founder Mode, Poetry / Bars), with managed cloud included so you skip the API key setup entirely."
+            q="What's the difference between Free and Founding License?"
+            a="Free gives you Raw Transcript — fully offline, fully local, no keys, forever. Founding License (one-time $19 for the first 100 buyers, then $29) unlocks all 11 polish + content modes: Clean Text, Eloquence, Book Description, Tweet Thread, Tech Support, Email Draft, Founder Mode, Marketing Copy, Social Post, Prompt Builder, and Poetry / Bars. The polish + content modes need an Anthropic API key for the Claude step (free $5 credit covers about 17,000 polishings). One purchase, own it forever, free updates on the v0.3 series."
+          />
+          <FaqItem
+            q="Why one-time pricing instead of a subscription?"
+            a="Two reasons. One, Voquence is built by a solo developer (Jason) and runs entirely on your Mac — there's no server eating recurring infrastructure cost that justifies a recurring bill. Two, the dictation category is currently full of $10-$20/month subscriptions that frustrate users (Wispr Flow sits at 2.7/5 on Trustpilot partly because of this). VoiceInk, superwhisper, and MacWhisper all sell one-time licenses for the same model. We follow that lead. Pay once, own it. A Managed Cloud subscription is on the roadmap for users who'd rather pay $9.99/mo and not deal with an Anthropic key at all — but it's optional, not a replacement."
+          />
+          <FaqItem
+            q="What's the Founding 100?"
+            a="The first 100 Founding License purchases lock in at $19 forever. After 100 founding buyers are in, the price moves to $29 for everyone new — but founding members keep their $19 price for life. Founding members will also get a public credit on a launch page (optional, first names only if you want it). It's our way of saying thanks to the people who showed up first."
           />
           <FaqItem
             q="When does Local Whisper Mode ship?"
@@ -506,8 +514,8 @@ function ModeExample({
       className="rounded-xl overflow-hidden"
       style={{
         background: "var(--brand-surface)",
-        // Match the Creator pricing card: lit cyan border + halo.
-        // Radius is halved vs. Creator (16px instead of 32px) because these
+        // Match the Founding License pricing card: lit cyan border + halo.
+        // Radius is halved vs. Founding License (16px instead of 32px) because these
         // cards sit in a tighter 3-column grid — a wider halo would bleed
         // into neighbors and muddy the look.
         border: "1px solid var(--brand-cyan)",
