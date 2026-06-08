@@ -48,7 +48,7 @@ export default function TermsPage() {
             Voquence is built and maintained by Jason Regino, a sole proprietor
             based in California, United States. &ldquo;We,&rdquo; &ldquo;us,&rdquo;
             and &ldquo;Voquence&rdquo; in these terms refer to that sole
-            proprietorship. Questions about anything below: <Mail />.
+            proprietorship. Questions about anything below:{" "}<Mail />.
           </p>
         </Block>
 
@@ -246,7 +246,7 @@ export default function TermsPage() {
             These terms are governed by the laws of the State of California,
             United States, without regard to its conflict-of-laws rules. Any
             dispute that isn&apos;t resolved by email between you and us first
-            (please email <Mail /> first) will be brought exclusively in the
+            (please email{" "}<Mail />{" "}first) will be brought exclusively in the
             state or federal courts located in California.
           </p>
         </Block>
@@ -255,7 +255,7 @@ export default function TermsPage() {
         <Block>
           <p>
             Questions, takedown requests, security disclosures, refund requests,
-            anything else: <Mail />. A human reads it.
+            anything else:{" "}<Mail />. A human reads it.
           </p>
         </Block>
       </section>

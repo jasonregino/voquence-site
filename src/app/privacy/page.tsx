@@ -44,7 +44,7 @@ export default function PrivacyPage() {
             This is the plain-English version of how Voquence handles your data.
             It says exactly what leaves your Mac, what stays on it, and who can
             see it. If anything is unclear, email{" "}
-            <Mail /> and Jason will answer directly.
+            <Mail />{" "}and Jason will answer directly.
           </p>
         </Block>
 
@@ -90,7 +90,7 @@ export default function PrivacyPage() {
           <p>
             Voquence is built and maintained by Jason Regino, a solo indie
             developer in California. There is no corporate parent. There is no
-            data team. When you email <Mail /> a human reads it.
+            data team. When you email{" "}<Mail />{" "}a human reads it.
           </p>
         </Block>
 
@@ -188,9 +188,9 @@ export default function PrivacyPage() {
             </li>
           </ul>
           <p>
-            Voquence does <strong>not</strong> take screenshots of your screen,
-            read the contents of other apps&apos; windows, log your keystrokes,
-            or watch your clipboard. (For comparison: another Mac dictation app
+            Voquence does not take screenshots of your screen, read the
+            contents of other apps&apos; windows, log your keystrokes, or watch
+            your clipboard. (For comparison: another Mac dictation app
             was found taking periodic screenshots of the active window for AI
             &ldquo;context.&rdquo; Voquence does nothing of the kind, by design.)
           </p>
@@ -209,7 +209,7 @@ export default function PrivacyPage() {
             If you enter your email address into the wishlist form on the
             homepage, we store it in our Resend account to send you launch
             announcements. We do not share or sell email addresses. Email{" "}
-            <Mail /> and we&apos;ll delete yours within a day.
+            <Mail />{" "}and we&apos;ll delete yours within a day.
           </p>
           <p>
             voquence.com is hosted on Vercel. Vercel logs HTTP requests at the
@@ -284,13 +284,13 @@ export default function PrivacyPage() {
         <Block>
           <p>
             You can ask us to delete any data we hold about you (mainly:
-            wishlist email address) at any time by emailing <Mail />. We&apos;ll
+            wishlist email address) at any time by emailing{" "}<Mail />. We&apos;ll
             confirm deletion within a few business days.
           </p>
           <p>
             If you&apos;re in the EU/UK, you have rights under GDPR/UK GDPR
             including the right to access, correct, delete, and port your data.
-            Email <Mail /> to exercise any of these.
+            Email{" "}<Mail />{" "}to exercise any of these.
           </p>
         </Block>
 
@@ -307,7 +307,7 @@ export default function PrivacyPage() {
         <H2>Contact</H2>
         <Block>
           <p>
-            Email <Mail />. A real human (Jason) reads every message. Replies
+            Email{" "}<Mail />. A real human (Jason) reads every message. Replies
             come back as &ldquo;Jason from Voquence&rdquo; from the same
             address.
           </p>
