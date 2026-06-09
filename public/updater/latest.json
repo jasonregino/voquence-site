@@ -1,15 +1,15 @@
 {
-  "version": "0.3.1",
-  "notes": "v0.3.1 — in-app guard rail for Claude-backed modes without an Anthropic key.\n\nWhat this fixes: pre-v0.3.1, if you tried Clean Text, Eloquence, or any of the content modes without an Anthropic API key set, the AI step failed silently and your raw transcript landed at your cursor with no explanation. People (rightly) thought Voquence was broken.\n\nNow when you trigger a Claude-backed mode without a key, Voquence pops up a friendly screen explaining what's needed and gives you three clear paths: (1) Get a free Anthropic key — opens the right page in your browser, (2) Open Settings if you already have one to paste, or (3) Just use Raw Transcript instead. Your voice work isn't lost either way — the raw transcript still pastes at your cursor.\n\nThe screen also surfaces the Anthropic $5 new-account credit. That's about 17,000 polishings before you'd ever pay anything, which most users will never hit.\n\nAlso in this release:\n• Polish to the mode-prompt copy in case the new prompt fires in a state we didn't expect.\n\nNo breaking changes. Existing users keep their keys, settings, and current mode.",
-  "pub_date": "2026-06-08T17:40:00Z",
+  "version": "0.3.2",
+  "notes": "v0.3.2 — kills the em-dash bug for good.\n\nClaude Haiku is great at most things, but it has a tic: roughly one in ten polished outputs would slip an em-dash (—) into the text. It's the single most common AI tell, and it broke the rule every Voquence mode prompt is supposed to follow.\n\nv0.3.2 adds a hard guarantee in the Rust layer: em-dashes and en-dashes are stripped after Claude returns, replaced with a clean sentence break (\". \") and the next word is capitalized. So \"Your space is chaotic—your mind follows.\" becomes \"Your space is chaotic. Your mind follows.\" Same meaning, no AI tell.\n\nFour unit tests cover the common shapes so this doesn't regress.\n\nNo breaking changes. Same Settings, same hotkey, same keys. The polished output just sounds more like you now.",
+  "pub_date": "2026-06-08T18:50:00Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaG9TZnhZNDE1c2VrSFFzT0IrRVdObUJYYmttdVl4MXhneU51WGZhYnFyNGdLUmdyYzJIWmY2QzMzQ1JvMWF4MG5LUUF4dndrS3hSYjBRZXlVbDc3VEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwOTQwNDgxCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpDanBaUGI3WVBOS2Q2MGF6bTM1YkcxVVJJY0o4Z2JnNVNvL0oyTk8vZGQ5SFFvTlV2cGhFZFFqK0poU0RDZFdXenNKaS9SMi9mamdyNE1GTzNlTDREUT09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.3.1_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hXaGhvVWZiNTlRd01Ta20xOGovSElkK3FYUTc3cmVkUTRnK3l2eEw4NnY3YUNnRytGZm1IQllYblZBanJzbURSYnI4U3ZORlhZVzR3bWJCNzY4bzQ2eVFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwOTY5NTQ0CWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpLc3JtUFBEeXYxZmZTN0ZZclpzZVFKS2t4Y1ZKcWZScTZFTVZ0YTAxRFpJa3hQV0loNnMzaUs5My85ZE5iUndKY2toallYUEczc3F3ZkI1RGlCRjRBZz09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.3.2_aarch64.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaG9TZnhZNDE1c2VrSFFzT0IrRVdObUJYYmttdVl4MXhneU51WGZhYnFyNGdLUmdyYzJIWmY2QzMzQ1JvMWF4MG5LUUF4dndrS3hSYjBRZXlVbDc3VEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwOTQwNDgxCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpDanBaUGI3WVBOS2Q2MGF6bTM1YkcxVVJJY0o4Z2JnNVNvL0oyTk8vZGQ5SFFvTlV2cGhFZFFqK0poU0RDZFdXenNKaS9SMi9mamdyNE1GTzNlTDREUT09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.3.1_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hXaGhvVWZiNTlRd01Ta20xOGovSElkK3FYUTc3cmVkUTRnK3l2eEw4NnY3YUNnRytGZm1IQllYblZBanJzbURSYnI4U3ZORlhZVzR3bWJCNzY4bzQ2eVFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwOTY5NTQ0CWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpLc3JtUFBEeXYxZmZTN0ZZclpzZVFKS2t4Y1ZKcWZScTZFTVZ0YTAxRFpJa3hQV0loNnMzaUs5My85ZE5iUndKY2toallYUEczc3F3ZkI1RGlCRjRBZz09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.3.2_aarch64.app.tar.gz"
     }
   }
 }
