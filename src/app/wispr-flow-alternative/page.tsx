@@ -180,7 +180,7 @@ export default function WisprFlowAlternativePage() {
           n={3}
           complaint="It gives me a transcript. I still have to rewrite it."
           detail="Wispr Flow does one job well: voice in, text out. But you still have to turn that text into a tweet thread, a polished email, a book description, a support reply. That is where most of the real time goes."
-          answer="Voquence has 11 finished-output modes. Speak rough thoughts, get back a structured tweet thread, a tightened email, a book description that follows the Amazon format, a clean AI prompt, a social post in your voice. The rewriting step is the product, not your homework after dictation. The content modes call Claude with your own Anthropic key, so that step uses the cloud, but your transcription can stay fully local, and Voquence the company never sees any of it."
+          answer="Voquence has 11 finished-output modes. Speak rough thoughts, get back a structured tweet thread, a tightened email, a book description that follows the Amazon format, a clean AI prompt, a social post in your voice. The rewriting step is the product, not your homework after dictation. TODAY these modes run through your own Anthropic key (free $5 credit covers about 17,000 polishings). WITHIN 1-2 WEEKS, Managed Cloud ships and Founders get it free forever, no key needed. Your transcription stays fully local either way and Voquence the company never sees any of it."
         />
       </section>
 

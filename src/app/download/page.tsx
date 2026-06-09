@@ -309,18 +309,46 @@ function FounderBanner() {
           className="mb-3"
           style={{ color: "#cccccc", fontSize: "14px", lineHeight: 1.6 }}
         >
-          Your $19 price is locked in for life. Voquence keeps the 11 polish
-          modes available with your Anthropic key today. When the license
-          enforcement layer ships in v0.4, your founding membership is
-          already on the list, no action needed.
+          Your $19 price is locked in for life. Here&apos;s exactly what
+          that buys you and when:
         </p>
+        <ul
+          className="space-y-2 mb-4 pl-5 list-disc"
+          style={{ color: "#cccccc", fontSize: "14px", lineHeight: 1.6 }}
+        >
+          <li>
+            <strong style={{ color: "#ffffff" }}>Today:</strong> All 11 polish
+            modes work via your own Anthropic key (free $5 credit covers
+            ~17,000 polishings).
+          </li>
+          <li>
+            <strong style={{ color: "#ffffff" }}>Within ~1-2 weeks:</strong>{" "}
+            Managed Cloud ships. Free for Founders, no key needed. Public
+            price will be $9.99/month.
+          </li>
+          <li>
+            <strong style={{ color: "#ffffff" }}>When v0.4 ships:</strong>{" "}
+            License enforcement turns on. Your founding membership keeps you
+            in automatically.
+          </li>
+          <li>
+            Plus: vote on the next mode, optional public credit on{" "}
+            <a
+              href="/founders"
+              className="underline"
+              style={{ color: "var(--brand-cyan)" }}
+            >
+              voquence.com/founders
+            </a>
+            , direct line to Jason.
+          </li>
+        </ul>
         <p
           className="mb-1"
           style={{ color: "#cccccc", fontSize: "14px", lineHeight: 1.6 }}
         >
           Next step: download Voquence below if you haven&apos;t already.
-          Jason will send a personal thank-you email and your founding
-          confirmation to the address you used at checkout within 24 hours.
+          Jason will send a personal thank-you email within 24 hours.
         </p>
         <p style={{ color: "#aaaaaa", fontSize: "13px", lineHeight: 1.6 }}>
           Questions? Reply to that email, or write directly to{" "}

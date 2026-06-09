@@ -304,13 +304,15 @@ export default function Home() {
             tier="Founding License"
             price="$19"
             priceSuffix="one-time"
-            tagline="11 polish + content modes. Own it once."
+            tagline="Lock in Founder status. Pay once, own it."
             features={[
-              "Everything in Free, plus:",
-              "Clean Text, Eloquence (polish)",
-              "Book Description, Tweet Thread, Tech Support, Email Draft, Founder Mode, Marketing Copy, Social Post, Prompt Builder, Poetry / Bars",
-              "Bring your own Anthropic key. Free $5 credit covers ~17,000 polishings",
-              "Free updates forever on the v0.3 series",
+              "TODAY: All 11 modes work with your Anthropic key ($5 free credit covers ~17,000 polishings)",
+              "WITHIN 1-2 WEEKS: Managed Cloud ships. Free for Founders. No key needed. (Public price: $9.99/mo)",
+              "$19 price locked for life. Public price moves to $29 after the 100th sale.",
+              "Vote on which mode ships next",
+              "Optional public credit on voquence.com/founders",
+              "Direct line to Jason at jason@voquence.com",
+              "Grandfather protection when v0.4 license enforcement ships",
             ]}
             highlighted
             badgeLabel="FIRST 100 · THEN $29"
@@ -681,18 +683,28 @@ function FoundingLicenseCard() {
               letterSpacing: "0.18em",
             }}
           >
-            WHAT YOU GET
+            HOW THE MODES WORK
           </p>
           <ul
             className="space-y-1.5"
-            style={{ color: "#cccccc", fontSize: "13px", lineHeight: 1.45 }}
+            style={{ color: "#cccccc", fontSize: "12.5px", lineHeight: 1.5 }}
           >
-            <li>All 11 polish + content modes above</li>
-            <li>Free updates on the v0.3 series</li>
             <li>
-              <span style={{ color: "#888" }}>
-                Bring your Anthropic key (~8¢/mo, $5 free credit)
-              </span>
+              <strong style={{ color: "#ffffff" }}>Today:</strong> Use your
+              own Anthropic key. Free $5 credit = ~17,000 polishings.
+            </li>
+            <li>
+              <strong style={{ color: "#ffffff" }}>~1-2 weeks:</strong>{" "}
+              Managed Cloud ships. Free for Founders. No key needed.
+            </li>
+            <li>
+              <a
+                href="/founders"
+                className="underline"
+                style={{ color: "var(--brand-cyan)" }}
+              >
+                Full Founder benefits at /founders →
+              </a>
             </li>
           </ul>
         </div>
