@@ -17,36 +17,64 @@ export default function WisprFlowAlternativePage() {
 
       {/* Hero */}
       <section className="relative z-10 px-6 sm:px-12 pt-8 pb-12 max-w-3xl mx-auto w-full">
-        <p
-          className="font-mono mb-3"
+        <h1
+          className="font-mono font-black mb-4"
           style={{
             color: "var(--brand-cyan)",
-            fontSize: "11px",
-            letterSpacing: "0.2em",
+            fontSize: "clamp(28px, 4vw, 40px)",
+            letterSpacing: "0.18em",
           }}
         >
           WISPR FLOW ALTERNATIVE
-        </p>
-        <h1
-          className="font-mono font-black mb-5"
-          style={{
-            color: "#ffffff",
-            fontSize: "clamp(28px, 4vw, 42px)",
-            lineHeight: 1.15,
-            letterSpacing: "0.04em",
-          }}
-        >
-          A local-first, one-time-payment alternative to Wispr Flow.
         </h1>
         <p
-          className="mb-8"
-          style={{ color: "#cccccc", fontSize: "17px", lineHeight: 1.6 }}
+          className="max-w-2xl mb-10"
+          style={{ color: "#cccccc", fontSize: "16px", lineHeight: 1.6 }}
         >
           If you came here from Wispr Flow, you probably have one of three
           complaints. Voquence is a Mac dictation app built around those exact
           three gaps. No subscription, your keys never leave your Mac, and the
           output is finished content, not raw transcript.
         </p>
+
+        {/* The one-liner — matches Honest Comparison's hero card */}
+        <div
+          className="rounded-xl p-8 mb-10"
+          style={{
+            background: "var(--brand-surface)",
+            border: "1px solid var(--brand-cyan)",
+            boxShadow: "0 0 32px rgba(0, 212, 255, 0.15)",
+          }}
+        >
+          <p
+            className="font-mono mb-2"
+            style={{
+              color: "var(--brand-cyan)",
+              fontSize: "11px",
+              letterSpacing: "0.2em",
+            }}
+          >
+            THE ONE-LINER
+          </p>
+          <p
+            style={{
+              color: "#ffffff",
+              fontSize: "20px",
+              lineHeight: 1.5,
+              fontWeight: 500,
+            }}
+          >
+            A local-first, one-time-payment alternative to Wispr Flow.
+          </p>
+          <p
+            className="mt-4"
+            style={{ color: "#bbbbbb", fontSize: "14px", lineHeight: 1.6 }}
+          >
+            Wispr Flow runs in the cloud on a $144/year subscription and stops
+            at the transcript. Voquence runs on your Mac, costs $19 one-time,
+            and turns voice into finished content across 11 modes.
+          </p>
+        </div>
 
         <Link
           href="/download"
