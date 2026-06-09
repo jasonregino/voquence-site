@@ -20,6 +20,17 @@
       align-items: center;
       justify-content: center;
     }
+    /* Export mode: when ?export=1 is in the URL, the body becomes exactly
+       1500x500 with no padding so headless Chrome can screenshot the whole
+       viewport and get a clean 1500x500 PNG. */
+    body.export {
+      background: var(--brand-bg);
+      width: 1500px;
+      height: 500px;
+      min-height: 0;
+      overflow: hidden;
+    }
+    body.export .hint { display: none; }
     .banner {
       width: 1500px;
       height: 500px;
@@ -95,5 +106,11 @@
       <div class="tagline">Speak Rough Ideas · Get Polished Output</div>
     </div>
   </div>
+  <script>
+    // Strip padding + hint when rendering for headless screenshot.
+    if (new URLSearchParams(window.location.search).get('export') === '1') {
+      document.body.classList.add('export');
+    }
+  </script>
 </body>
 </html>
