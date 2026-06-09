@@ -176,8 +176,8 @@ export default function Home() {
           />
           <ModeExample
             mode="Social Post"
-            input="spent six hours cleaning my home office this weekend and i feel like a new person honestly"
-            output="Spent 6 hours cleaning my home office this weekend. Feel like a new person. Clean space, clean head."
+            input="spent six hours deep cleaning my home office this weekend and i feel like a new person honestly the mental reset is real"
+            output="Just spent 6 hours deep cleaning my home office and wow, the mental reset is real. Feeling like a completely different human right now. If your space is chaotic, your mind follows. Highly recommend."
           />
           <ModeExample
             mode="Marketing Copy"
