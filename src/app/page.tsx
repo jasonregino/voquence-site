@@ -4,6 +4,16 @@ import { EmailSignup } from "@/components/EmailSignup";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
+/**
+ * Live Stripe Payment Link for the Voquence Founding License ($19 one-time).
+ * Generated 2026-06-09 in Live mode after Sandbox flow was verified end-to-end.
+ * Redirects buyers to voquence.com/download?founder=1 on successful payment.
+ * Single source of truth — every "Get Founding License" CTA on the site
+ * points here.
+ */
+export const FOUNDING_LICENSE_URL =
+  "https://buy.stripe.com/8x23cxgJG1Px2Tz1gN8EM00";
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
@@ -303,8 +313,9 @@ export default function Home() {
               "Free updates forever on the v0.3 series",
             ]}
             highlighted
-            comingSoon
-            comingSoonLabel="FIRST 100 · THEN $29"
+            badgeLabel="FIRST 100 · THEN $29"
+            ctaUrl={FOUNDING_LICENSE_URL}
+            ctaLabel="GET FOUNDING LICENSE →"
           />
           <PricingCard
             tier="Managed Cloud"
@@ -318,8 +329,7 @@ export default function Home() {
               "Cancel anytime",
               "Ships when the backend is built",
             ]}
-            comingSoon
-            comingSoonLabel="COMING SOON"
+            badgeLabel="COMING SOON"
           />
         </div>
 
@@ -432,8 +442,9 @@ function PricingCard({
   tagline,
   features,
   highlighted = false,
-  comingSoon = false,
-  comingSoonLabel = "COMING SOON",
+  badgeLabel,
+  ctaUrl,
+  ctaLabel,
 }: {
   tier: string;
   price: string;
@@ -441,8 +452,12 @@ function PricingCard({
   tagline: string;
   features: string[];
   highlighted?: boolean;
-  comingSoon?: boolean;
-  comingSoonLabel?: string;
+  /** Small chip shown in the card header, e.g. "FIRST 100 · THEN $29" or "COMING SOON" */
+  badgeLabel?: string;
+  /** When set, renders a buy/CTA button at the bottom of the card */
+  ctaUrl?: string;
+  /** Button text when ctaUrl is set; defaults to "GET IT" */
+  ctaLabel?: string;
 }) {
   return (
     <div
@@ -466,12 +481,12 @@ function PricingCard({
         }}
       >
         <span>{tier.toUpperCase()}</span>
-        {highlighted && !comingSoon && (
+        {highlighted && !badgeLabel && (
           <span style={{ fontSize: "9px", letterSpacing: "0.15em" }}>
             MOST POPULAR
           </span>
         )}
-        {comingSoon && (
+        {badgeLabel && (
           <span
             style={{
               color: "#a3a3a3",
@@ -482,7 +497,7 @@ function PricingCard({
               letterSpacing: "0.15em",
             }}
           >
-            {comingSoonLabel}
+            {badgeLabel}
           </span>
         )}
       </div>
@@ -531,6 +546,22 @@ function PricingCard({
             </li>
           ))}
         </ul>
+        {ctaUrl && (
+          <a
+            href={ctaUrl}
+            className="inline-flex items-center justify-center font-mono font-bold rounded-lg transition w-full mt-6"
+            style={{
+              background: "var(--brand-cyan)",
+              color: "#0a0a0a",
+              fontSize: "12px",
+              letterSpacing: "0.15em",
+              padding: "12px 16px",
+              boxShadow: "0 0 24px rgba(0, 212, 255, 0.25)",
+            }}
+          >
+            {ctaLabel || "GET IT →"}
+          </a>
+        )}
       </div>
     </div>
   );
@@ -619,17 +650,21 @@ function FoundingLicenseCard() {
             After the first 100 buyers, the price moves to $29. License
             owners keep theirs forever.
           </p>
-          <p
-            className="font-mono"
+          <a
+            href={FOUNDING_LICENSE_URL}
+            className="inline-flex items-center justify-center font-mono font-bold rounded-lg transition w-full"
             style={{
-              color: "#f59e0b",
-              fontSize: "10px",
+              background: "var(--brand-cyan)",
+              color: "#0a0a0a",
+              fontSize: "12px",
               letterSpacing: "0.15em",
-              marginTop: "8px",
+              padding: "10px 16px",
+              marginTop: "12px",
+              boxShadow: "0 0 24px rgba(0, 212, 255, 0.25)",
             }}
           >
-            CHECKOUT OPENS SHORTLY · APP IS A FREE DOWNLOAD MEANWHILE
-          </p>
+            GET FOUNDING LICENSE →
+          </a>
         </div>
 
         <div

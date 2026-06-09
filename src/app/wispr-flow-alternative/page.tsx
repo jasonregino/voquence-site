@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { FOUNDING_LICENSE_URL } from "@/app/page";
 
 export const metadata = {
   title: "Wispr Flow Alternative · Voquence",
@@ -90,19 +91,34 @@ export default function WisprFlowAlternativePage() {
           </p>
         </div>
 
-        <Link
-          href="/download"
-          className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition"
-          style={{
-            background: "var(--brand-cyan)",
-            color: "#0a0a0a",
-            fontSize: "14px",
-            letterSpacing: "0.15em",
-            boxShadow: "0 0 32px rgba(0, 212, 255, 0.25)",
-          }}
-        >
-          ↓ DOWNLOAD VOQUENCE FREE
-        </Link>
+        <div className="flex flex-col sm:flex-row gap-3 items-start">
+          <Link
+            href="/download"
+            className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition"
+            style={{
+              background: "var(--brand-cyan)",
+              color: "#0a0a0a",
+              fontSize: "14px",
+              letterSpacing: "0.15em",
+              boxShadow: "0 0 32px rgba(0, 212, 255, 0.25)",
+            }}
+          >
+            ↓ DOWNLOAD VOQUENCE FREE
+          </Link>
+          <a
+            href={FOUNDING_LICENSE_URL}
+            className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition"
+            style={{
+              background: "transparent",
+              color: "var(--brand-cyan)",
+              border: "1px solid var(--brand-cyan)",
+              fontSize: "14px",
+              letterSpacing: "0.15em",
+            }}
+          >
+            GET FOUNDING LICENSE · $19
+          </a>
+        </div>
         <p
           className="font-mono mt-3"
           style={{
@@ -157,7 +173,7 @@ export default function WisprFlowAlternativePage() {
           n={2}
           complaint="$144 a year, and it gets worse after you pay."
           detail="Wispr Flow runs $12 to $15 per month. That is $144 to $180 a year, forever. Trustpilot sits in the mid-2s out of 5 with a recurring theme: users say the app feels great during the free trial and degrades once they are paying."
-          answer="Voquence's Founding License is a one-time $19 for the first 100 buyers, then $29 after. Pay once. You own it. No renewal, no surprise charge twelve months from now. Checkout opens shortly. For now the app is a free download, and you can run Raw Transcript with Local Whisper at no cost while the license goes live."
+          answer="Voquence's Founding License is a one-time $19 for the first 100 buyers, then $29 after. Pay once. You own it. No renewal, no surprise charge twelve months from now. Checkout is open today, the app itself is a free download if you want to try it first."
         />
 
         <ComplaintCard
@@ -274,18 +290,33 @@ export default function WisprFlowAlternativePage() {
             Raw Transcript mode with Local Whisper is free forever. Decide
             later whether the 11 content modes are worth the one-time license.
           </p>
-          <Link
-            href="/download"
-            className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition"
-            style={{
-              background: "var(--brand-cyan)",
-              color: "#0a0a0a",
-              fontSize: "14px",
-              letterSpacing: "0.15em",
-            }}
-          >
-            ↓ DOWNLOAD FOR MAC
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link
+              href="/download"
+              className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition"
+              style={{
+                background: "var(--brand-cyan)",
+                color: "#0a0a0a",
+                fontSize: "14px",
+                letterSpacing: "0.15em",
+              }}
+            >
+              ↓ DOWNLOAD FOR MAC
+            </Link>
+            <a
+              href={FOUNDING_LICENSE_URL}
+              className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition"
+              style={{
+                background: "transparent",
+                color: "var(--brand-cyan)",
+                border: "1px solid var(--brand-cyan)",
+                fontSize: "14px",
+                letterSpacing: "0.15em",
+              }}
+            >
+              GET FOUNDING LICENSE · $19
+            </a>
+          </div>
           <p
             className="mt-4"
             style={{ color: "var(--brand-muted)", fontSize: "12px" }}
