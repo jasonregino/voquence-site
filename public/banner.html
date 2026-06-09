@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Voquence X Banner — 1500x500</title>
+  <style>
+    /* Match the site's brand variables so the banner is pixel-consistent
+       with voquence.com (--brand-cyan, --brand-surface, grid pattern). */
+    :root {
+      --brand-cyan: #00D4FF;
+      --brand-bg: #0a0a0a;
+      --grid-line: rgba(0, 212, 255, 0.06);
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .banner {
+      width: 1500px;
+      height: 500px;
+      background: var(--brand-bg);
+      background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 40px 40px;
+      position: relative;
+      overflow: hidden;
+      font-family: 'SF Mono', 'JetBrains Mono', ui-monospace, Menlo, monospace;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04);
+    }
+    .border-frame {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      right: 50px;
+      bottom: 50px;
+      border: 2px solid var(--brand-cyan);
+      border-radius: 18px;
+      box-shadow:
+        0 0 48px rgba(0, 212, 255, 0.35),
+        0 0 96px rgba(0, 212, 255, 0.15),
+        inset 0 0 32px rgba(0, 212, 255, 0.04);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* Push content up slightly so the X profile avatar (lower-left)
+         doesn't visually crowd the wordmark. */
+      padding-bottom: 80px;
+    }
+    .wordmark {
+      color: var(--brand-cyan);
+      font-size: 110px;
+      font-weight: 900;
+      letter-spacing: 0.28em;
+      line-height: 1;
+      /* Offset for the wide letter-spacing so the visual center matches the
+         frame center; without this the wordmark looks pushed left. */
+      padding-left: 0.28em;
+      text-shadow:
+        0 0 32px rgba(0, 212, 255, 0.45),
+        0 0 4px rgba(0, 212, 255, 0.8);
+    }
+    .tagline {
+      color: #aaaaaa;
+      font-size: 22px;
+      letter-spacing: 0.32em;
+      margin-top: 32px;
+      text-transform: uppercase;
+      padding-left: 0.32em;
+    }
+    /* Small hint above the banner so Jason knows what to screenshot.
+       Hidden in print/screenshot via the .no-capture class but visible
+       in the browser. */
+    .hint {
+      position: fixed;
+      top: 8px;
+      left: 8px;
+      color: #888;
+      font: 12px/1.4 system-ui;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="hint">Screenshot the banner below at native size (1500×500). The dark area around it is just page padding.</div>
+  <div class="banner">
+    <div class="border-frame">
+      <div class="wordmark">VOQUENCE</div>
+      <div class="tagline">Speak Rough Ideas · Get Polished Output</div>
+    </div>
+  </div>
+</body>
+</html>
