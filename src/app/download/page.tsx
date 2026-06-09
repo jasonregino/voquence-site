@@ -145,7 +145,7 @@ export default function DownloadPage() {
               >
                 Anthropic API key
               </a>{" "}
-              (the AI content modes — new accounts get $5 free credit, about
+              (the AI content modes. New accounts get $5 free credit, about
               17,000 polishings before you pay anything)
             </li>
           </ul>

@@ -199,7 +199,7 @@ export default function ComparePage() {
             className="mb-6"
             style={{ color: "#cccccc", fontSize: "16px", lineHeight: 1.6 }}
           >
-            Voquence is free to try — no keys, no signup. Local Whisper installs during Welcome and Raw Transcript works immediately.
+            Voquence is free to try. No keys, no signup. Local Whisper installs during Welcome and Raw Transcript works immediately.
           </p>
           <Link
             href="/download"

@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata = {
-  title: "Privacy Policy — Voquence",
+  title: "Privacy Policy · Voquence",
   description:
     "What data Voquence collects, what stays on your Mac, what flows to OpenAI and Anthropic, and how to reach us.",
 };

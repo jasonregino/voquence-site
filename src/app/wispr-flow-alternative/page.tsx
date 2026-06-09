@@ -3,9 +3,23 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata = {
-  title: "Wispr Flow Alternative — Voquence",
+  title: "Wispr Flow Alternative · Voquence",
   description:
     "Looking to switch from Wispr Flow? Voquence runs locally, costs $19 one-time, and turns your voice into finished content instead of a transcript.",
+  openGraph: {
+    title: "A Wispr Flow Alternative That Runs On Your Mac.",
+    description:
+      "Local-first, one-time $19, and it turns your voice into finished content instead of a transcript. Free to download.",
+    url: "https://voquence.com/wispr-flow-alternative",
+    siteName: "Voquence",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "A Wispr Flow Alternative That Runs On Your Mac.",
+    description:
+      "Local-first, one-time $19, and it turns your voice into finished content instead of a transcript. Free to download.",
+  },
 };
 
 export default function WisprFlowAlternativePage() {
@@ -124,15 +138,15 @@ export default function WisprFlowAlternativePage() {
         <ComplaintCard
           n={2}
           complaint="$144 a year, and it gets worse after you pay."
-          detail="Wispr Flow runs $12 to $15 per month. That is $144 to $180 a year, forever. Trustpilot sits around 2.7 out of 5 with a recurring theme: users say the app feels great during the free trial and degrades once they are paying."
-          answer="Voquence's Founding License is a one-time $19 for the first 100 buyers, then $29 after. Pay once. You own it. No renewal, no surprise charge twelve months from now."
+          detail="Wispr Flow runs $12 to $15 per month. That is $144 to $180 a year, forever. Trustpilot sits in the mid-2s out of 5 with a recurring theme: users say the app feels great during the free trial and degrades once they are paying."
+          answer="Voquence's Founding License is a one-time $19 for the first 100 buyers, then $29 after. Pay once. You own it. No renewal, no surprise charge twelve months from now. Checkout opens shortly. For now the app is a free download, and you can run Raw Transcript with Local Whisper at no cost while the license goes live."
         />
 
         <ComplaintCard
           n={3}
           complaint="It gives me a transcript. I still have to rewrite it."
           detail="Wispr Flow does one job well: voice in, text out. But you still have to turn that text into a tweet thread, a polished email, a book description, a support reply. That is where most of the real time goes."
-          answer="Voquence has 11 finished-output modes. Speak rough thoughts, get back a structured tweet thread, a tightened email, a book description that follows the Amazon format, a clean AI prompt, a social post in your voice. The rewriting step is the product, not your homework after dictation."
+          answer="Voquence has 11 finished-output modes. Speak rough thoughts, get back a structured tweet thread, a tightened email, a book description that follows the Amazon format, a clean AI prompt, a social post in your voice. The rewriting step is the product, not your homework after dictation. The content modes call Claude with your own Anthropic key, so that step uses the cloud, but your transcription can stay fully local, and Voquence the company never sees any of it."
         />
       </section>
 
@@ -160,7 +174,7 @@ export default function WisprFlowAlternativePage() {
           <CompareRow label="Where audio goes" voq="On your Mac with Local Whisper" wispr="Their cloud servers" />
           <CompareRow label="Output" voq="Raw transcript + 11 finished-content modes" wispr="Raw transcript" />
           <CompareRow label="API keys" voq="Bring your own (OpenAI + Anthropic) or use Local Whisper for free" wispr="Built in, you cannot swap" />
-          <CompareRow label="Platforms" voq="Mac (Apple Silicon)" wispr="Mac, Windows" last />
+          <CompareRow label="Platforms" voq="Mac (Apple Silicon)" wispr="Mac, Windows, iPhone, Android" last />
         </div>
       </section>
 

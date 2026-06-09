@@ -2,7 +2,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata = {
-  title: "Terms of Service — Voquence",
+  title: "Terms of Service · Voquence",
   description:
     "The rules of using Voquence: what we promise, what we don't, and how disputes are handled. Plain English.",
 };
@@ -132,7 +132,7 @@ export default function TermsPage() {
             The polish + content modes call Anthropic&apos;s Claude API. You
             bring your own Anthropic API key for that step. Voquence does not
             mark up or proxy those calls; what Anthropic charges your key is
-            between you and them (typically pennies — new accounts get $5 of
+            between you and them (typically pennies, new accounts get $5 of
             free credit, which covers around 17,000 polishings).
           </p>
           <p>

@@ -54,7 +54,7 @@ export default function Home() {
           className="max-w-xl text-base mb-12 leading-relaxed"
           style={{ color: "#aaaaaa" }}
         >
-          Want it private and faster? Turn on Local Whisper — runs entirely on
+          Want it private and faster? Turn on Local Whisper. Runs entirely on
           your Mac. Offline, no API key, no per-minute cost.
         </p>
 
@@ -122,7 +122,7 @@ export default function Home() {
 
         {/* FREE TIER — one mode, fully offline, no keys */}
         <TierLabel
-          tier="FREE — TRY VOQUENCE INSTANTLY"
+          tier="FREE · TRY VOQUENCE INSTANTLY"
           subhead="Raw Transcript runs fully offline with Local Whisper. No keys, no setup, no signup. Download and dictate in 60 seconds."
         />
         <div className="max-w-md mx-auto mb-16">
@@ -135,7 +135,7 @@ export default function Home() {
 
         {/* FOUNDING LICENSE — all polish + content modes, one-time */}
         <TierLabel
-          tier="FOUNDING LICENSE — $19 ONE-TIME (FIRST 100)"
+          tier="FOUNDING LICENSE · $19 ONE-TIME (FIRST 100)"
           subhead="11 polish + content modes. One purchase, own it forever."
         />
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-16">
@@ -266,7 +266,7 @@ export default function Home() {
               "Everything in Free, plus:",
               "Clean Text, Eloquence (polish)",
               "Book Description, Tweet Thread, Tech Support, Email Draft, Founder Mode, Marketing Copy, Social Post, Prompt Builder, Poetry / Bars",
-              "Bring your own Anthropic key — free $5 credit covers ~17,000 polishings",
+              "Bring your own Anthropic key. Free $5 credit covers ~17,000 polishings",
               "Free updates forever on the v0.3 series",
             ]}
             highlighted
@@ -280,7 +280,7 @@ export default function Home() {
             tagline="Same modes. No key needed. We handle the cloud."
             features={[
               "Everything in Founding License, plus:",
-              "Managed Anthropic — no signup elsewhere",
+              "Managed Anthropic. No signup elsewhere",
               "No per-call thinking",
               "Cancel anytime",
               "Ships when the backend is built",
@@ -338,7 +338,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto space-y-3">
           <FaqItem
             q="Is my voice data private?"
-            a="Yes. Local Whisper is auto-installed when you finish Welcome (v0.3.0+) — transcription runs entirely on your Mac, nothing leaves your device. If you choose cloud transcription instead in Settings, your audio goes directly from your Mac to OpenAI's Whisper API using your own key. The polish + content modes send the transcript directly to Anthropic's Claude with your Anthropic key. Either way, Voquence the company never sees or stores any of it."
+            a="Yes. Local Whisper is auto-installed when you finish Welcome (v0.3.0+). Transcription runs entirely on your Mac, nothing leaves your device. If you choose cloud transcription instead in Settings, your audio goes directly from your Mac to OpenAI's Whisper API using your own key. The polish + content modes send the transcript directly to Anthropic's Claude with your Anthropic key. Either way, Voquence the company never sees or stores any of it."
           />
           <FaqItem
             q="Do I need an account?"
@@ -346,11 +346,11 @@ export default function Home() {
           />
           <FaqItem
             q="What's BYOK and what will the API cost me?"
-            a="BYOK means Bring Your Own Keys. For the polish + content modes you create a free Anthropic account, paste your API key into Voquence Settings, and Voquence calls Claude directly with your key. New Anthropic accounts get $5 of free credit — that's roughly 17,000 polishings before you pay anything. After that, typical usage is about 8 cents a month. Less than a coffee. You can also keep using Raw Transcript for free without any keys at all."
+            a="BYOK means Bring Your Own Keys. For the polish + content modes you create a free Anthropic account, paste your API key into Voquence Settings, and Voquence calls Claude directly with your key. New Anthropic accounts get $5 of free credit. That's roughly 17,000 polishings before you pay anything. After that, typical usage is about 8 cents a month. Less than a coffee. You can also keep using Raw Transcript for free without any keys at all."
           />
           <FaqItem
             q="How is Voquence different from Spokenly and Wispr Flow?"
-            a="Spokenly and Wispr Flow are both solid dictation apps. They turn voice into a clean transcript fast. Voquence goes a step further: the same voice note becomes a polished tweet thread, book description, support reply, email draft, or one of nine ready-to-paste content modes total. If you want fast transcription, Spokenly and Wispr are great choices. If you want voice in and finished content out — saving the rewriting step entirely — that's where Voquence fits."
+            a="Spokenly and Wispr Flow are both solid dictation apps. They turn voice into a clean transcript fast. Voquence goes a step further: the same voice note becomes a polished tweet thread, book description, support reply, email draft, or one of nine ready-to-paste content modes total. If you want fast transcription, Spokenly and Wispr are great choices. If you want voice in and finished content out, saving the rewriting step entirely, that's where Voquence fits."
           />
           <FaqItem
             q="Will Voquence work in any Mac app?"
@@ -358,19 +358,19 @@ export default function Home() {
           />
           <FaqItem
             q="What's the difference between Free and Founding License?"
-            a="Free gives you Raw Transcript — fully offline, fully local, no keys, forever. Founding License (one-time $19 for the first 100 buyers, then $29) unlocks all 11 polish + content modes: Clean Text, Eloquence, Book Description, Tweet Thread, Tech Support, Email Draft, Founder Mode, Marketing Copy, Social Post, Prompt Builder, and Poetry / Bars. The polish + content modes need an Anthropic API key for the Claude step (free $5 credit covers about 17,000 polishings). One purchase, own it forever, free updates on the v0.3 series."
+            a="Free gives you Raw Transcript. Fully offline, fully local, no keys, forever. Founding License (one-time $19 for the first 100 buyers, then $29) unlocks all 11 polish + content modes: Clean Text, Eloquence, Book Description, Tweet Thread, Tech Support, Email Draft, Founder Mode, Marketing Copy, Social Post, Prompt Builder, and Poetry / Bars. The polish + content modes need an Anthropic API key for the Claude step (free $5 credit covers about 17,000 polishings). One purchase, own it forever, free updates on the v0.3 series."
           />
           <FaqItem
             q="Why one-time pricing instead of a subscription?"
-            a="Two reasons. One, Voquence is built by a solo developer (Jason) and runs entirely on your Mac — there's no server eating recurring infrastructure cost that justifies a recurring bill. Two, the dictation category is currently full of $10-$20/month subscriptions that frustrate users (Wispr Flow sits at 2.7/5 on Trustpilot partly because of this). VoiceInk, superwhisper, and MacWhisper all sell one-time licenses for the same model. We follow that lead. Pay once, own it. A Managed Cloud subscription is on the roadmap for users who'd rather pay $9.99/mo and not deal with an Anthropic key at all — but it's optional, not a replacement."
+            a="Two reasons. One, Voquence is built by a solo developer (Jason) and runs entirely on your Mac. There's no server eating recurring infrastructure cost that justifies a recurring bill. Two, the dictation category is currently full of $10-$20/month subscriptions that frustrate users (Wispr Flow sits in the mid-2s out of 5 on Trustpilot partly because of this). VoiceInk, superwhisper, and MacWhisper all sell one-time licenses for the same model. We follow that lead. Pay once, own it. A Managed Cloud subscription is on the roadmap for users who'd rather pay $9.99/mo and not deal with an Anthropic key at all, but it's optional, not a replacement."
           />
           <FaqItem
             q="What's the Founding 100?"
-            a="The first 100 Founding License purchases lock in at $19 forever. After 100 founding buyers are in, the price moves to $29 for everyone new — but founding members keep their $19 price for life. Founding members will also get a public credit on a launch page (optional, first names only if you want it). It's our way of saying thanks to the people who showed up first."
+            a="The first 100 Founding License purchases lock in at $19 forever. After 100 founding buyers are in, the price moves to $29 for everyone new. Founding members keep their $19 price for life. Founding members will also get a public credit on a launch page (optional, first names only if you want it). It's our way of saying thanks to the people who showed up first."
           />
           <FaqItem
             q="When does Local Whisper Mode ship?"
-            a="Already shipped in v0.2.0 — that's what you download today. Local Whisper runs transcription on your Mac instead of OpenAI's servers. No API key needed for transcription, fully offline, zero per-minute cost. Download the model from Voquence Settings once it's installed."
+            a="Already shipped in v0.2.0. That's what you download today. Local Whisper runs transcription on your Mac instead of OpenAI's servers. No API key needed for transcription, fully offline, zero per-minute cost. Download the model from Voquence Settings once it's installed."
           />
           <FaqItem
             q="What Mac do I need to run Voquence?"
@@ -382,7 +382,7 @@ export default function Home() {
           />
           <FaqItem
             q="Why isn't Voquence on the Mac App Store?"
-            a="Voquence pastes its output at your cursor in any app — TextEdit, Pages, Google Docs in the browser, Slack, Notion, your code editor. That requires the macOS Accessibility API. In late 2025 Apple started rejecting Mac App Store updates for dictation apps that use the Accessibility API to inject text (WhisperPad and others have been hit). Going App Store would either mean shipping a worse product that can't paste at your cursor, or building Voquence and waiting to find out if a future update gets rejected. Direct download is the honest path: you get the real product today, signed by Apple, notarized by Apple, distributed by Voquence directly. If you'd prefer App Store, fair — Spokenly is a solid choice with a more limited cursor-paste story."
+            a="Voquence pastes its output at your cursor in any app: TextEdit, Pages, Google Docs in the browser, Slack, Notion, your code editor. That requires the macOS Accessibility API. In late 2025 Apple started rejecting Mac App Store updates for dictation apps that use the Accessibility API to inject text (WhisperPad and others have been hit). Going App Store would either mean shipping a worse product that can't paste at your cursor, or building Voquence and waiting to find out if a future update gets rejected. Direct download is the honest path: you get the real product today, signed by Apple, notarized by Apple, distributed by Voquence directly. If you'd prefer App Store, fair. Spokenly is a solid choice with a more limited cursor-paste story."
           />
         </div>
       </section>
@@ -583,7 +583,7 @@ function FoundingLicenseCard() {
               marginTop: "4px",
             }}
           >
-            After the first 100 buyers, the price moves to $29 — license
+            After the first 100 buyers, the price moves to $29. License
             owners keep theirs forever.
           </p>
         </div>
