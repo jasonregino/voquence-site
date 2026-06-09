@@ -73,7 +73,7 @@ export default function Home() {
         </Link>
 
         <p
-          className="font-mono mb-8"
+          className="font-mono"
           style={{
             color: "var(--brand-muted)",
             fontSize: "10px",
@@ -81,6 +81,39 @@ export default function Home() {
           }}
         >
           APPLE SILICON · NOTARIZED · v0.3.2
+        </p>
+        <p
+          className="mb-2"
+          style={{
+            color: "#aaaaaa",
+            fontSize: "12px",
+            lineHeight: 1.5,
+            maxWidth: "420px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            marginTop: "10px",
+          }}
+        >
+          You&apos;re downloading the full Voquence app. Free tier (Raw
+          Transcript with Local Whisper) works immediately, no keys. Add your
+          Anthropic key in Settings to unlock the 11 polish modes today.
+          Founding License checkout opens shortly.
+        </p>
+        <p
+          className="font-mono mb-8"
+          style={{
+            color: "var(--brand-muted)",
+            fontSize: "11px",
+            letterSpacing: "0.1em",
+          }}
+        >
+          <Link
+            href="/download"
+            style={{ color: "var(--brand-cyan)" }}
+            className="underline"
+          >
+            Not sure if your Mac is Apple Silicon? →
+          </Link>
         </p>
 
         <div
