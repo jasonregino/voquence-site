@@ -331,7 +331,7 @@ function FounderBanner() {
           >
             jason@voquence.com
           </a>
-          . Real human.
+          . I read every message.
         </p>
       </div>
     </section>

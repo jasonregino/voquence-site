@@ -4,12 +4,18 @@
   <meta charset="UTF-8" />
   <title>Voquence X Banner — 1500x500</title>
   <style>
-    /* Match the site's brand variables so the banner is pixel-consistent
-       with voquence.com (--brand-cyan, --brand-surface, grid pattern). */
+    /* Matches the actual voquence.com restraint:
+       - Wordmark is FLAT cyan, no glow (site h1 has no text-shadow)
+       - Tagline is muted gray
+       - Only the border-frame glows (matches the card style)
+       - Background is dark with subtle grid, no radial wash
+       Content is biased upward so the X profile avatar circle in the
+       lower-left does NOT clip the tagline. */
     :root {
       --brand-cyan: #00D4FF;
       --brand-bg: #0a0a0a;
-      --grid-line: rgba(0, 212, 255, 0.06);
+      --brand-muted: #888;
+      --grid-line: rgba(0, 212, 255, 0.07);
     }
     html, body {
       margin: 0;
@@ -20,9 +26,6 @@
       align-items: center;
       justify-content: center;
     }
-    /* Export mode: when ?export=1 is in the URL, the body becomes exactly
-       1500x500 with no padding so headless Chrome can screenshot the whole
-       viewport and get a clean 1500x500 PNG. */
     body.export {
       background: var(--brand-bg);
       width: 1500px;
@@ -38,56 +41,54 @@
       background-image:
         linear-gradient(var(--grid-line) 1px, transparent 1px),
         linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-      background-size: 40px 40px;
+      background-size: 50px 50px;
       position: relative;
       overflow: hidden;
       font-family: 'SF Mono', 'JetBrains Mono', ui-monospace, Menlo, monospace;
-      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04);
     }
     .border-frame {
       position: absolute;
-      top: 50px;
-      left: 50px;
-      right: 50px;
-      bottom: 50px;
+      top: 40px;
+      left: 40px;
+      right: 40px;
+      bottom: 40px;
       border: 2px solid var(--brand-cyan);
       border-radius: 18px;
+      /* Match the site card glow — moderate, not aggressive */
       box-shadow:
-        0 0 48px rgba(0, 212, 255, 0.35),
-        0 0 96px rgba(0, 212, 255, 0.15),
-        inset 0 0 32px rgba(0, 212, 255, 0.04);
+        0 0 32px rgba(0, 212, 255, 0.32),
+        inset 0 0 24px rgba(0, 212, 255, 0.04);
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      /* Push content up slightly so the X profile avatar (lower-left)
-         doesn't visually crowd the wordmark. */
-      padding-bottom: 80px;
+      /* Content sits in the UPPER half so the X avatar in the lower-left
+         doesn't overlap the tagline. padding-top pushes everything up. */
+      justify-content: flex-start;
+      padding-top: 110px;
     }
     .wordmark {
       color: var(--brand-cyan);
-      font-size: 110px;
+      font-size: 130px;
       font-weight: 900;
-      letter-spacing: 0.28em;
+      letter-spacing: 0.24em;
       line-height: 1;
-      /* Offset for the wide letter-spacing so the visual center matches the
-         frame center; without this the wordmark looks pushed left. */
-      padding-left: 0.28em;
-      text-shadow:
-        0 0 32px rgba(0, 212, 255, 0.45),
-        0 0 4px rgba(0, 212, 255, 0.8);
+      /* Offset for letter-spacing so visual center matches frame center */
+      padding-left: 0.24em;
+      /* No text-shadow — site wordmark is flat */
     }
     .tagline {
-      color: #aaaaaa;
-      font-size: 22px;
+      color: var(--brand-muted);
+      font-size: 24px;
       letter-spacing: 0.32em;
-      margin-top: 32px;
+      margin-top: 36px;
       text-transform: uppercase;
       padding-left: 0.32em;
+      font-weight: 400;
     }
-    /* Small hint above the banner so Jason knows what to screenshot.
-       Hidden in print/screenshot via the .no-capture class but visible
-       in the browser. */
+    .tagline .dot {
+      color: var(--brand-cyan);
+      margin: 0 0.5em;
+    }
     .hint {
       position: fixed;
       top: 8px;
@@ -99,15 +100,14 @@
   </style>
 </head>
 <body>
-  <div class="hint">Screenshot the banner below at native size (1500×500). The dark area around it is just page padding.</div>
+  <div class="hint">Screenshot the banner below at native size (1500×500).</div>
   <div class="banner">
     <div class="border-frame">
       <div class="wordmark">VOQUENCE</div>
-      <div class="tagline">Speak Rough Ideas · Get Polished Output</div>
+      <div class="tagline">SPEAK ROUGH IDEAS<span class="dot">·</span>GET POLISHED OUTPUT</div>
     </div>
   </div>
   <script>
-    // Strip padding + hint when rendering for headless screenshot.
     if (new URLSearchParams(window.location.search).get('export') === '1') {
       document.body.classList.add('export');
     }
