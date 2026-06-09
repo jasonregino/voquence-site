@@ -119,7 +119,7 @@ export default function PrivacyPage() {
             OpenAI API key you pasted into Settings. The resulting transcript
             is then sent directly from your Mac to Anthropic&apos;s Claude API
             (using your Anthropic key) so it can be processed by the mode you
-            picked &mdash; Clean Text, Tweet Thread, Book Description, and so
+            picked: Clean Text, Tweet Thread, Book Description, and so
             on. The polished result comes back and is pasted at your cursor.
           </p>
           <p>
@@ -134,7 +134,7 @@ export default function PrivacyPage() {
         <H2>Where your API keys live</H2>
         <Block>
           <p>
-            As of v0.3.1 (current), your OpenAI and Anthropic API keys are
+            As of v0.3.2 (current), your OpenAI and Anthropic API keys are
             stored on your Mac in a local JSON file at{" "}
             <code style={{ color: "#ddd", fontSize: "12px" }}>
               ~/Library/Application Support/voquence/config.json
@@ -169,20 +169,20 @@ export default function PrivacyPage() {
           </p>
           <ul className="space-y-3 pl-5 list-disc">
             <li>
-              <strong>Microphone</strong> &mdash; captures your voice during
+              <strong>Microphone:</strong> captures your voice during
               recording. Voquence only listens between the moment you press the
               hotkey and the moment you press it again. The mic is off at all
               other times.
             </li>
             <li>
-              <strong>Accessibility</strong> &mdash; lets Voquence paste its
+              <strong>Accessibility:</strong> lets Voquence paste its
               output at your cursor in any app. Apple&apos;s Accessibility API
               is the only sanctioned way to do this on Mac. Voquence uses it to{" "}
               <em>send</em> a paste keystroke. It does not read other apps&apos;
               text, watch your typing, or take screenshots.
             </li>
             <li>
-              <strong>Apple Events</strong> &mdash; required for the Cmd+V paste
+              <strong>Apple Events:</strong> required for the Cmd+V paste
               simulation to work in some apps. Voquence triggers a single
               keystroke event when a transcription completes. Nothing else.
             </li>
@@ -223,7 +223,7 @@ export default function PrivacyPage() {
         <Block>
           <ul className="space-y-2 pl-5 list-disc">
             <li>
-              <strong>OpenAI</strong> &mdash; only if you turn on cloud mode and
+              <strong>OpenAI:</strong> only if you turn on cloud mode and
               add your OpenAI API key. Audio is sent directly from your Mac to
               OpenAI using your key. See{" "}
               <a
@@ -238,7 +238,7 @@ export default function PrivacyPage() {
               .
             </li>
             <li>
-              <strong>Anthropic</strong> &mdash; only for the content modes that
+              <strong>Anthropic:</strong> only for the content modes that
               call Claude, and only with your Anthropic key. See{" "}
               <a
                 href="https://www.anthropic.com/legal/privacy"
@@ -252,19 +252,19 @@ export default function PrivacyPage() {
               .
             </li>
             <li>
-              <strong>Google Analytics 4</strong> &mdash; on voquence.com only.
+              <strong>Google Analytics 4:</strong> on voquence.com only.
               Page views and download counts.
             </li>
             <li>
-              <strong>Resend</strong> &mdash; only if you enter your email in
+              <strong>Resend:</strong> only if you enter your email in
               the wishlist form. Used for launch announcements.
             </li>
             <li>
-              <strong>Vercel</strong> &mdash; hosts the voquence.com website
+              <strong>Vercel:</strong> hosts the voquence.com website
               and serves the auto-updater endpoint.
             </li>
             <li>
-              <strong>Hugging Face</strong> &mdash; hosts the Whisper model
+              <strong>Hugging Face:</strong> hosts the Whisper model
               file. When Local Whisper mode downloads the model the first time,
               it pulls the 141 MB file from huggingface.co. No personal data is
               sent.

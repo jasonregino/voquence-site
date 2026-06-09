@@ -80,7 +80,7 @@ export default function Home() {
             letterSpacing: "0.1em",
           }}
         >
-          APPLE SILICON · NOTARIZED · v0.3.1
+          APPLE SILICON · NOTARIZED · v0.3.2
         </p>
 
         <div
@@ -585,6 +585,17 @@ function FoundingLicenseCard() {
           >
             After the first 100 buyers, the price moves to $29. License
             owners keep theirs forever.
+          </p>
+          <p
+            className="font-mono"
+            style={{
+              color: "#f59e0b",
+              fontSize: "10px",
+              letterSpacing: "0.15em",
+              marginTop: "8px",
+            }}
+          >
+            CHECKOUT OPENS SHORTLY · APP IS A FREE DOWNLOAD MEANWHILE
           </p>
         </div>
 

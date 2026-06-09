@@ -233,7 +233,7 @@ export default function TermsPage() {
             punitive damages arising from your use of the app or the site. Our
             total liability for any direct damages, in any case, is limited to
             the amount you&apos;ve paid Voquence in the 12 months before the
-            event giving rise to the claim &mdash; or $50, whichever is greater.
+            event giving rise to the claim, or $50, whichever is greater.
           </p>
           <p>
             Some jurisdictions don&apos;t allow these exclusions, so they may
@@ -258,7 +258,7 @@ export default function TermsPage() {
             You can stop using Voquence at any time by deleting it from your
             Mac. We can stop providing it at any time, including the
             voquence.com site, the auto-updater, and the Whisper model
-            download &mdash; though we&apos;ll try to give notice if we plan to.
+            download. We&apos;ll try to give notice if we plan to.
           </p>
           <p>
             If you materially violate these terms (e.g. you reverse-engineer

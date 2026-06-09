@@ -113,6 +113,24 @@ export default function WisprFlowAlternativePage() {
         >
           MAC · APPLE SILICON · NO ACCOUNT · NO CREDIT CARD
         </p>
+        <p
+          className="mt-2"
+          style={{
+            color: "var(--brand-muted)",
+            fontSize: "12px",
+            lineHeight: 1.5,
+          }}
+        >
+          Apple Silicon only (M1, M2, M3, M4). Any Mac after Nov 2020. Not sure?{" "}
+          <Link
+            href="/download"
+            className="underline"
+            style={{ color: "var(--brand-cyan)" }}
+          >
+            How to check your Mac
+          </Link>
+          .
+        </p>
       </section>
 
       {/* The three complaints */}

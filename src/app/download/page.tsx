@@ -62,6 +62,49 @@ export default function DownloadPage() {
           VERSION 0.3.2 · APPLE SILICON (M1, M2, M3, M4) · NOTARIZED BY APPLE
         </p>
 
+        {/* Apple Silicon check — catches Intel Mac users before they hit a cryptic install error */}
+        <details
+          className="mt-4 inline-block"
+          style={{ color: "var(--brand-muted)", fontSize: "12px" }}
+        >
+          <summary
+            className="cursor-pointer"
+            style={{ color: "var(--brand-cyan)" }}
+          >
+            Not sure if your Mac is Apple Silicon?
+          </summary>
+          <div
+            className="mt-3 rounded-lg p-4"
+            style={{
+              background: "var(--brand-surface)",
+              border: "1px solid var(--brand-border)",
+              maxWidth: "560px",
+              color: "#cccccc",
+              fontSize: "13px",
+              lineHeight: 1.6,
+            }}
+          >
+            <p className="mb-2">
+              Click the Apple logo in the top-left corner of your Mac, then
+              click <strong>About This Mac</strong>. Look for one of these:
+            </p>
+            <ul className="space-y-1 pl-5 list-disc">
+              <li>
+                <strong style={{ color: "#22c55e" }}>Chip Apple M1, M2, M3, or M4</strong>{" "}
+                = Apple Silicon. Voquence will run.
+              </li>
+              <li>
+                <strong style={{ color: "#ef4444" }}>Processor Intel...</strong>{" "}
+                = Intel Mac. Voquence won&apos;t run on your machine yet.
+              </li>
+            </ul>
+            <p className="mt-3" style={{ color: "#aaaaaa", fontSize: "12px" }}>
+              Any Mac sold after November 2020 is Apple Silicon. Most Macs sold
+              before that are Intel.
+            </p>
+          </div>
+        </details>
+
         {/* Install steps */}
         <div className="mt-16">
           <h2
