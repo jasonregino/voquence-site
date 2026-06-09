@@ -11,12 +11,21 @@ export const metadata = {
     "Download Voquence for Mac. Voice into ready-to-paste content.",
 };
 
-export default function DownloadPage() {
+export default async function DownloadPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ founder?: string }>;
+}) {
+  const params = await searchParams;
+  const isFounder = params.founder === "1";
+
   return (
     <main className="min-h-screen flex flex-col">
       <div className="fixed inset-0 bg-grid pointer-events-none opacity-60" />
 
       <SiteHeader />
+
+      {isFounder && <FounderBanner />}
 
       {/* Hero */}
       <section className="relative z-10 px-6 sm:px-12 py-12 sm:py-20 max-w-3xl mx-auto w-full">
@@ -262,6 +271,70 @@ export default function DownloadPage() {
 
       <SiteFooter />
     </main>
+  );
+}
+
+function FounderBanner() {
+  return (
+    <section className="relative z-10 px-6 sm:px-12 pt-6 max-w-3xl mx-auto w-full">
+      <div
+        className="rounded-xl p-6"
+        style={{
+          background: "var(--brand-surface)",
+          border: "1px solid var(--brand-cyan)",
+          boxShadow: "0 0 32px rgba(0, 212, 255, 0.18)",
+        }}
+      >
+        <p
+          className="font-mono mb-2"
+          style={{
+            color: "var(--brand-cyan)",
+            fontSize: "11px",
+            letterSpacing: "0.2em",
+          }}
+        >
+          WELCOME, FOUNDER
+        </p>
+        <h2
+          className="font-bold mb-3"
+          style={{
+            color: "#ffffff",
+            fontSize: "20px",
+            lineHeight: 1.4,
+          }}
+        >
+          You&apos;re in the Founding 100. Thank you.
+        </h2>
+        <p
+          className="mb-3"
+          style={{ color: "#cccccc", fontSize: "14px", lineHeight: 1.6 }}
+        >
+          Your $19 price is locked in for life. Voquence keeps the 11 polish
+          modes available with your Anthropic key today. When the license
+          enforcement layer ships in v0.4, your founding membership is
+          already on the list, no action needed.
+        </p>
+        <p
+          className="mb-1"
+          style={{ color: "#cccccc", fontSize: "14px", lineHeight: 1.6 }}
+        >
+          Next step: download Voquence below if you haven&apos;t already.
+          Jason will send a personal thank-you email and your founding
+          confirmation to the address you used at checkout within 24 hours.
+        </p>
+        <p style={{ color: "#aaaaaa", fontSize: "13px", lineHeight: 1.6 }}>
+          Questions? Reply to that email, or write directly to{" "}
+          <a
+            href="mailto:jason@voquence.com"
+            className="underline"
+            style={{ color: "var(--brand-cyan)" }}
+          >
+            jason@voquence.com
+          </a>
+          . Real human.
+        </p>
+      </div>
+    </section>
   );
 }
 
