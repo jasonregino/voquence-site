@@ -187,24 +187,26 @@ export default function FoundersPage() {
             style={{ color: "#cccccc", fontSize: "14px", lineHeight: 1.6 }}
           >
             <li>
-              <strong style={{ color: "#ffffff" }}>$19 locked for life.</strong>{" "}
-              When the public price moves to $29 after the 100th sale, you
-              keep yours at $19.
+              <strong style={{ color: "#ffffff" }}>$19 one-time.</strong>{" "}
+              That&apos;s it. No recurring charges, no surprise renewals,
+              no upgrade tier hiding behind it.
             </li>
             <li>
               <strong style={{ color: "#ffffff" }}>
-                Free Managed Cloud when it ships
+                All 11 polish + content modes via your Anthropic key.
               </strong>{" "}
-              (targeting 1-2 weeks out). No Anthropic key required, no
-              recurring fee for Founders. Public price will be $9.99/month.
+              Free $5 Anthropic credit covers ~17,000 polishings, and typical
+              usage runs about 8 cents per month after that. Lifetime access
+              to your BYOK setup.
             </li>
             <li>
               <strong style={{ color: "#ffffff" }}>
-                All 11 polish + content modes today
+                1 year of Managed Cloud free
               </strong>{" "}
-              via Bring Your Own Keys (Anthropic). New Anthropic accounts get
-              $5 free credit, which is roughly 17,000 polishings before you
-              ever pay anything.
+              (worth $119.88). Starts the day you activate Managed Cloud, not
+              from your purchase date. No Anthropic key needed for that year,
+              Voquence covers the cloud cost. After year 1: $9.99/mo or
+              cancel, your call.
             </li>
             <li>
               <strong style={{ color: "#ffffff" }}>
@@ -235,8 +237,10 @@ export default function FoundersPage() {
               <strong style={{ color: "#ffffff" }}>
                 Grandfather protection when v0.4 ships.
               </strong>{" "}
-              When license enforcement turns on, you stay in. Free users
-              who haven&apos;t bought by then will need to.
+              When license enforcement turns on, your BYOK access keeps
+              working. Free-tier users without a Founding License will need
+              to pick the Managed Cloud subscription if they want the
+              polish modes.
             </li>
           </ul>
         </div>
@@ -266,11 +270,15 @@ export default function FoundersPage() {
           />
           <Timeline
             when="Within ~1-2 weeks"
-            what="Managed Cloud ships. You stop needing an Anthropic key for the polish modes. Voquence handles the cloud. Free for Founders, $9.99/month for everyone else."
+            what="Managed Cloud ships. Sign up at voquence.com/managed-cloud/signup with the same email you used at checkout, and your 1-year free Managed Cloud kicks in. No Anthropic key needed during your free year."
+          />
+          <Timeline
+            when="1 year after you activate Managed Cloud"
+            what="Your free year ends. Either convert to the $9.99/month subscription (or $99/year, save 17%) and keep using Managed Cloud, or cancel and go back to BYOK Anthropic. Your Founding License BYOK access stays forever either way."
           />
           <Timeline
             when="v0.4 (soon after Managed Cloud)"
-            what="License enforcement turns on. The 11 polish modes become a paid feature. You stay in automatically. Free users who didn't buy will need to."
+            what="License enforcement turns on. The 11 polish modes become a paid feature. Your Founding License BYOK access stays valid. Free-tier users without a Founding License will need to subscribe to Managed Cloud if they want the polish modes."
             last
           />
         </div>

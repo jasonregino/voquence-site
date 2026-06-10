@@ -106,8 +106,8 @@ export default function Home() {
         >
           You&apos;re downloading the full Voquence app. Free tier (Raw
           Transcript with Local Whisper) works immediately, no keys. Add your
-          Anthropic key in Settings to unlock the 11 polish modes today.
-          Founding License checkout opens shortly.
+          Anthropic key in Settings to unlock the 11 polish modes today, or
+          buy a Founding License for 1 year of Managed Cloud free.
         </p>
         <p
           className="font-mono mb-8"
@@ -283,7 +283,7 @@ export default function Home() {
           className="text-center mb-16 max-w-xl mx-auto"
           style={{ color: "var(--brand-muted)", fontSize: "15px" }}
         >
-          Free dictation, no setup. One price unlocks all the polish + content modes. No subscription.
+          Free dictation forever. Pay monthly or yearly for the polish + content modes. Founding License is a one-time offer for the first 100 supporters.
         </p>
 
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
@@ -304,34 +304,35 @@ export default function Home() {
             tier="Founding License"
             price="$19"
             priceSuffix="one-time"
-            tagline="Lock in Founder status. Pay once, own it."
+            tagline="Support the build. Become Founder #2 to #100."
             features={[
-              "TODAY: All 11 modes work with your Anthropic key ($5 free credit covers ~17,000 polishings)",
-              "WITHIN 1-2 WEEKS: Managed Cloud ships. Free for Founders. No key needed. (Public price: $9.99/mo)",
-              "$19 price locked for life. Public price moves to $29 after the 100th sale.",
+              "All 11 polish + content modes via your own Anthropic key (free $5 credit covers ~17,000 polishings, about 8 cents a month typical)",
+              "1 year of Managed Cloud FREE (worth $119.88). After year 1: $9.99/mo or cancel.",
+              "Founding License closes at sale #100. After that, subscription only.",
               "Vote on which mode ships next",
               "Optional public credit on voquence.com/founders",
               "Direct line to Jason at jason@voquence.com",
               "Grandfather protection when v0.4 license enforcement ships",
             ]}
             highlighted
-            badgeLabel="FIRST 100 · THEN $29"
+            badgeLabel="100 SPOTS ONLY"
             ctaUrl={FOUNDING_LICENSE_URL}
             ctaLabel="GET FOUNDING LICENSE →"
           />
           <PricingCard
             tier="Managed Cloud"
             price="$9.99"
-            priceSuffix="per month"
-            tagline="Same modes. No key needed. We handle the cloud."
+            priceSuffix="per month, or $99/year (save 17%)"
+            tagline="The 11 modes with zero setup. No key, no thinking."
             features={[
-              "Everything in Founding License, plus:",
-              "Managed Anthropic. No signup elsewhere",
-              "No per-call thinking",
-              "Cancel anytime",
-              "Ships when the backend is built",
+              "All 11 polish + content modes via Voquence's Anthropic proxy",
+              "10,000 polishings per month included (about 333 per day)",
+              "Or annual at $99 (save $20.88 vs monthly)",
+              "No Anthropic key needed",
+              "Cancel anytime, no commitment",
+              "Founders get 1 year free, then $9.99/mo or cancel",
             ]}
-            badgeLabel="COMING SOON"
+            badgeLabel="SHIPS IN 1-2 WEEKS"
           />
         </div>
 
@@ -343,7 +344,13 @@ export default function Home() {
             letterSpacing: "0.1em",
           }}
         >
-          NO RECURRING CHARGE · OWN IT ONCE
+          NEED TEAMS, CUSTOM LIMITS, OR SLA?{" "}
+          <a
+            href="mailto:jason@voquence.com?subject=Voquence%20Enterprise"
+            style={{ color: "var(--brand-cyan)" }}
+          >
+            EMAIL JASON
+          </a>
         </p>
 
         <p
@@ -387,7 +394,7 @@ export default function Home() {
           />
           <FaqItem
             q="Do I need an account?"
-            a="Not for the Free tier. Download Voquence, walk through Welcome, and Raw Transcript works immediately with no account. The Founding License unlock will require an email when it ships (so you can recover your license if you reinstall). Managed Cloud will require an account so we can run the subscription."
+            a="Not for the Free tier. Download Voquence, walk through Welcome, and Raw Transcript works immediately with no account. Founding License requires an email at checkout so you can recover your license if you reinstall. Managed Cloud (monthly or annual) requires an account so we can run the subscription."
           />
           <FaqItem
             q="What's BYOK and what will the API cost me?"
@@ -402,16 +409,16 @@ export default function Home() {
             a="Yes. Voquence pastes at your cursor wherever you are: Word, Pages, Notion, Slack, Google Docs in the browser, your code editor, your email client. Anywhere you can normally paste with Cmd+V, Voquence works."
           />
           <FaqItem
-            q="What's the difference between Free and Founding License?"
-            a="Free gives you Raw Transcript. Fully offline, fully local, no keys, forever. Founding License (one-time $19 for the first 100 buyers, then $29) unlocks all 11 polish + content modes: Clean Text, Eloquence, Book Description, Tweet Thread, Tech Support, Email Draft, Founder Mode, Marketing Copy, Social Post, Prompt Builder, and Poetry / Bars. The polish + content modes need an Anthropic API key for the Claude step (free $5 credit covers about 17,000 polishings). One purchase, own it forever, free updates on the v0.3 series."
+            q="What's the difference between Free, Founding License, and Managed Cloud?"
+            a="Free gives you Raw Transcript with Local Whisper. Fully offline, fully local, no keys, forever. Founding License ($19 one-time, first 100 supporters only) unlocks all 11 polish + content modes via your own Anthropic key (free $5 Anthropic credit covers about 17,000 polishings, typically 8 cents a month after), plus 1 year of Managed Cloud free, plus voting/credit/direct line perks. Managed Cloud ($9.99/month or $99/year) is the subscription path that runs the same 11 modes through Voquence's Anthropic proxy, no key needed, cancel anytime. After the 100th Founding License sale, Founding License closes and the only paid option is the Managed Cloud subscription."
           />
           <FaqItem
-            q="Why one-time pricing instead of a subscription?"
-            a="Two reasons. One, Voquence is built by a solo developer (Jason) and runs entirely on your Mac. There's no server eating recurring infrastructure cost that justifies a recurring bill. Two, the dictation category is currently full of $10-$20/month subscriptions that frustrate users (Wispr Flow sits in the mid-2s out of 5 on Trustpilot partly because of this). VoiceInk, superwhisper, and MacWhisper all sell one-time licenses for the same model. We follow that lead. Pay once, own it. A Managed Cloud subscription is on the roadmap for users who'd rather pay $9.99/mo and not deal with an Anthropic key at all, but it's optional, not a replacement."
+            q="Why is Managed Cloud a subscription and Founding License a one-time deal?"
+            a="They serve different commitment levels. Managed Cloud at $9.99/month (or $99/year) is the low-friction subscription path for anyone who wants the 11 modes with zero setup, no key management, and the ability to cancel anytime. It's also fairly priced against Wispr Flow's $144/year and Glaido's $199/year, while running through Voquence's own Anthropic proxy so there's no per-call thinking. Founding License at $19 one-time is a limited launch offer for the first 100 supporters. It's a thank-you to people who showed up before reviews and traction existed, with lifetime BYOK access plus 1 year of Managed Cloud free, plus voting and credit perks. After sale #100, the Founding License closes and Managed Cloud becomes the only paid path. Both serve real buyer psychologies and they don't compete with each other."
           />
           <FaqItem
             q="What's the Founding 100?"
-            a="The first 100 Founding License purchases lock in at $19 forever. After 100 founding buyers are in, the price moves to $29 for everyone new. Founding members keep their $19 price for life. Founding members will also get a public credit on a launch page (optional, first names only if you want it). It's our way of saying thanks to the people who showed up first."
+            a="The first 100 Voquence supporters buy the Founding License at $19 one-time. After the 100th sale, the offer closes forever and new buyers can only get Managed Cloud at $9.99/month or $99/year. Founders 2 through 100 get: lifetime BYOK access to all 11 modes (your own Anthropic key, free $5 credit covers ~17,000 polishings), 1 year of Managed Cloud free (worth $119.88, then $9.99/mo or cancel), voting rights on which mode ships next, optional public credit on /founders (first name only, opt-in), and a direct line to Jason at jason@voquence.com. It's our way of saying thanks to the people who showed up first."
           />
           <FaqItem
             q="When does Local Whisper Mode ship?"
@@ -649,8 +656,9 @@ function FoundingLicenseCard() {
               marginTop: "4px",
             }}
           >
-            After the first 100 buyers, the price moves to $29. License
-            owners keep theirs forever.
+            One-time offer for the first 100 Voquence supporters. Closes at
+            sale #100. After that, the only paid option is Managed Cloud
+            subscription.
           </p>
           <a
             href={FOUNDING_LICENSE_URL}
@@ -683,19 +691,19 @@ function FoundingLicenseCard() {
               letterSpacing: "0.18em",
             }}
           >
-            HOW THE MODES WORK
+            WHAT YOU GET
           </p>
           <ul
             className="space-y-1.5"
             style={{ color: "#cccccc", fontSize: "12.5px", lineHeight: 1.5 }}
           >
             <li>
-              <strong style={{ color: "#ffffff" }}>Today:</strong> Use your
-              own Anthropic key. Free $5 credit = ~17,000 polishings.
+              <strong style={{ color: "#ffffff" }}>11 modes via BYOK:</strong>{" "}
+              Your Anthropic key, free $5 credit covers ~17,000 polishings.
             </li>
             <li>
-              <strong style={{ color: "#ffffff" }}>~1-2 weeks:</strong>{" "}
-              Managed Cloud ships. Free for Founders. No key needed.
+              <strong style={{ color: "#ffffff" }}>1 year Managed Cloud free</strong>{" "}
+              (worth $119.88). Then $9.99/mo or cancel.
             </li>
             <li>
               <a

@@ -6,20 +6,20 @@ import { FOUNDING_LICENSE_URL } from "@/app/page";
 export const metadata = {
   title: "Wispr Flow Alternative · Voquence",
   description:
-    "Looking to switch from Wispr Flow? Voquence runs locally, costs $19 one-time, and turns your voice into finished content instead of a transcript.",
+    "Looking to switch from Wispr Flow? Voquence runs locally on your Mac, costs less per year ($99 vs Wispr's $144+), and turns your voice into finished content instead of a transcript.",
   openGraph: {
-    title: "A Wispr Flow Alternative That Runs On Your Mac.",
+    title: "A Local-First Wispr Flow Alternative That Costs Less.",
     description:
-      "Local-first, one-time $19, and it turns your voice into finished content instead of a transcript. Free to download.",
+      "Voquence runs on your Mac, costs $9.99/mo (or $99/yr), and turns your voice into finished content. Free to download.",
     url: "https://voquence.com/wispr-flow-alternative",
     siteName: "Voquence",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "A Wispr Flow Alternative That Runs On Your Mac.",
+    title: "A Local-First Wispr Flow Alternative That Costs Less.",
     description:
-      "Local-first, one-time $19, and it turns your voice into finished content instead of a transcript. Free to download.",
+      "Voquence runs on your Mac, costs $9.99/mo (or $99/yr), and turns your voice into finished content. Free to download.",
   },
 };
 
@@ -79,15 +79,17 @@ export default function WisprFlowAlternativePage() {
               fontWeight: 500,
             }}
           >
-            A local-first, one-time-payment alternative to Wispr Flow.
+            A local-first, cheaper alternative to Wispr Flow.
           </p>
           <p
             className="mt-4"
             style={{ color: "#bbbbbb", fontSize: "14px", lineHeight: 1.6 }}
           >
             Wispr Flow runs in the cloud on a $144/year subscription and stops
-            at the transcript. Voquence runs on your Mac, costs $19 one-time,
-            and turns voice into finished content across 11 modes.
+            at the transcript. Voquence runs on your Mac, costs $9.99/month
+            (or $99/year, save 17%), and turns voice into finished content
+            across 11 modes. First 100 supporters can also grab a Founding
+            License at $19 one-time and get a full year of Managed Cloud free.
           </p>
         </div>
 
@@ -173,14 +175,14 @@ export default function WisprFlowAlternativePage() {
           n={2}
           complaint="$144 a year, and it gets worse after you pay."
           detail="Wispr Flow runs $12 to $15 per month. That is $144 to $180 a year, forever. Trustpilot sits in the mid-2s out of 5 with a recurring theme: users say the app feels great during the free trial and degrades once they are paying."
-          answer="Voquence's Founding License is a one-time $19 for the first 100 buyers, then $29 after. Pay once. You own it. No renewal, no surprise charge twelve months from now. Checkout is open today, the app itself is a free download if you want to try it first."
+          answer="Voquence Managed Cloud is $9.99/month (or $99/year, save 17%, two months free). That's cheaper than Wispr Flow's $144/year and cancel anytime. The first 100 supporters can also buy a Founding License at $19 one-time, which adds a full year of Managed Cloud free, voting rights, public credit, and lifetime BYOK access to all 11 modes. After the 100th Founding License sells, the only paid path is the subscription."
         />
 
         <ComplaintCard
           n={3}
           complaint="It gives me a transcript. I still have to rewrite it."
           detail="Wispr Flow does one job well: voice in, text out. But you still have to turn that text into a tweet thread, a polished email, a book description, a support reply. That is where most of the real time goes."
-          answer="Voquence has 11 finished-output modes. Speak rough thoughts, get back a structured tweet thread, a tightened email, a book description that follows the Amazon format, a clean AI prompt, a social post in your voice. The rewriting step is the product, not your homework after dictation. TODAY these modes run through your own Anthropic key (free $5 credit covers about 17,000 polishings). WITHIN 1-2 WEEKS, Managed Cloud ships and Founders get it free forever, no key needed. Your transcription stays fully local either way and Voquence the company never sees any of it."
+          answer="Voquence has 11 finished-output modes. Speak rough thoughts, get back a structured tweet thread, a tightened email, a book description that follows the Amazon format, a clean AI prompt, a social post in your voice. The rewriting step is the product, not your homework after dictation. Two paths to use them: bring your own Anthropic key today (free $5 credit covers about 17,000 polishings) and the modes run through your account, OR subscribe to Managed Cloud at $9.99/mo (or $99/yr) and Voquence handles the cloud with no key needed. Either way your transcription stays fully local and Voquence the company never sees any of it."
         />
       </section>
 
@@ -204,7 +206,7 @@ export default function WisprFlowAlternativePage() {
             border: "1px solid var(--brand-border)",
           }}
         >
-          <CompareRow label="Price" voq="$19 one-time (first 100), then $29" wispr="$12 to $15 per month" />
+          <CompareRow label="Price" voq="$9.99/mo or $99/yr (or $19 Founding License, first 100)" wispr="$12 to $15 per month" />
           <CompareRow label="Where audio goes" voq="On your Mac with Local Whisper" wispr="Their cloud servers" />
           <CompareRow label="Output" voq="Raw transcript + 11 finished-content modes" wispr="Raw transcript" />
           <CompareRow label="API keys" voq="Bring your own (OpenAI + Anthropic) or use Local Whisper for free" wispr="Built in, you cannot swap" />
@@ -288,7 +290,7 @@ export default function WisprFlowAlternativePage() {
             style={{ color: "#cccccc", fontSize: "15px", lineHeight: 1.6 }}
           >
             Raw Transcript mode with Local Whisper is free forever. Decide
-            later whether the 11 content modes are worth the one-time license.
+            later whether the 11 content modes are worth $9.99/month, $99/year, or a Founding License.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link

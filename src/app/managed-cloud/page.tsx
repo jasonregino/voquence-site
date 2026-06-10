@@ -78,11 +78,12 @@ export default function ManagedCloudPage() {
             </span>
           </div>
           <p
-            className="mb-4"
+            className="mb-3"
             style={{ color: "#cccccc", fontSize: "14px", lineHeight: 1.6 }}
           >
-            Includes up to 10,000 polishings per month (about 333 per day).
-            Cancel anytime, no commitment.
+            Or annual at <strong style={{ color: "#ffffff" }}>$99/year</strong>
+            {" "}(save 17%, two months free). Includes up to 10,000 polishings
+            per month (about 333 per day). Cancel anytime, no commitment.
           </p>
           <p
             className="font-mono"
@@ -92,7 +93,7 @@ export default function ManagedCloudPage() {
               letterSpacing: "0.15em",
             }}
           >
-            FREE FOREVER FOR FOUNDING LICENSE BUYERS
+            FOUNDERS: 1 YEAR FREE
           </p>
         </div>
 
@@ -162,7 +163,7 @@ export default function ManagedCloudPage() {
             </li>
             <li>
               <strong style={{ color: "#ffffff" }}>
-                Want Managed Cloud free forever?
+                Want 1 year of Managed Cloud free?
               </strong>{" "}
               Buy a Founding License at{" "}
               <a
@@ -172,8 +173,8 @@ export default function ManagedCloudPage() {
               >
                 $19 one-time (first 100 only)
               </a>
-              . Then sign up here with the same email and you get Managed Cloud
-              at no charge, locked for life.
+              . Sign up here with the same email and you get a year of Managed
+              Cloud at no charge. After year one, $9.99/mo or cancel.
             </li>
           </ul>
         </div>

@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
   return NextResponse.json(
     {
       message:
-        "Claude proxy stub — Session 1 wires auth only. Anthropic forwarding ships in Session 3.",
+        "Claude proxy stub. Session 1 wires auth only. Anthropic forwarding ships in Session 3.",
       authenticated_as: user.email,
     },
     { status: 501 }

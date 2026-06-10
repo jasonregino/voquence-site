@@ -309,8 +309,8 @@ function FounderBanner() {
           className="mb-3"
           style={{ color: "#cccccc", fontSize: "14px", lineHeight: 1.6 }}
         >
-          Your $19 price is locked in for life. Here&apos;s exactly what
-          that buys you and when:
+          Your $19 Founding License is a one-time purchase. Here&apos;s
+          exactly what it includes and when each piece kicks in:
         </p>
         <ul
           className="space-y-2 mb-4 pl-5 list-disc"
@@ -318,18 +318,20 @@ function FounderBanner() {
         >
           <li>
             <strong style={{ color: "#ffffff" }}>Today:</strong> All 11 polish
-            modes work via your own Anthropic key (free $5 credit covers
-            ~17,000 polishings).
+            + content modes via your own Anthropic key (free $5 Anthropic
+            credit covers ~17,000 polishings, typical usage runs ~8 cents a
+            month after). Lifetime BYOK access.
           </li>
           <li>
             <strong style={{ color: "#ffffff" }}>Within ~1-2 weeks:</strong>{" "}
-            Managed Cloud ships. Free for Founders, no key needed. Public
-            price will be $9.99/month.
+            Managed Cloud ships. You get 1 year free (worth $119.88). Sign up
+            at /managed-cloud/signup with this same email. After year 1: stay
+            for $9.99/mo (or $99/yr, save 17%) or cancel.
           </li>
           <li>
             <strong style={{ color: "#ffffff" }}>When v0.4 ships:</strong>{" "}
-            License enforcement turns on. Your founding membership keeps you
-            in automatically.
+            License enforcement turns on. Your Founding License BYOK access
+            keeps working automatically.
           </li>
           <li>
             Plus: vote on the next mode, optional public credit on{" "}
