@@ -269,6 +269,26 @@ export default function PrivacyPage() {
               it pulls the 141 MB file from huggingface.co. No personal data is
               sent.
             </li>
+            <li>
+              <strong>Supabase:</strong> stores your Managed Cloud account
+              login (email and encrypted password or OAuth identity) and your
+              subscription and usage status. Supabase sees your email and
+              account state. They do not see your dictation, transcripts, or
+              polished outputs, which flow through Voquence&apos;s own proxy
+              with our Anthropic key only while you are actively using Managed
+              Cloud. Free tier users and BYOK users do not create a Supabase
+              account. See{" "}
+              <a
+                href="https://supabase.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+                style={{ color: "var(--brand-cyan)" }}
+              >
+                Supabase&apos;s privacy policy
+              </a>
+              .
+            </li>
           </ul>
         </Block>
 
