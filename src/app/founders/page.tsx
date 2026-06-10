@@ -18,10 +18,9 @@ export const metadata = {
  * for the first 100. People know a human added them.
  */
 const FOUNDERS: Array<{ position: number; name: string; note?: string }> = [
-  // Buyer #1 was Jason's friend who helped validate the live Stripe flow on
-  // 2026-06-09. Name is intentionally TBD until the friend confirms whether
-  // they want public credit (first name only, opt-in per the email).
-  { position: 1, name: "TBD", note: "First Founder · 2026-06-09" },
+  // Buyer #1 was Ives, Jason's friend who helped validate the live Stripe
+  // flow on 2026-06-09. Opted in to first-name public credit.
+  { position: 1, name: "Ives", note: "First Founder · 2026-06-09" },
 ];
 
 const TOTAL_SPOTS = 100;
