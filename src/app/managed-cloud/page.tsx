@@ -75,7 +75,14 @@ async function getDashboardState(userId: string): Promise<DashboardState> {
   return { kind: "none" };
 }
 
-export default async function ManagedCloudPage() {
+export default async function ManagedCloudPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ checkout?: string }>;
+}) {
+  const { checkout } = await searchParams;
+  const justCheckedOut = checkout === "success";
+
   const supabase = await createClient();
   const {
     data: { user },
@@ -111,6 +118,7 @@ export default async function ManagedCloudPage() {
             <ManagedCloudDashboard
               email={user.email ?? ""}
               state={await getDashboardState(user.id)}
+              justCheckedOut={justCheckedOut}
             />
           </>
         ) : (

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 
@@ -32,13 +32,31 @@ const eyebrow: React.CSSProperties = {
 export function ManagedCloudDashboard({
   email,
   state,
+  justCheckedOut = false,
 }: {
   email: string;
   state: DashboardState;
+  justCheckedOut?: boolean;
 }) {
   const router = useRouter();
   const [busy, setBusy] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  // After Stripe checkout, the browser is redirected back here a beat before
+  // the webhook finishes writing "active" to the DB. Rather than flash the
+  // subscribe buttons (which reads as "did my payment fail?"), show an
+  // "activating" state and quietly re-fetch until the subscription appears.
+  const finalizing = justCheckedOut && state.kind === "none";
+  const pollsRef = useRef(0);
+  useEffect(() => {
+    if (!finalizing) return;
+    if (pollsRef.current >= 8) return; // ~20s ceiling, then stop polling
+    const t = setTimeout(() => {
+      pollsRef.current += 1;
+      router.refresh();
+    }, 2500);
+    return () => clearTimeout(t);
+  }, [finalizing, state, router]);
 
   async function post(path: string, body?: object) {
     const res = await fetch(path, {
@@ -116,6 +134,19 @@ export function ManagedCloudDashboard({
         </button>
       </div>
 
+      {finalizing && (
+        <StatusCard label="ACTIVATING YOUR ACCOUNT">
+          <p style={bodyText}>
+            Payment received, thank you. We&apos;re switching on your Managed
+            Cloud access now. This usually takes a few seconds and updates on
+            its own. If it doesn&apos;t, tap refresh below.
+          </p>
+          <ActionButton onClick={() => router.refresh()} loading={false}>
+            REFRESH
+          </ActionButton>
+        </StatusCard>
+      )}
+
       {state.kind === "subscribed" && (
         <StatusCard label="MANAGED CLOUD ACTIVE">
           <p style={bodyText}>
@@ -176,7 +207,7 @@ export function ManagedCloudDashboard({
         </StatusCard>
       )}
 
-      {(state.kind === "none" || state.kind === "founder_expired") && (
+      {!finalizing && (state.kind === "none" || state.kind === "founder_expired") && (
         <StatusCard
           label={
             state.kind === "founder_expired"
