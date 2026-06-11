@@ -26,7 +26,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
  * upserts or no-ops on conflict.
  */
 
-const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!;
+const webhookSecret = (process.env.STRIPE_WEBHOOK_SECRET ?? "").trim();
 
 export async function POST(req: NextRequest) {
   const body = await req.text();
