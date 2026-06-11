@@ -29,3 +29,22 @@ export const MANAGED_CLOUD_PRICES = {
 } as const;
 
 export type ManagedCloudPlan = keyof typeof MANAGED_CLOUD_PRICES;
+
+/**
+ * Voquence and Source to Social share ONE Stripe account, so the Voquence
+ * webhook also receives S2S's events. We identify Voquence's own products to
+ * skip foreign events. This is the Founding License PRODUCT id (matches all
+ * of its prices). Managed Cloud is matched by its price ids above.
+ */
+export const FOUNDING_LICENSE_PRODUCT_ID = (
+  process.env.STRIPE_PRODUCT_FOUNDING_LICENSE ?? ""
+).trim();
+
+/** True if a Stripe price id is one of Voquence's Managed Cloud prices. */
+export function isManagedCloudPrice(priceId: string | undefined | null): boolean {
+  return (
+    !!priceId &&
+    (priceId === MANAGED_CLOUD_PRICES.monthly ||
+      priceId === MANAGED_CLOUD_PRICES.annual)
+  );
+}

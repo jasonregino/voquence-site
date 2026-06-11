@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import type Stripe from "stripe";
-import { stripe } from "@/lib/stripe";
+import {
+  stripe,
+  FOUNDING_LICENSE_PRODUCT_ID,
+  isManagedCloudPrice,
+} from "@/lib/stripe";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 /**
@@ -83,7 +87,34 @@ export async function POST(req: NextRequest) {
 async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   const supabase = createAdminClient();
 
-  if (session.mode === "payment") {
+  // Shared Stripe account: this webhook also receives Source to Social's
+  // checkouts. Inspect the line items and only act if this is one of
+  // Voquence's products. Everything else is skipped cleanly.
+  const lineItems = await stripe.checkout.sessions.listLineItems(session.id, {
+    limit: 100,
+  });
+  let isFoundingLicense = false;
+  let isManagedCloud = false;
+  for (const li of lineItems.data) {
+    if (isManagedCloudPrice(li.price?.id)) isManagedCloud = true;
+    const productId =
+      typeof li.price?.product === "string"
+        ? li.price.product
+        : li.price?.product?.id;
+    if (FOUNDING_LICENSE_PRODUCT_ID && productId === FOUNDING_LICENSE_PRODUCT_ID) {
+      isFoundingLicense = true;
+    }
+  }
+
+  if (!isFoundingLicense && !isManagedCloud) {
+    console.log(
+      "[stripe-webhook] skipping non-Voquence checkout",
+      session.id
+    );
+    return;
+  }
+
+  if (session.mode === "payment" && isFoundingLicense) {
     // $19 Founding License (the only one-time product today).
     const email = (
       session.customer_details?.email ?? session.customer_email ?? ""
@@ -127,7 +158,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     return;
   }
 
-  if (session.mode === "subscription") {
+  if (session.mode === "subscription" && isManagedCloud) {
     // Managed Cloud signup. client_reference_id is the Supabase user id we
     // set when creating the checkout session.
     const userId = session.client_reference_id;
@@ -160,6 +191,19 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
  * cached on their profile.
  */
 async function syncSubscription(subscription: Stripe.Subscription) {
+  // Shared Stripe account: skip subscriptions that aren't a Voquence Managed
+  // Cloud price (e.g. Source to Social's Creator plan). Without this, a
+  // foreign subscription would fail the profile lookup below, return 500, and
+  // make Stripe retry it forever.
+  const priceId = subscription.items?.data?.[0]?.price?.id;
+  if (!isManagedCloudPrice(priceId)) {
+    console.log(
+      "[stripe-webhook] skipping non-Voquence subscription",
+      subscription.id
+    );
+    return;
+  }
+
   const supabase = createAdminClient();
 
   const customerId =
