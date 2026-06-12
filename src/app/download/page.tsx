@@ -14,10 +14,13 @@ export const metadata = {
 export default async function DownloadPage({
   searchParams,
 }: {
-  searchParams: Promise<{ founder?: string }>;
+  searchParams: Promise<{ founder?: string; choose?: string }>;
 }) {
   const params = await searchParams;
   const isFounder = params.founder === "1";
+  // Arrived by clicking "Download Free" on the homepage pricing shelf. Offer
+  // the zero-setup upgrade once, calmly, without blocking the download.
+  const fromPricing = params.choose === "1";
 
   return (
     <main className="min-h-screen flex flex-col">
@@ -26,6 +29,7 @@ export default async function DownloadPage({
       <SiteHeader />
 
       {isFounder && <FounderBanner />}
+      {!isFounder && fromPricing && <FreeChoiceBanner />}
 
       {/* Hero */}
       <section className="relative z-10 px-6 sm:px-12 py-12 sm:py-20 max-w-3xl mx-auto w-full">
@@ -271,6 +275,65 @@ export default async function DownloadPage({
 
       <SiteFooter />
     </main>
+  );
+}
+
+/**
+ * Shown when a visitor clicks "Download Free" on the homepage pricing shelf
+ * (?choose=1). A calm, one-time offer of the zero-setup path — never a block.
+ * The download button and install steps sit right below it, untouched.
+ */
+function FreeChoiceBanner() {
+  return (
+    <section className="relative z-10 px-6 sm:px-12 pt-6 max-w-3xl mx-auto w-full">
+      <div
+        className="rounded-xl p-6 vq-card"
+        style={{
+          background: "var(--brand-surface)",
+          border: "1px solid var(--brand-cyan)",
+          boxShadow: "0 0 32px rgba(0, 212, 255, 0.18)",
+        }}
+      >
+        <p
+          className="font-mono mb-2"
+          style={{
+            color: "var(--brand-cyan)",
+            fontSize: "11px",
+            letterSpacing: "0.2em",
+          }}
+        >
+          YOU&apos;RE GETTING THE FREE VERSION
+        </p>
+        <p
+          className="mb-4"
+          style={{ color: "#cccccc", fontSize: "15px", lineHeight: 1.6 }}
+        >
+          Raw Transcript with Local Whisper. No account, no keys, works fully
+          offline. Want the 11 polish + content modes with zero setup? Managed
+          Cloud runs them through Voquence&apos;s cloud, nothing to configure.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+          <Link
+            href="/managed-cloud"
+            className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-3 transition vq-cta"
+            style={{
+              background: "var(--brand-cyan)",
+              color: "#0a0a0a",
+              fontSize: "13px",
+              letterSpacing: "0.15em",
+              boxShadow: "0 0 24px rgba(0, 212, 255, 0.25)",
+            }}
+          >
+            SEE MANAGED CLOUD →
+          </Link>
+          <span
+            style={{ color: "var(--brand-muted)", fontSize: "13px" }}
+          >
+            or just scroll down to download, it&apos;s free either way.
+          </span>
+        </div>
+      </div>
+    </section>
   );
 }
 

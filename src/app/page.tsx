@@ -14,6 +14,27 @@ import { SiteFooter } from "@/components/SiteFooter";
 export const FOUNDING_LICENSE_URL =
   "https://buy.stripe.com/8x23cxgJG1Px2Tz1gN8EM00";
 
+/**
+ * Managed Cloud purchase switch. Keep this FALSE until the v0.4 desktop app
+ * ships — the build that signs in to Managed Cloud and routes through the
+ * proxy. While false, the homepage Managed Cloud card stays "shipping soon"
+ * with no buy button, so nobody can subscribe and pay before any app build can
+ * actually use the cloud.
+ *
+ * Flip to true the day v0.4 is live. That single change turns the card
+ * purchase-forward: badge removed, a "GET MANAGED CLOUD →" button pointing at
+ * /managed-cloud, and a short note spelling out the steps to subscribe.
+ */
+export const MANAGED_CLOUD_PURCHASE_LIVE = false;
+
+/**
+ * Hero secondary CTA switch. When true, a quiet "SEE PRICING →" ghost button
+ * sits beside the primary "Download for Mac" so buyer-minded visitors have a
+ * door to the pricing shelf instead of only the free-download path. Safe to
+ * ship independently of Managed Cloud (Founding License is buyable today).
+ */
+export const SEE_PRICING_CTA_LIVE = false;
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
@@ -68,19 +89,39 @@ export default function Home() {
           your Mac. Offline, no API key, no per-minute cost.
         </p>
 
-        <Link
-          href="/download"
-          className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-7 py-4 transition mb-6 vq-cta"
-          style={{
-            background: "var(--brand-cyan)",
-            color: "#0a0a0a",
-            fontSize: "14px",
-            letterSpacing: "0.15em",
-            boxShadow: "0 0 32px rgba(0, 212, 255, 0.25)",
-          }}
-        >
-          ↓ DOWNLOAD FOR MAC
-        </Link>
+        <div className="flex flex-col sm:flex-row gap-3 items-center justify-center mb-6">
+          <Link
+            href="/download"
+            className="inline-flex items-center justify-center gap-3 font-mono font-bold rounded-lg px-7 py-4 transition vq-cta"
+            style={{
+              background: "var(--brand-cyan)",
+              color: "#0a0a0a",
+              border: "1px solid transparent",
+              fontSize: "14px",
+              letterSpacing: "0.15em",
+              boxShadow: "0 0 32px rgba(0, 212, 255, 0.25)",
+              minWidth: "230px",
+            }}
+          >
+            ↓ DOWNLOAD FOR MAC
+          </Link>
+          {SEE_PRICING_CTA_LIVE && (
+            <Link
+              href="/#pricing"
+              className="inline-flex items-center justify-center gap-3 font-mono font-bold rounded-lg px-7 py-4 transition vq-cta"
+              style={{
+                background: "transparent",
+                color: "var(--brand-cyan)",
+                border: "1px solid var(--brand-cyan)",
+                fontSize: "14px",
+                letterSpacing: "0.15em",
+                minWidth: "230px",
+              }}
+            >
+              SEE PRICING →
+            </Link>
+          )}
+        </div>
 
         <p
           className="font-mono"
@@ -300,6 +341,9 @@ export default function Home() {
               "No account, no keys, no setup",
               "Unlimited usage",
             ]}
+            {...(MANAGED_CLOUD_PURCHASE_LIVE
+              ? { ctaUrl: "/download?choose=1", ctaLabel: "DOWNLOAD FREE →" }
+              : {})}
           />
           <PricingCard
             tier="Founding License"
@@ -333,7 +377,14 @@ export default function Home() {
               "Cancel anytime, no commitment",
               "Founders get 1 year free, then $9.99/mo or cancel",
             ]}
-            badgeLabel="SHIPS IN 1-2 WEEKS"
+            {...(MANAGED_CLOUD_PURCHASE_LIVE
+              ? {
+                  ctaUrl: "/managed-cloud",
+                  ctaLabel: "GET MANAGED CLOUD →",
+                  ctaNote:
+                    "Create a free account, then subscribe inside. About a minute.",
+                }
+              : { badgeLabel: "SHIPS IN 1-2 WEEKS" })}
           />
         </div>
 
@@ -455,6 +506,7 @@ function PricingCard({
   badgeLabel,
   ctaUrl,
   ctaLabel,
+  ctaNote,
 }: {
   tier: string;
   price: string;
@@ -468,6 +520,8 @@ function PricingCard({
   ctaUrl?: string;
   /** Button text when ctaUrl is set; defaults to "GET IT" */
   ctaLabel?: string;
+  /** Small muted line under the CTA button, e.g. how to subscribe */
+  ctaNote?: string;
 }) {
   return (
     <div
@@ -556,10 +610,24 @@ function PricingCard({
             </li>
           ))}
         </ul>
+        {ctaUrl && ctaNote && (
+          <p
+            className="text-center mt-6 mb-2"
+            style={{
+              color: "var(--brand-muted)",
+              fontSize: "11px",
+              lineHeight: 1.5,
+            }}
+          >
+            {ctaNote}
+          </p>
+        )}
         {ctaUrl && (
           <a
             href={ctaUrl}
-            className="inline-flex items-center justify-center font-mono font-bold rounded-lg transition w-full mt-6 vq-cta"
+            className={`inline-flex items-center justify-center font-mono font-bold rounded-lg transition w-full vq-cta ${
+              ctaNote ? "" : "mt-6"
+            }`}
             style={{
               background: "var(--brand-cyan)",
               color: "#0a0a0a",
