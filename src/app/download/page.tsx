@@ -48,7 +48,7 @@ export default async function DownloadPage({
 
         <a
           href={DOWNLOAD_URL}
-          className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition"
+          className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition vq-cta"
           style={{
             background: "var(--brand-cyan)",
             color: "#0a0a0a",
@@ -117,7 +117,7 @@ export default async function DownloadPage({
         {/* Install steps */}
         <div className="mt-16">
           <h2
-            className="font-mono font-black mb-6"
+            className="font-mono font-black mb-6 vq-heading"
             style={{
               color: "var(--brand-cyan)",
               fontSize: "16px",
@@ -149,7 +149,7 @@ export default async function DownloadPage({
         {/* BYOK setup */}
         <div className="mt-14">
           <h2
-            className="font-mono font-black mb-4"
+            className="font-mono font-black mb-4 vq-heading"
             style={{
               color: "var(--brand-cyan)",
               fontSize: "16px",
@@ -212,7 +212,7 @@ export default async function DownloadPage({
         {/* FAQ / Troubleshooting */}
         <div className="mt-14">
           <h2
-            className="font-mono font-black mb-6"
+            className="font-mono font-black mb-6 vq-heading"
             style={{
               color: "var(--brand-cyan)",
               fontSize: "16px",
@@ -278,7 +278,7 @@ function FounderBanner() {
   return (
     <section className="relative z-10 px-6 sm:px-12 pt-6 max-w-3xl mx-auto w-full">
       <div
-        className="rounded-xl p-6"
+        className="rounded-xl p-6 vq-card"
         style={{
           background: "var(--brand-surface)",
           border: "1px solid var(--brand-cyan)",

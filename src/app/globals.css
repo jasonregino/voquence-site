@@ -37,4 +37,80 @@ html, body {
     linear-gradient(rgba(0, 212, 255, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 212, 255, 0.04) 1px, transparent 1px);
   background-size: 48px 48px;
+  /* Audit item G: vignette the grid so it breathes toward the edges
+     instead of wallpapering the whole viewport. */
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 40%, transparent 80%);
+  mask-image: radial-gradient(ellipse at 50% 30%, black 40%, transparent 80%);
+}
+
+/* ─── Cowork visual audit (2026-06-11) — calm industrial system ───────────
+   Tells fixed: full-opacity cyan borders everywhere (#1), resting glow (#2),
+   zero hover response (#3), monotone headings (#4), unfocused inputs (#5).
+   Classes use !important so they win over the existing inline styles —
+   apply by adding a className, remove by deleting it. */
+
+/* A: calm card. Border drops to 16% cyan at rest; the fill gets a whisper
+   gradient + machined inset highlight. Hover brightens the frame + lifts. */
+.vq-card {
+  border-color: rgba(0, 212, 255, 0.16) !important;
+  background: linear-gradient(180deg, #16181b 0%, #101214 100%) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+  transition: border-color 150ms ease, transform 150ms ease;
+}
+.vq-card:hover {
+  /* Best-of-both-worlds (Jason's call): calm at rest, but on hover the card
+     lights up to the full live look — bright cyan border + glow — plus the
+     2px lift. Energy you earn instead of energy that's always on. */
+  border-color: var(--brand-cyan) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 0 26px rgba(0, 212, 255, 0.28) !important;
+  transform: translateY(-2px);
+}
+
+/* B: glow discipline. CTAs are calm at rest (machined press edge only);
+   the glow is earned on hover. */
+.vq-cta {
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.3) !important;
+  transition: box-shadow 150ms ease, filter 150ms ease;
+}
+.vq-cta:hover {
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.3),
+    0 0 24px rgba(0, 212, 255, 0.35) !important;
+  filter: brightness(1.05);
+}
+
+/* C: heading hierarchy. Big section headings go white with tighter
+   tracking; the small cyan eyebrows above them stay cyan and become the
+   accent. Cyan points, white speaks. */
+.vq-heading {
+  color: #ededed !important;
+  letter-spacing: 0.12em !important;
+}
+
+/* E: input focus treatment for the money-path forms. */
+.vq-input {
+  background: #16181b !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+.vq-input:focus {
+  outline: none;
+  border-color: rgba(0, 212, 255, 0.6) !important;
+  box-shadow: 0 0 0 1px rgba(0, 212, 255, 0.25) !important;
+}
+/* Browsers tint fields they can autofill (email especially) with their own
+   yellow/blue wash. Pin the fill back to brand so email + password match. */
+.vq-input:-webkit-autofill,
+.vq-input:-webkit-autofill:hover,
+.vq-input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #16181b inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #ffffff;
+}
+
+/* I: radius tightening — industrial corners. Tailwind v4 reads these
+   tokens for rounded-lg / rounded-xl sitewide. */
+@theme {
+  --radius-lg: 6px;
+  --radius-xl: 8px;
 }

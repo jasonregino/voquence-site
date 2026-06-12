@@ -50,7 +50,7 @@ export function SignupForm() {
   if (success) {
     return (
       <div
-        className="rounded-xl p-6"
+        className="rounded-xl p-6 vq-card"
         style={{
           background: "var(--brand-surface)",
           border: "1px solid var(--brand-cyan)",
@@ -96,7 +96,7 @@ export function SignupForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           autoComplete="email"
-          className="w-full rounded-lg px-4 py-3"
+          className="w-full rounded-lg px-4 py-3 vq-input"
           style={{
             background: "var(--brand-surface)",
             border: "1px solid var(--brand-border)",
@@ -126,7 +126,7 @@ export function SignupForm() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           autoComplete="new-password"
-          className="w-full rounded-lg px-4 py-3"
+          className="w-full rounded-lg px-4 py-3 vq-input"
           style={{
             background: "var(--brand-surface)",
             border: "1px solid var(--brand-border)",
@@ -159,7 +159,7 @@ export function SignupForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full inline-flex items-center justify-center font-mono font-bold rounded-lg px-6 py-4 transition"
+        className="w-full inline-flex items-center justify-center font-mono font-bold rounded-lg px-6 py-4 transition vq-cta"
         style={{
           background: "var(--brand-cyan)",
           color: "#0a0a0a",

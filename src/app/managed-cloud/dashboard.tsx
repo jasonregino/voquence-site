@@ -266,7 +266,7 @@ function StatusCard({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-xl p-6" style={cardStyle}>
+    <div className="rounded-xl p-6 vq-card" style={cardStyle}>
       <p className="font-mono mb-3" style={eyebrow}>
         {label}
       </p>
@@ -300,7 +300,7 @@ function ActionButton({
     <button
       onClick={onClick}
       disabled={loading}
-      className="inline-flex items-center justify-center font-mono font-bold rounded-lg px-6 py-4 transition mt-4"
+      className="inline-flex items-center justify-center font-mono font-bold rounded-lg px-6 py-4 transition mt-4 vq-cta"
       style={{
         ...(variant === "solid" ? solid : outline),
         fontSize: "14px",
