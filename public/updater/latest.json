@@ -1,15 +1,15 @@
 {
-  "version": "0.4.0",
-  "notes": "v0.4.0 — Managed Cloud is live.\n\nThe 11 polish + content modes now run with zero setup. Subscribe at voquence.com/managed-cloud ($9.99/mo or $99/yr), then open Voquence Settings, sign in with your account email, and flip on Managed Cloud routing. No Anthropic key, no key management, nothing to configure. Your dictation routes through Voquence's cloud and the polished result pastes at your cursor like always.\n\nFounders: your Founding License includes 1 year of Managed Cloud free. Create your account at voquence.com/managed-cloud/signup with the same email you used at checkout and activate your free year from the dashboard.\n\nPrefer your own Anthropic key? Nothing changes. BYOK keeps working exactly as before.\n\nAlso in this release: fresh downloads now come as a fully signed and notarized DMG, so new installs skip the macOS 'cannot check for malicious software' warning entirely.",
-  "pub_date": "2026-06-12T20:15:00Z",
+  "version": "0.4.1",
+  "notes": "v0.4.1 — updates now find you.\n\nVoquence now checks for new versions automatically when it launches. If one is live, a small banner appears in the main window: hit INSTALL and the app updates and restarts itself in about ten seconds, or hit LATER and it stays out of your way until next launch. No more digging into Settings to find out a release exists. (Settings → Updates still works if you prefer checking manually.)\n\nAlso: removed the leftover 'WEEK 4 BUILD' label from the main window header. The app just shows its version now.\n\nThis is the last update you'll ever have to go looking for.",
+  "pub_date": "2026-06-12T22:30:00Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaGpVbWV0MGNxMytFQkpoV0tQSlZITjdxaG9LdXlsZ1JPUXE0VlNnZjBkWDNvUStrd1F4WGlpNzljaTJYWXBBODJqUG1RZytNbEhEUEd3cVh2SmlON3dFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMjk0ODkyCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpuRytNejRUVXlJSk5CeklMRVVOMVFWNXNtOVVuRnJUV2hEYUp2b1BKU2RkWU53WFdFOE1YbkRGa2I4K2pPczhYM0c0bE1NT1lvOHlueWtIRVVhTDBEZz09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.4.0_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaGdxWEIwbm9HSitKbFMyR2I3cFcybmpielFxRTVyQW5ISU9wd2d1SVpwMTRDUkZwY2Exa3pjOUtHYWJNdXVJOFFlVWR2NTZlbkorS2pmNU9NQmpOK0FrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMjk2NzI5CWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpSRTNRcjdhcjU3YXZQTnJHVFM2am51U0o4RnE4TlFXQnp3K2pIc0k5a0Q3cTU0VXViNksyWWlwNnZneWpHVURQRWkyUnp2bENPelhMbit6Y051YU5Ddz09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.4.1_aarch64.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaGpVbWV0MGNxMytFQkpoV0tQSlZITjdxaG9LdXlsZ1JPUXE0VlNnZjBkWDNvUStrd1F4WGlpNzljaTJYWXBBODJqUG1RZytNbEhEUEd3cVh2SmlON3dFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMjk0ODkyCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpuRytNejRUVXlJSk5CeklMRVVOMVFWNXNtOVVuRnJUV2hEYUp2b1BKU2RkWU53WFdFOE1YbkRGa2I4K2pPczhYM0c0bE1NT1lvOHlueWtIRVVhTDBEZz09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.4.0_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaGdxWEIwbm9HSitKbFMyR2I3cFcybmpielFxRTVyQW5ISU9wd2d1SVpwMTRDUkZwY2Exa3pjOUtHYWJNdXVJOFFlVWR2NTZlbkorS2pmNU9NQmpOK0FrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMjk2NzI5CWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpSRTNRcjdhcjU3YXZQTnJHVFM2am51U0o4RnE4TlFXQnp3K2pIc0k5a0Q3cTU0VXViNksyWWlwNnZneWpHVURQRWkyUnp2bENPelhMbit6Y051YU5Ddz09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.4.1_aarch64.app.tar.gz"
     }
   }
 }
