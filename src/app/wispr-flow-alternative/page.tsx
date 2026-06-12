@@ -54,7 +54,7 @@ export default function WisprFlowAlternativePage() {
 
         {/* The one-liner — matches Honest Comparison's hero card */}
         <div
-          className="rounded-xl p-8 mb-10"
+          className="rounded-xl p-8 mb-10 vq-card"
           style={{
             background: "var(--brand-surface)",
             border: "1px solid var(--brand-cyan)",
@@ -96,7 +96,7 @@ export default function WisprFlowAlternativePage() {
         <div className="flex flex-col sm:flex-row gap-3 items-start">
           <Link
             href="/download"
-            className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition"
+            className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition vq-cta"
             style={{
               background: "var(--brand-cyan)",
               color: "#0a0a0a",
@@ -109,7 +109,7 @@ export default function WisprFlowAlternativePage() {
           </Link>
           <a
             href={FOUNDING_LICENSE_URL}
-            className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition"
+            className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition vq-cta"
             style={{
               background: "transparent",
               color: "var(--brand-cyan)",
@@ -154,7 +154,7 @@ export default function WisprFlowAlternativePage() {
       {/* The three complaints */}
       <section className="relative z-10 px-6 sm:px-12 pb-12 max-w-3xl mx-auto w-full">
         <h2
-          className="font-mono font-black mb-6"
+          className="font-mono font-black mb-6 vq-heading"
           style={{
             color: "var(--brand-cyan)",
             fontSize: "16px",
@@ -189,14 +189,14 @@ export default function WisprFlowAlternativePage() {
       {/* Quick comparison */}
       <section className="relative z-10 px-6 sm:px-12 pb-12 max-w-3xl mx-auto w-full">
         <h2
-          className="font-mono font-black mb-6"
+          className="font-mono font-black mb-6 vq-heading"
           style={{
             color: "var(--brand-cyan)",
             fontSize: "16px",
             letterSpacing: "0.18em",
           }}
         >
-          SIDE BY SIDE
+          VOQUENCE VS WISPR FLOW
         </h2>
 
         <div
@@ -217,7 +217,7 @@ export default function WisprFlowAlternativePage() {
       {/* Honest gaps */}
       <section className="relative z-10 px-6 sm:px-12 pb-12 max-w-3xl mx-auto w-full">
         <h2
-          className="font-mono font-black mb-6"
+          className="font-mono font-black mb-6 vq-heading"
           style={{
             color: "var(--brand-cyan)",
             fontSize: "16px",
@@ -268,7 +268,7 @@ export default function WisprFlowAlternativePage() {
       {/* Final CTA */}
       <section className="relative z-10 px-6 sm:px-12 pb-20 max-w-3xl mx-auto w-full">
         <div
-          className="rounded-xl p-8 text-center"
+          className="rounded-xl p-8 text-center vq-card"
           style={{
             background: "var(--brand-surface)",
             border: "1px solid var(--brand-cyan)",
@@ -295,7 +295,7 @@ export default function WisprFlowAlternativePage() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/download"
-              className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition"
+              className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition vq-cta"
               style={{
                 background: "var(--brand-cyan)",
                 color: "#0a0a0a",
@@ -307,7 +307,7 @@ export default function WisprFlowAlternativePage() {
             </Link>
             <a
               href={FOUNDING_LICENSE_URL}
-              className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition"
+              className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition vq-cta"
               style={{
                 background: "transparent",
                 color: "var(--brand-cyan)",

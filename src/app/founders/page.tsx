@@ -57,7 +57,7 @@ export default function FoundersPage() {
 
         {/* Counter */}
         <div
-          className="rounded-xl p-6 mb-10"
+          className="rounded-xl p-6 mb-10 vq-card"
           style={{
             background: "var(--brand-surface)",
             border: "1px solid var(--brand-cyan)",
@@ -94,7 +94,7 @@ export default function FoundersPage() {
           </p>
           <a
             href={FOUNDING_LICENSE_URL}
-            className="inline-flex items-center gap-3 font-mono font-bold rounded-lg mt-5 px-6 py-3 transition"
+            className="inline-flex items-center gap-3 font-mono font-bold rounded-lg mt-5 px-6 py-3 transition vq-cta"
             style={{
               background: "var(--brand-cyan)",
               color: "#0a0a0a",
@@ -109,7 +109,7 @@ export default function FoundersPage() {
 
         {/* Founders list */}
         <h2
-          className="font-mono font-black mb-6"
+          className="font-mono font-black mb-6 vq-heading"
           style={{
             color: "var(--brand-cyan)",
             fontSize: "16px",
@@ -165,7 +165,7 @@ export default function FoundersPage() {
 
         {/* What Founders get */}
         <h2
-          className="font-mono font-black mb-6"
+          className="font-mono font-black mb-6 vq-heading"
           style={{
             color: "var(--brand-cyan)",
             fontSize: "16px",
@@ -247,7 +247,7 @@ export default function FoundersPage() {
 
         {/* Timeline */}
         <h2
-          className="font-mono font-black mb-6"
+          className="font-mono font-black mb-6 vq-heading"
           style={{
             color: "var(--brand-cyan)",
             fontSize: "16px",

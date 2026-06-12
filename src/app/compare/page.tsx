@@ -39,7 +39,7 @@ export default function ComparePage() {
       {/* The one-liner */}
       <section className="relative z-10 px-6 sm:px-12 mb-16 max-w-5xl mx-auto w-full">
         <div
-          className="rounded-xl p-8"
+          className="rounded-xl p-8 vq-card"
           style={{
             background: "var(--brand-surface)",
             border: "1px solid var(--brand-cyan)",
@@ -98,7 +98,7 @@ export default function ComparePage() {
       {/* Where we lose */}
       <section className="relative z-10 px-6 sm:px-12 mb-16 max-w-5xl mx-auto w-full">
         <h2
-          className="font-mono font-black mb-6"
+          className="font-mono font-black mb-6 vq-heading"
           style={{
             color: "var(--brand-cyan)",
             fontSize: "20px",
@@ -137,7 +137,7 @@ export default function ComparePage() {
       {/* Where we win */}
       <section className="relative z-10 px-6 sm:px-12 mb-16 max-w-5xl mx-auto w-full">
         <h2
-          className="font-mono font-black mb-6"
+          className="font-mono font-black mb-6 vq-heading"
           style={{
             color: "var(--brand-cyan)",
             fontSize: "20px",
@@ -203,7 +203,7 @@ export default function ComparePage() {
           </p>
           <Link
             href="/download"
-            className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-7 py-4 transition"
+            className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-7 py-4 transition vq-cta"
             style={{
               background: "var(--brand-cyan)",
               color: "#0a0a0a",
@@ -370,7 +370,7 @@ function ComparisonSection({
   return (
     <section className="relative z-10 px-6 sm:px-12 mb-16 max-w-5xl mx-auto w-full">
       <h2
-        className="font-mono font-black mb-6"
+        className="font-mono font-black mb-6 vq-heading"
         style={{
           color: "var(--brand-cyan)",
           fontSize: "20px",

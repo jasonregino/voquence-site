@@ -60,7 +60,7 @@ export function LoginForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           autoComplete="email"
-          className="w-full rounded-lg px-4 py-3"
+          className="w-full rounded-lg px-4 py-3 vq-input"
           style={{
             background: "var(--brand-surface)",
             border: "1px solid var(--brand-border)",
@@ -89,7 +89,7 @@ export function LoginForm() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           autoComplete="current-password"
-          className="w-full rounded-lg px-4 py-3"
+          className="w-full rounded-lg px-4 py-3 vq-input"
           style={{
             background: "var(--brand-surface)",
             border: "1px solid var(--brand-border)",
@@ -116,7 +116,7 @@ export function LoginForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full inline-flex items-center justify-center font-mono font-bold rounded-lg px-6 py-4 transition"
+        className="w-full inline-flex items-center justify-center font-mono font-bold rounded-lg px-6 py-4 transition vq-cta"
         style={{
           background: "var(--brand-cyan)",
           color: "#0a0a0a",

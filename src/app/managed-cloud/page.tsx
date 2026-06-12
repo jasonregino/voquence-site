@@ -148,7 +148,7 @@ function LoggedOutView() {
 
       {/* Pricing */}
       <div
-        className="rounded-xl p-6 mb-10"
+        className="rounded-xl p-6 mb-10 vq-card"
         style={{
           background: "var(--brand-surface)",
           border: "1px solid var(--brand-cyan)",
@@ -211,7 +211,7 @@ function LoggedOutView() {
       <div className="flex flex-col sm:flex-row gap-3 mb-12">
         <Link
           href="/managed-cloud/signup"
-          className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition"
+          className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition vq-cta"
           style={{
             background: "var(--brand-cyan)",
             color: "#0a0a0a",
@@ -224,7 +224,7 @@ function LoggedOutView() {
         </Link>
         <Link
           href="/managed-cloud/login"
-          className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition"
+          className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-6 py-4 transition vq-cta"
           style={{
             background: "transparent",
             color: "var(--brand-cyan)",
@@ -268,7 +268,7 @@ function LoggedOutView() {
               className="underline"
               style={{ color: "var(--brand-cyan)" }}
             >
-              Download Voquence →
+              Download Voquence →
             </Link>
           </li>
           <li>

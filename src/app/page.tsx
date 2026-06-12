@@ -56,8 +56,8 @@ export default function Home() {
           style={{ color: "#cccccc" }}
         >
           Most dictation apps give you a transcript. Voquence turns your voice into
-          finished business content. Book descriptions, tweet threads, AI prompts,
-          tech support replies, pasted at your cursor in seconds.
+          finished business content. Emails, book descriptions, tweet threads, AI
+          prompts, tech support replies, pasted at your cursor in seconds.
         </p>
 
         <p
@@ -70,7 +70,7 @@ export default function Home() {
 
         <Link
           href="/download"
-          className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-7 py-4 transition mb-6"
+          className="inline-flex items-center gap-3 font-mono font-bold rounded-lg px-7 py-4 transition mb-6 vq-cta"
           style={{
             background: "var(--brand-cyan)",
             color: "#0a0a0a",
@@ -147,7 +147,7 @@ export default function Home() {
       {/* What it does */}
       <section className="relative z-10 px-6 sm:px-12 py-16 sm:py-24">
         <h2
-          className="font-mono font-black text-center mb-3"
+          className="font-mono font-black text-center mb-3 vq-heading"
           style={{
             color: "var(--brand-cyan)",
             fontSize: "clamp(20px, 3vw, 28px)",
@@ -241,9 +241,10 @@ export default function Home() {
           <FoundingLicenseCard />
         </div>
 
-        {/* COMING SOON — v1.1 roadmap teasers */}
+        {/* COMING SOON — roadmap teasers (no version number: we're on v0.x,
+            and pinning roadmap items to a version only over-promises) */}
         <TierLabel
-          tier="COMING SOON · v1.1"
+          tier="COMING SOON"
           subhead="On the roadmap. Make your voice for what ships first."
         />
         <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-6">
@@ -270,7 +271,7 @@ export default function Home() {
       {/* Pricing */}
       <section className="relative z-10 px-6 sm:px-12 py-16 sm:py-24" id="pricing">
         <h2
-          className="font-mono font-black text-center mb-3"
+          className="font-mono font-black text-center mb-3 vq-heading"
           style={{
             color: "var(--brand-cyan)",
             fontSize: "clamp(20px, 3vw, 28px)",
@@ -371,7 +372,7 @@ export default function Home() {
       {/* FAQ */}
       <section className="relative z-10 px-6 sm:px-12 py-16 sm:py-24" id="faq">
         <h2
-          className="font-mono font-black text-center mb-3"
+          className="font-mono font-black text-center mb-3 vq-heading"
           style={{
             color: "var(--brand-cyan)",
             fontSize: "clamp(20px, 3vw, 28px)",
@@ -470,7 +471,7 @@ function PricingCard({
 }) {
   return (
     <div
-      className="rounded-xl overflow-hidden flex flex-col"
+      className="rounded-xl overflow-hidden flex flex-col vq-card"
       style={{
         background: "var(--brand-surface)",
         border: highlighted
@@ -558,7 +559,7 @@ function PricingCard({
         {ctaUrl && (
           <a
             href={ctaUrl}
-            className="inline-flex items-center justify-center font-mono font-bold rounded-lg transition w-full mt-6"
+            className="inline-flex items-center justify-center font-mono font-bold rounded-lg transition w-full mt-6 vq-cta"
             style={{
               background: "var(--brand-cyan)",
               color: "#0a0a0a",
@@ -593,7 +594,7 @@ function PricingCard({
 function FoundingLicenseCard() {
   return (
     <div
-      className="rounded-xl overflow-hidden"
+      className="rounded-xl overflow-hidden vq-card"
       style={{
         background: "var(--brand-surface)",
         border: "1px solid var(--brand-cyan)",
@@ -662,7 +663,7 @@ function FoundingLicenseCard() {
           </p>
           <a
             href={FOUNDING_LICENSE_URL}
-            className="inline-flex items-center justify-center font-mono font-bold rounded-lg transition w-full"
+            className="inline-flex items-center justify-center font-mono font-bold rounded-lg transition w-full vq-cta"
             style={{
               background: "var(--brand-cyan)",
               color: "#0a0a0a",
@@ -734,7 +735,7 @@ function ModeExample({
 }) {
   return (
     <div
-      className="rounded-xl overflow-hidden"
+      className="rounded-xl overflow-hidden vq-card"
       style={{
         background: "var(--brand-surface)",
         // Match the Founding License pricing card: lit cyan border + halo.
