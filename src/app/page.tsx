@@ -33,7 +33,7 @@ export const MANAGED_CLOUD_PURCHASE_LIVE = false;
  * door to the pricing shelf instead of only the free-download path. Safe to
  * ship independently of Managed Cloud (Founding License is buyable today).
  */
-export const SEE_PRICING_CTA_LIVE = false;
+export const SEE_PRICING_CTA_LIVE = true;
 
 export default function Home() {
   return (
