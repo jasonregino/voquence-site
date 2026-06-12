@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
 const DOWNLOAD_URL =
-  "https://voquence.com/releases/Voquence_0.3.2_aarch64.dmg";
+  "https://voquence.com/releases/Voquence_0.4.0_aarch64.dmg";
 
 export const metadata = {
   title: "Download Voquence",
@@ -72,7 +72,7 @@ export default async function DownloadPage({
             letterSpacing: "0.1em",
           }}
         >
-          VERSION 0.3.2 · APPLE SILICON (M1, M2, M3, M4) · NOTARIZED BY APPLE
+          VERSION 0.4.0 · APPLE SILICON (M1, M2, M3, M4) · NOTARIZED BY APPLE
         </p>
 
         {/* Apple Silicon check — catches Intel Mac users before they hit a cryptic install error */}
@@ -386,15 +386,16 @@ function FounderBanner() {
             month after). Lifetime BYOK access.
           </li>
           <li>
-            <strong style={{ color: "#ffffff" }}>Within ~1-2 weeks:</strong>{" "}
-            Managed Cloud ships. You get 1 year free (worth $119.88). Sign up
-            at /managed-cloud/signup with this same email. After year 1: stay
-            for $9.99/mo (or $99/yr, save 17%) or cancel.
+            <strong style={{ color: "#ffffff" }}>Now live:</strong>{" "}
+            Managed Cloud shipped with v0.4.0. You get 1 year free (worth
+            $119.88). Sign up at /managed-cloud/signup with this same email.
+            After year 1: stay for $9.99/mo (or $99/yr, save 17%) or cancel.
           </li>
           <li>
-            <strong style={{ color: "#ffffff" }}>When v0.4 ships:</strong>{" "}
-            License enforcement turns on. Your Founding License BYOK access
-            keeps working automatically.
+            <strong style={{ color: "#ffffff" }}>Down the road:</strong>{" "}
+            if a future release ever enforces the polish modes as a paid
+            feature, your Founding License BYOK access keeps working
+            automatically.
           </li>
           <li>
             Plus: vote on the next mode, optional public credit on{" "}

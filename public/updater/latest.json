@@ -1,15 +1,15 @@
 {
-  "version": "0.3.2",
-  "notes": "v0.3.2 — kills the em-dash bug for good.\n\nClaude Haiku is great at most things, but it has a tic: roughly one in ten polished outputs would slip an em-dash (—) into the text. It's the single most common AI tell, and it broke the rule every Voquence mode prompt is supposed to follow.\n\nv0.3.2 adds a hard guarantee in the Rust layer: em-dashes and en-dashes are stripped after Claude returns, replaced with a clean sentence break (\". \") and the next word is capitalized. So \"Your space is chaotic—your mind follows.\" becomes \"Your space is chaotic. Your mind follows.\" Same meaning, no AI tell.\n\nFour unit tests cover the common shapes so this doesn't regress.\n\nNo breaking changes. Same Settings, same hotkey, same keys. The polished output just sounds more like you now.",
-  "pub_date": "2026-06-08T18:50:00Z",
+  "version": "0.4.0",
+  "notes": "v0.4.0 — Managed Cloud is live.\n\nThe 11 polish + content modes now run with zero setup. Subscribe at voquence.com/managed-cloud ($9.99/mo or $99/yr), then open Voquence Settings, sign in with your account email, and flip on Managed Cloud routing. No Anthropic key, no key management, nothing to configure. Your dictation routes through Voquence's cloud and the polished result pastes at your cursor like always.\n\nFounders: your Founding License includes 1 year of Managed Cloud free. Create your account at voquence.com/managed-cloud/signup with the same email you used at checkout and activate your free year from the dashboard.\n\nPrefer your own Anthropic key? Nothing changes. BYOK keeps working exactly as before.\n\nAlso in this release: fresh downloads now come as a fully signed and notarized DMG, so new installs skip the macOS 'cannot check for malicious software' warning entirely.",
+  "pub_date": "2026-06-12T20:15:00Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hXaGhvVWZiNTlRd01Ta20xOGovSElkK3FYUTc3cmVkUTRnK3l2eEw4NnY3YUNnRytGZm1IQllYblZBanJzbURSYnI4U3ZORlhZVzR3bWJCNzY4bzQ2eVFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwOTY5NTQ0CWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpLc3JtUFBEeXYxZmZTN0ZZclpzZVFKS2t4Y1ZKcWZScTZFTVZ0YTAxRFpJa3hQV0loNnMzaUs5My85ZE5iUndKY2toallYUEczc3F3ZkI1RGlCRjRBZz09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.3.2_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaGpVbWV0MGNxMytFQkpoV0tQSlZITjdxaG9LdXlsZ1JPUXE0VlNnZjBkWDNvUStrd1F4WGlpNzljaTJYWXBBODJqUG1RZytNbEhEUEd3cVh2SmlON3dFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMjk0ODkyCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpuRytNejRUVXlJSk5CeklMRVVOMVFWNXNtOVVuRnJUV2hEYUp2b1BKU2RkWU53WFdFOE1YbkRGa2I4K2pPczhYM0c0bE1NT1lvOHlueWtIRVVhTDBEZz09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.4.0_aarch64.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hXaGhvVWZiNTlRd01Ta20xOGovSElkK3FYUTc3cmVkUTRnK3l2eEw4NnY3YUNnRytGZm1IQllYblZBanJzbURSYnI4U3ZORlhZVzR3bWJCNzY4bzQ2eVFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwOTY5NTQ0CWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpLc3JtUFBEeXYxZmZTN0ZZclpzZVFKS2t4Y1ZKcWZScTZFTVZ0YTAxRFpJa3hQV0loNnMzaUs5My85ZE5iUndKY2toallYUEczc3F3ZkI1RGlCRjRBZz09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.3.2_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaGpVbWV0MGNxMytFQkpoV0tQSlZITjdxaG9LdXlsZ1JPUXE0VlNnZjBkWDNvUStrd1F4WGlpNzljaTJYWXBBODJqUG1RZytNbEhEUEd3cVh2SmlON3dFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMjk0ODkyCWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpuRytNejRUVXlJSk5CeklMRVVOMVFWNXNtOVVuRnJUV2hEYUp2b1BKU2RkWU53WFdFOE1YbkRGa2I4K2pPczhYM0c0bE1NT1lvOHlueWtIRVVhTDBEZz09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.4.0_aarch64.app.tar.gz"
     }
   }
 }

@@ -323,7 +323,7 @@ const PAID_TIER_ROWS: CompareRow[] = [
   },
   {
     label: "Managed cloud (no API keys)",
-    voquence: { text: "Managed Cloud tier ships later (~$9.99/mo)", pending: true },
+    voquence: { text: "Yes — Managed Cloud, $9.99/mo or $99/yr" },
     competitors: [{ text: "Yes" }, { text: "Yes" }, { text: "Yes" }],
   },
   {

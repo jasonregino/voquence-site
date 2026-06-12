@@ -25,7 +25,7 @@ export const FOUNDING_LICENSE_URL =
  * purchase-forward: badge removed, a "GET MANAGED CLOUD →" button pointing at
  * /managed-cloud, and a short note spelling out the steps to subscribe.
  */
-export const MANAGED_CLOUD_PURCHASE_LIVE = false;
+export const MANAGED_CLOUD_PURCHASE_LIVE = true;
 
 /**
  * Hero secondary CTA switch. When true, a quiet "SEE PRICING →" ghost button
@@ -131,7 +131,7 @@ export default function Home() {
             letterSpacing: "0.1em",
           }}
         >
-          APPLE SILICON · NOTARIZED · v0.3.2
+          APPLE SILICON · NOTARIZED · v0.4.0
         </p>
         <p
           className="mb-2"
@@ -357,7 +357,7 @@ export default function Home() {
               "Vote on which mode ships next",
               "Optional public credit on voquence.com/founders",
               "Direct line to Jason at jason@voquence.com",
-              "Grandfather protection when v0.4 license enforcement ships",
+              "Grandfather protection: if the polish modes ever become an enforced paid feature, your BYOK access keeps working",
             ]}
             highlighted
             badgeLabel="100 SPOTS ONLY"
@@ -482,7 +482,7 @@ export default function Home() {
           />
           <FaqItem
             q="What about Windows?"
-            a="In active development. The Mac version is shipping and stable (v0.2.0 added Local Whisper, v0.2.1 added the install-location safety banner, v0.2.2 ships the DMG installer + clearer update errors, v0.3.0 auto-installs Local Whisper during the Welcome flow so no API keys are needed to get started, v0.3.1 adds a friendly in-app guard rail when you try a Claude-backed mode without a key). A Windows release is targeted for a few weeks out. Drop your email at the top of this page and you'll be the first to know the moment it's ready."
+            a="In active development. The Mac version is shipping and stable (v0.2.0 added Local Whisper, v0.2.1 added the install-location safety banner, v0.2.2 ships the DMG installer + clearer update errors, v0.3.0 auto-installs Local Whisper during the Welcome flow so no API keys are needed to get started, v0.3.1 adds a friendly in-app guard rail when you try a Claude-backed mode without a key, v0.4.0 ships Managed Cloud — the polish modes with no key at all). A Windows release is targeted for a few weeks out. Drop your email at the top of this page and you'll be the first to know the moment it's ready."
           />
           <FaqItem
             q="Why isn't Voquence on the Mac App Store?"

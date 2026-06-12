@@ -8,7 +8,7 @@ export const metadata = {
     "What data Voquence collects, what stays on your Mac, what flows to OpenAI and Anthropic, and how to reach us.",
 };
 
-const LAST_UPDATED = "2026-06-08";
+const LAST_UPDATED = "2026-06-12";
 
 export default function PrivacyPage() {
   return (
@@ -61,6 +61,15 @@ export default function PrivacyPage() {
               from your Mac to OpenAI&apos;s Whisper API using your OpenAI key.
               Your transcript goes to Anthropic&apos;s Claude using your
               Anthropic key. Voquence the company never sees either.
+            </li>
+            <li>
+              <strong>Managed Cloud (subscription):</strong> transcription still
+              happens however you&apos;ve set it (Local Whisper stays fully
+              on-device). For the polish modes, your transcript is sent to
+              Voquence&apos;s proxy, which forwards it to Anthropic&apos;s
+              Claude using Voquence&apos;s key and returns the result. The proxy
+              does not store your transcripts or outputs; it records only a
+              usage count (how many polishings, not what they said).
             </li>
             <li>
               <strong>API keys:</strong> currently stored on your Mac in a local
@@ -123,18 +132,32 @@ export default function PrivacyPage() {
             on. The polished result comes back and is pasted at your cursor.
           </p>
           <p>
-            In cloud mode, OpenAI and Anthropic see your audio and your
+            In BYOK cloud mode, OpenAI and Anthropic see your audio and your
             transcript under the terms of their own privacy policies and data
-            retention rules (linked below). Voquence the company is not on the
-            wire. Your keys give you a direct line to those providers; we are
-            not a proxy.
+            retention rules (linked below). In this mode Voquence the company
+            is not on the wire. Your keys give you a direct line to those
+            providers; we are not a proxy.
+          </p>
+
+          <H3>Managed Cloud (subscription)</H3>
+          <p>
+            If you subscribe to Managed Cloud, you skip the keys entirely. Your
+            transcription still runs wherever you&apos;ve set it (Local Whisper
+            stays fully on-device). When a polish mode runs, your transcript is
+            sent from your Mac to Voquence&apos;s proxy at voquence.com, which
+            forwards it to Anthropic&apos;s Claude using Voquence&apos;s own
+            key and returns the polished result. The proxy is a pass-through:
+            it does not store, log, or read your transcripts or outputs. The
+            only thing it records is a usage counter (how many polishings
+            you&apos;ve run this month, never their content) so we can enforce
+            the plan&apos;s monthly allowance.
           </p>
         </Block>
 
         <H2>Where your API keys live</H2>
         <Block>
           <p>
-            As of v0.3.2 (current), your OpenAI and Anthropic API keys are
+            As of v0.4.0 (current), your OpenAI and Anthropic API keys are
             stored on your Mac in a local JSON file at{" "}
             <code style={{ color: "#ddd", fontSize: "12px" }}>
               ~/Library/Application Support/voquence/config.json
@@ -144,7 +167,8 @@ export default function PrivacyPage() {
             it&apos;s encrypted at rest.
           </p>
           <p>
-            We are migrating API key storage to the macOS Keychain in v0.3.x.
+            We are migrating API key storage to the macOS Keychain in an
+            upcoming release.
             The Keychain is the correct long-term home for credentials on Mac.
             When that ships, the migration will run once on update: your keys
             move into Keychain, and the JSON file is cleared.
@@ -258,6 +282,21 @@ export default function PrivacyPage() {
             <li>
               <strong>Resend:</strong> only if you enter your email in
               the wishlist form. Used for launch announcements.
+            </li>
+            <li>
+              <strong>Stripe:</strong> processes Founding License and Managed
+              Cloud payments. Stripe sees your payment details (card number,
+              billing address) under{" "}
+              <a
+                href="https://stripe.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+                style={{ color: "var(--brand-cyan)" }}
+              >
+                Stripe&apos;s privacy policy
+              </a>
+              . Voquence never sees or stores your card number.
             </li>
             <li>
               <strong>Vercel:</strong> hosts the voquence.com website

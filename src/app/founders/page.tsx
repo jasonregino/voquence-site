@@ -235,12 +235,11 @@ export default function FoundersPage() {
             </li>
             <li>
               <strong style={{ color: "#ffffff" }}>
-                Grandfather protection when v0.4 ships.
+                Grandfather protection, guaranteed.
               </strong>{" "}
-              When license enforcement turns on, your BYOK access keeps
-              working. Free-tier users without a Founding License will need
-              to pick the Managed Cloud subscription if they want the
-              polish modes.
+              If the polish modes ever become an enforced paid feature in a
+              future release, your BYOK access keeps working automatically.
+              Your Founding License is permanent.
             </li>
           </ul>
         </div>
@@ -269,16 +268,16 @@ export default function FoundersPage() {
             what="You get a personal thank-you email from Jason. Download Voquence (free) and paste your Anthropic key into Settings if you want the 11 polish modes immediately."
           />
           <Timeline
-            when="Within ~1-2 weeks"
-            what="Managed Cloud ships. Sign up at voquence.com/managed-cloud/signup with the same email you used at checkout, and your 1-year free Managed Cloud kicks in. No Anthropic key needed during your free year."
+            when="Now live"
+            what="Managed Cloud shipped with v0.4.0. Sign up at voquence.com/managed-cloud/signup with the same email you used at checkout, and your 1-year free Managed Cloud kicks in. No Anthropic key needed during your free year."
           />
           <Timeline
             when="1 year after you activate Managed Cloud"
             what="Your free year ends. Either convert to the $9.99/month subscription (or $99/year, save 17%) and keep using Managed Cloud, or cancel and go back to BYOK Anthropic. Your Founding License BYOK access stays forever either way."
           />
           <Timeline
-            when="v0.4 (soon after Managed Cloud)"
-            what="License enforcement turns on. The 11 polish modes become a paid feature. Your Founding License BYOK access stays valid. Free-tier users without a Founding License will need to subscribe to Managed Cloud if they want the polish modes."
+            when="Down the road"
+            what="If a future release ever enforces the polish modes as a paid feature, your Founding License BYOK access stays valid automatically. Buy once, covered forever."
             last
           />
         </div>
