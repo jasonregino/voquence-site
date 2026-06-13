@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     creator: "@voquenceapp",
     images: ["https://voquence.com/og-image.png"],
   },
+  verification: {
+    google: "TN-YsP_n6b9L6V4_zojM5qaeyIP9AriVBv5YW6aApmI",
+  },
 };
 
 export default function RootLayout({
