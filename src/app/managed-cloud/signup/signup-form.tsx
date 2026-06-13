@@ -44,6 +44,9 @@ export function SignupForm() {
       return;
     }
 
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", "signup_completed");
+    }
     setSuccess(true);
   }
 

@@ -3,6 +3,7 @@ import { VLogo } from "@/components/VLogo";
 import { EmailSignup } from "@/components/EmailSignup";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { TrackLink } from "@/components/TrackLink";
 
 /**
  * Live Stripe Payment Link for the Voquence Founding License ($19 one-time).
@@ -90,8 +91,10 @@ export default function Home() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 items-center justify-center mb-6">
-          <Link
+          <TrackLink
             href="/download"
+            event="download_click"
+            params={{ location: "hero" }}
             className="inline-flex items-center justify-center gap-3 font-mono font-bold rounded-lg px-7 py-4 transition vq-cta"
             style={{
               background: "var(--brand-cyan)",
@@ -104,10 +107,12 @@ export default function Home() {
             }}
           >
             ↓ DOWNLOAD FOR MAC
-          </Link>
+          </TrackLink>
           {SEE_PRICING_CTA_LIVE && (
-            <Link
+            <TrackLink
               href="/#pricing"
+              event="see_pricing_click"
+              params={{ location: "hero" }}
               className="inline-flex items-center justify-center gap-3 font-mono font-bold rounded-lg px-7 py-4 transition vq-cta"
               style={{
                 background: "transparent",
@@ -119,7 +124,7 @@ export default function Home() {
               }}
             >
               SEE PRICING →
-            </Link>
+            </TrackLink>
           )}
         </div>
 
@@ -342,7 +347,11 @@ export default function Home() {
               "Unlimited usage",
             ]}
             {...(MANAGED_CLOUD_PURCHASE_LIVE
-              ? { ctaUrl: "/download?choose=1", ctaLabel: "DOWNLOAD FREE →" }
+              ? {
+                  ctaUrl: "/download?choose=1",
+                  ctaLabel: "DOWNLOAD FREE →",
+                  ctaEvent: "download_click",
+                }
               : {})}
           />
           <PricingCard
@@ -363,6 +372,7 @@ export default function Home() {
             badgeLabel="100 SPOTS ONLY"
             ctaUrl={FOUNDING_LICENSE_URL}
             ctaLabel="GET FOUNDING LICENSE →"
+            ctaEvent="founding_license_click"
           />
           <PricingCard
             tier="Managed Cloud"
@@ -383,6 +393,7 @@ export default function Home() {
                   ctaLabel: "GET MANAGED CLOUD →",
                   ctaNote:
                     "Create a free account, then subscribe inside. About a minute.",
+                  ctaEvent: "managed_cloud_cta_click",
                 }
               : { badgeLabel: "SHIPS IN 1-2 WEEKS" })}
           />
@@ -507,6 +518,7 @@ function PricingCard({
   ctaUrl,
   ctaLabel,
   ctaNote,
+  ctaEvent,
 }: {
   tier: string;
   price: string;
@@ -522,6 +534,8 @@ function PricingCard({
   ctaLabel?: string;
   /** Small muted line under the CTA button, e.g. how to subscribe */
   ctaNote?: string;
+  /** GA4 event name to fire when the CTA is clicked */
+  ctaEvent?: string;
 }) {
   return (
     <div
@@ -623,8 +637,10 @@ function PricingCard({
           </p>
         )}
         {ctaUrl && (
-          <a
+          <TrackLink
             href={ctaUrl}
+            event={ctaEvent || "cta_click"}
+            params={{ tier }}
             className={`inline-flex items-center justify-center font-mono font-bold rounded-lg transition w-full vq-cta ${
               ctaNote ? "" : "mt-6"
             }`}
@@ -638,7 +654,7 @@ function PricingCard({
             }}
           >
             {ctaLabel || "GET IT →"}
-          </a>
+          </TrackLink>
         )}
       </div>
     </div>

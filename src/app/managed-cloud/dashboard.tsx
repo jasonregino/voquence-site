@@ -73,6 +73,9 @@ export function ManagedCloudDashboard({
     setError(null);
     setBusy(plan);
     try {
+      if (typeof window !== "undefined" && typeof window.gtag === "function") {
+        window.gtag("event", "checkout_start", { plan });
+      }
       const { url } = await post("/api/create-checkout", { plan });
       window.location.href = url;
     } catch (e) {
