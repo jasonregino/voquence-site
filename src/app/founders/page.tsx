@@ -222,16 +222,9 @@ export default function FoundersPage() {
               and say you want to be listed.
             </li>
             <li>
-              <strong style={{ color: "#ffffff" }}>Direct line to Jason</strong>{" "}
-              at{" "}
-              <a
-                href="mailto:jason@voquence.com"
-                className="underline"
-                style={{ color: "var(--brand-cyan)" }}
-              >
-                jason@voquence.com
-              </a>
-              . Replies come from Jason personally, not a support queue.
+              <strong style={{ color: "#ffffff" }}>A direct line to Jason.</strong>{" "}
+              He reads and answers every Founder email himself, not a support
+              queue. You get his address with your purchase.
             </li>
             <li>
               <strong style={{ color: "#ffffff" }}>

@@ -364,7 +364,7 @@ export default function Home() {
               "Bonus: 1 year of Managed Cloud FREE (worth $119.88), the no-key path. After the free year it's $9.99/mo or just cancel and keep your own-key access.",
               "Vote on which mode ships next",
               "Optional public credit on voquence.com/founders",
-              "Direct line to Jason at jason@voquence.com",
+              "A direct line to Jason. He reads and answers every Founder email himself.",
               "Locked at $19. After sale #100 the Founding License closes to new buyers (it never costs you more) and the only paid path for newcomers becomes the Managed Cloud subscription.",
             ]}
             highlighted
@@ -417,10 +417,10 @@ export default function Home() {
         >
           NEED TEAMS, CUSTOM LIMITS, OR SLA?{" "}
           <a
-            href="mailto:jason@voquence.com?subject=Voquence%20Enterprise"
+            href="mailto:support@voquence.com?subject=Voquence%20Enterprise"
             style={{ color: "var(--brand-cyan)" }}
           >
-            EMAIL JASON
+            EMAIL US
           </a>
         </p>
 
@@ -489,7 +489,7 @@ export default function Home() {
           />
           <FaqItem
             q="What's the Founding 100?"
-            a="The first 100 Voquence supporters buy the Founding License at $19 one-time. After the 100th sale, the offer closes forever and new buyers can only get Managed Cloud at $9.99/month or $99/year. Founders 2 through 100 get: lifetime BYOK access to all 11 modes (your own Anthropic key, free $5 credit covers ~17,000 polishings), 1 year of Managed Cloud free (worth $119.88, then $9.99/mo or cancel), voting rights on which mode ships next, optional public credit on /founders (first name only, opt-in), and a direct line to Jason at jason@voquence.com. It's our way of saying thanks to the people who showed up first."
+            a="The first 100 Voquence supporters buy the Founding License at $19 one-time. After the 100th sale, the offer closes forever and new buyers can only get Managed Cloud at $9.99/month or $99/year. Founders 2 through 100 get: lifetime BYOK access to all 11 modes (your own Anthropic key, free $5 credit covers ~17,000 polishings), 1 year of Managed Cloud free (worth $119.88, then $9.99/mo or cancel), voting rights on which mode ships next, optional public credit on /founders (first name only, opt-in), and a direct line to Jason, who answers Founder emails personally. It's our way of saying thanks to the people who showed up first."
           />
           <FaqItem
             q="When does Local Whisper Mode ship?"

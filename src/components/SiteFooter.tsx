@@ -46,14 +46,6 @@ export function SiteFooter() {
           >
             X / TWITTER
           </a>
-          <a
-            href="https://instagram.com/voquenceapp"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ letterSpacing: "0.1em" }}
-          >
-            INSTAGRAM
-          </a>
         </div>
       </div>
     </footer>

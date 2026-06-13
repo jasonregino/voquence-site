@@ -179,7 +179,7 @@ export async function POST(request: NextRequest) {
       {
         code: "monthly_cap_reached",
         error:
-          "You've hit this month's 10,000-polishing limit. It resets on the 1st. (If you genuinely need more, email jason@voquence.com.)",
+          "You've hit this month's 10,000-polishing limit. It resets on the 1st. (If you genuinely need more, email support@voquence.com.)",
       },
       { status: 429 }
     );

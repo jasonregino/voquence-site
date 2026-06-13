@@ -417,15 +417,16 @@ function FounderBanner() {
           Jason will send a personal thank-you email within 24 hours.
         </p>
         <p style={{ color: "#aaaaaa", fontSize: "13px", lineHeight: 1.6 }}>
-          Questions? Reply to that email, or write directly to{" "}
+          Questions? Reply to that thank-you email (it comes straight from
+          Jason), or write to{" "}
           <a
-            href="mailto:jason@voquence.com"
+            href="mailto:support@voquence.com"
             className="underline"
             style={{ color: "var(--brand-cyan)" }}
           >
-            jason@voquence.com
+            support@voquence.com
           </a>
-          . I read every message.
+          . Jason reads every message.
         </p>
       </div>
     </section>
