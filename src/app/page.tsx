@@ -225,7 +225,7 @@ export default function Home() {
         {/* FOUNDING LICENSE — all polish + content modes, one-time */}
         <TierLabel
           tier="FOUNDING LICENSE · $19 ONE-TIME (FIRST 100)"
-          subhead="11 polish + content modes. One purchase, own it forever."
+          subhead="All 11 modes with your own key, yours for life. Plus 1 year of Managed Cloud free."
         />
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-16">
           <ModeExample
@@ -266,7 +266,7 @@ export default function Home() {
           <ModeExample
             mode="Social Post"
             input="spent six hours deep cleaning my home office this weekend and i feel like a new person honestly the mental reset is real"
-            output="Just spent 6 hours deep cleaning my home office and wow, the mental reset is real. Feeling like a completely different human right now. If your space is chaotic, your mind follows. Highly recommend."
+            output="Spent six hours deep cleaning my home office this weekend. Didn't expect it to do much. Turns out a clear desk quiets the brain more than I'd admit. Back to work Monday feeling like I can actually think."
           />
           <ModeExample
             mode="Marketing Copy"
@@ -358,15 +358,14 @@ export default function Home() {
             tier="Founding License"
             price="$19"
             priceSuffix="one-time"
-            tagline="Support the build. Become Founder #2 to #100."
+            tagline="Support the build. Be one of the first 100 Founders."
             features={[
-              "All 11 polish + content modes via your own Anthropic key (free $5 credit covers ~17,000 polishings, about 8 cents a month typical)",
-              "1 year of Managed Cloud FREE (worth $119.88). After year 1: $9.99/mo or cancel.",
-              "Founding License closes at sale #100. After that, subscription only.",
+              "Yours for life: all 11 modes with your own Anthropic key (free $5 credit covers ~17,000 polishings, about 8 cents a month typical). This part never expires.",
+              "Bonus: 1 year of Managed Cloud FREE (worth $119.88), the no-key path. After the free year it's $9.99/mo or just cancel and keep your own-key access.",
               "Vote on which mode ships next",
               "Optional public credit on voquence.com/founders",
               "Direct line to Jason at jason@voquence.com",
-              "Grandfather protection: if the polish modes ever become an enforced paid feature, your BYOK access keeps working",
+              "Locked at $19. After sale #100 the Founding License closes to new buyers (it never costs you more) and the only paid path for newcomers becomes the Managed Cloud subscription.",
             ]}
             highlighted
             badgeLabel="100 SPOTS ONLY"
@@ -400,7 +399,16 @@ export default function Home() {
         </div>
 
         <p
-          className="text-center font-mono mt-12"
+          className="text-center mt-8 max-w-xl mx-auto"
+          style={{ color: "var(--brand-muted)", fontSize: "13px", lineHeight: 1.6 }}
+        >
+          Secure checkout via Stripe. Voquence never sees your card. Cancel
+          Managed Cloud anytime, and if a paid plan isn&apos;t right for you,
+          email Jason and he&apos;ll make it right.
+        </p>
+
+        <p
+          className="text-center font-mono mt-10"
           style={{
             color: "var(--brand-muted)",
             fontSize: "12px",
@@ -465,7 +473,7 @@ export default function Home() {
           />
           <FaqItem
             q="How is Voquence different from Spokenly and Wispr Flow?"
-            a="Spokenly and Wispr Flow are both solid dictation apps. They turn voice into a clean transcript fast. Voquence goes a step further: the same voice note becomes a polished tweet thread, book description, support reply, email draft, or one of nine ready-to-paste content modes total. If you want fast transcription, Spokenly and Wispr are great choices. If you want voice in and finished content out, saving the rewriting step entirely, that's where Voquence fits."
+            a="Spokenly and Wispr Flow are both solid dictation apps. They turn voice into a clean transcript fast. Voquence goes a step further: the same voice note becomes a polished tweet thread, book description, support reply, email draft, or one of 11 polish + content modes total. If you want fast transcription, Spokenly and Wispr are great choices. If you want voice in and finished content out, saving the rewriting step entirely, that's where Voquence fits."
           />
           <FaqItem
             q="Will Voquence work in any Mac app?"
@@ -485,7 +493,7 @@ export default function Home() {
           />
           <FaqItem
             q="When does Local Whisper Mode ship?"
-            a="Already shipped in v0.2.0. That's what you download today. Local Whisper runs transcription on your Mac instead of OpenAI's servers. No API key needed for transcription, fully offline, zero per-minute cost. Download the model from Voquence Settings once it's installed."
+            a="It's live, and since v0.3.0 it auto-installs during the Welcome flow, so a brand-new user gets fully offline transcription with no setup and no API key. Local Whisper runs transcription on your Mac instead of OpenAI's servers: fully offline, zero per-minute cost. You can re-download or remove the model anytime in Voquence Settings."
           />
           <FaqItem
             q="What Mac do I need to run Voquence?"
