@@ -1,15 +1,15 @@
 {
-  "version": "0.4.1",
-  "notes": "v0.4.1 — updates now find you.\n\nVoquence now checks for new versions automatically when it launches. If one is live, a small banner appears in the main window: hit INSTALL and the app updates and restarts itself in about ten seconds, or hit LATER and it stays out of your way until next launch. No more digging into Settings to find out a release exists. (Settings → Updates still works if you prefer checking manually.)\n\nAlso: removed the leftover 'WEEK 4 BUILD' label from the main window header. The app just shows its version now.\n\nThis is the last update you'll ever have to go looking for.",
-  "pub_date": "2026-06-12T22:30:00Z",
+  "version": "0.5.0",
+  "notes": "v0.5.0 — Voquence learns your words.\n\nNew: a Custom Dictionary. Add the names, brands, pen names, and jargon Voquence keeps mishearing (your company name, a client, an acronym) and it'll spell them right from now on, even offline.\n\nIt works three ways at once: it nudges the transcription toward your words while it listens, cleans up close misspellings after (so 'Vokance' becomes 'Voquence'), and tells the AI your terms on the polish modes. Find it in Settings, right under Local Whisper. Type a word, hit Add, done. The auto-correct toggle is on by default and can be turned off if it ever over-corrects.\n\nThis runs on every mode, including the free Raw Transcript, so your proper nouns come out right whether or not you use the AI modes.",
+  "pub_date": "2026-06-14T19:30:00Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaGdxWEIwbm9HSitKbFMyR2I3cFcybmpielFxRTVyQW5ISU9wd2d1SVpwMTRDUkZwY2Exa3pjOUtHYWJNdXVJOFFlVWR2NTZlbkorS2pmNU9NQmpOK0FrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMjk2NzI5CWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpSRTNRcjdhcjU3YXZQTnJHVFM2am51U0o4RnE4TlFXQnp3K2pIc0k5a0Q3cTU0VXViNksyWWlwNnZneWpHVURQRWkyUnp2bENPelhMbit6Y051YU5Ddz09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.4.1_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaHJJTTVTeGIzYjY1YXJjOWtSR2IwMFBRcTRqK1g5RUtSNzNRbTJXdVZHbnNKeFEzb3REMVFlQkJDeFkyWWF0U2JqU2VoWld4RlNBNnFIZHpnQ01vSEFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxNDcxNjA0CWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpnVU4zdHVZRzlOQ1NqWENCYitiTUV0alFOcmFwWlpZUmh1dnJ2eVNMVytiNEtuQkpCQnNoM1ZsMXgyblhuZm5BbHpFSFZQYUoxQ0ZoQVJIMmpOMUdEQT09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.5.0_aarch64.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaGdxWEIwbm9HSitKbFMyR2I3cFcybmpielFxRTVyQW5ISU9wd2d1SVpwMTRDUkZwY2Exa3pjOUtHYWJNdXVJOFFlVWR2NTZlbkorS2pmNU9NQmpOK0FrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMjk2NzI5CWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpSRTNRcjdhcjU3YXZQTnJHVFM2am51U0o4RnE4TlFXQnp3K2pIc0k5a0Q3cTU0VXViNksyWWlwNnZneWpHVURQRWkyUnp2bENPelhMbit6Y051YU5Ddz09Cg==",
-      "url": "https://voquence.com/releases/Voquence_0.4.1_aarch64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNDg0cm85N0hWaHJJTTVTeGIzYjY1YXJjOWtSR2IwMFBRcTRqK1g5RUtSNzNRbTJXdVZHbnNKeFEzb3REMVFlQkJDeFkyWWF0U2JqU2VoWld4RlNBNnFIZHpnQ01vSEFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxNDcxNjA0CWZpbGU6Vm9xdWVuY2UuYXBwLnRhci5negpnVU4zdHVZRzlOQ1NqWENCYitiTUV0alFOcmFwWlpZUmh1dnJ2eVNMVytiNEtuQkpCQnNoM1ZsMXgyblhuZm5BbHpFSFZQYUoxQ0ZoQVJIMmpOMUdEQT09Cg==",
+      "url": "https://voquence.com/releases/Voquence_0.5.0_aarch64.app.tar.gz"
     }
   }
 }

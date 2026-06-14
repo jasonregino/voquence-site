@@ -136,7 +136,7 @@ export default function Home() {
             letterSpacing: "0.1em",
           }}
         >
-          APPLE SILICON · NOTARIZED · v0.4.1
+          APPLE SILICON · NOTARIZED · v0.5.0
         </p>
         <p
           className="mb-2"

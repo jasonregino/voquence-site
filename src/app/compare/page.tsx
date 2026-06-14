@@ -342,7 +342,7 @@ const PAID_TIER_ROWS: CompareRow[] = [
   },
   {
     label: "Custom dictionary",
-    voquence: { text: "v1.1 ship", pending: true },
+    voquence: { text: "Yes (teach it your words)" },
     competitors: [{ text: "Not advertised" }, { text: "Yes" }, { text: "Yes" }],
   },
 ];

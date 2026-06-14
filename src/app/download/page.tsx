@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
 const DOWNLOAD_URL =
-  "https://voquence.com/releases/Voquence_0.4.1_aarch64.dmg";
+  "https://voquence.com/releases/Voquence_0.5.0_aarch64.dmg";
 
 export const metadata = {
   title: "Download Voquence",
@@ -72,7 +72,7 @@ export default async function DownloadPage({
             letterSpacing: "0.1em",
           }}
         >
-          VERSION 0.4.1 · APPLE SILICON (M1, M2, M3, M4) · NOTARIZED BY APPLE
+          VERSION 0.5.0 · APPLE SILICON (M1, M2, M3, M4) · NOTARIZED BY APPLE
         </p>
 
         {/* Apple Silicon check — catches Intel Mac users before they hit a cryptic install error */}

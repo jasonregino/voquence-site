@@ -247,12 +247,6 @@ export default function WisprFlowAlternativePage() {
               runs on Windows. Voquence is Mac only for v1. Windows is on the
               roadmap, but not soon.
             </li>
-            <li>
-              <strong style={{ color: "#ffffff" }}>Custom vocabulary.</strong>{" "}
-              Neither tool currently has a great editable custom dictionary
-              for names, jargon, or pen names. Voquence is building one for
-              v0.4. If you need it today, neither of us is the answer.
-            </li>
           </ul>
           <p
             className="mt-4"
